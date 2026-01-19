@@ -2,90 +2,108 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Veronica Fridman</title>
+  <title>STATIK Magazine</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    body {
-      margin: 0;
-      font-family: Helvetica, Arial, sans-serif;
-      background-color: #0e0e0e;
-      color: #f5f5f5;
+    /* CHANGE THIS IF YOU WANT TO TWEAK THE PINK */
+    :root {
+      --statik-pink: #ff6fa3;
     }
 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--statik-pink);
+      font-family: Arial, Helvetica, sans-serif;
+      color: black;
+    }
+
+    /* HEADER WITH IMAGE AS BACKGROUND */
+    .title-header {
+      height: 260px; /* controls how much of the image shows */
+      background-color: var(--statik-pink);
+      background-image: url("hometitle1.jpg");
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: contain;
+    }
+
+    /* NAV BAR */
     nav {
       display: flex;
-      justify-content: space-between;
-      padding: 20px 40px;
-      font-size: 14px;
+      justify-content: center;
+      gap: 40px;
+      padding: 20px 0;
+      font-weight: bold;
       letter-spacing: 1px;
     }
 
     nav a {
-      color: #f5f5f5;
       text-decoration: none;
-      margin-left: 20px;
-      opacity: 0.8;
+      color: black;
     }
 
     nav a:hover {
-      opacity: 1;
+      text-decoration: underline;
     }
 
-    .hero {
-      height: 80vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    /* MAIN CONTENT */
+    main {
+      padding: 60px 20px;
       text-align: center;
-      padding: 40px;
-    }
-
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-      font-weight: 600;
-    }
-
-    .hero p {
-      font-size: 18px;
-      opacity: 0.75;
-      max-width: 600px;
+      max-width: 900px;
       margin: 0 auto;
+    }
+
+    main h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    main p {
+      font-size: 18px;
+      line-height: 1.6;
     }
 
     footer {
       text-align: center;
       padding: 30px;
       font-size: 12px;
-      opacity: 0.5;
+      opacity: 0.7;
     }
   </style>
 </head>
 
 <body>
 
+  <!-- TITLE IMAGE -->
+  <header class="title-header"></header>
+
+  <!-- NAV -->
   <nav>
-    <div>VERONICA FRIDMAN</div>
-    <div>
-      <a href="#">WORK</a>
-      <a href="#">ABOUT</a>
-      <a href="#">CONTACT</a>
-    </div>
+    <a href="#">ARTISTS</a>
+    <a href="#">ABOUT</a>
+    <a href="#">SUBMIT</a>
+    <a href="#">SUPPORT</a>
   </nav>
 
-  <section class="hero">
-    <div>
-      <h1>Filmmaker & Storyteller</h1>
-      <p>
-        I’m a student filmmaker exploring character, tension, and visual storytelling.
-        This site is a growing archive of my work.
-      </p>
-    </div>
-  </section>
+  <!-- CONTENT -->
+  <main>
+    <h2>A magazine centered on children’s art</h2>
+    <p>
+      STATIK is a platform dedicated to amplifying the voices and creativity
+      of children around the world — especially those whose stories are often
+      overlooked.
+    </p>
+  </main>
 
   <footer>
-    © 2026 Veronica Fridman
+    © 2026 STATIK Magazine
   </footer>
 
 </body>
