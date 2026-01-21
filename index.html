@@ -3,94 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <title>STATIK Magazine</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    :root {
-      --statik-pink: #ff6fa3;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      background-color: var(--statik-pink);
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    /* TITLE IMAGE — NEAR FULL WIDTH */
-    .title-header {
-      height: 360px; /* BIG BUT NOT OVERWHELMING */
-      background-color: var(--statik-pink);
-      background-image: url("hometitle1.jpg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain; /* keeps full title visible */
-    }
-
-    /* BUTTON BAR — FULL WIDTH FEEL */
-    .nav-buttons {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      max-width: 1400px;
-      margin: 40px auto 70px;
-      padding: 0 30px;
-    }
-
-    .nav-buttons a {
-      flex: 1;
+      margin: 0;
+      background-color: #ff6fa3; /* pink background */
+      font-family: Arial, sans-serif;
       text-align: center;
     }
 
-    .nav-buttons img {
-      height: 95px; /* BIGGER BUTTONS */
-      max-width: 100%;
+    /* TITLE IMAGE */
+    .title {
+      width: 85%;
+      max-width: 1100px;
+      margin: 40px auto 30px auto;
+      display: block;
+    }
+
+    /* NAV BAR */
+    .nav {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px 20px;
+    }
+
+    .nav img {
+      width: 180px; /* button size */
+      max-width: 20%;
       cursor: pointer;
       transition: transform 0.2s ease;
     }
 
-    .nav-buttons img:hover {
+    .nav img:hover {
       transform: scale(1.05);
     }
 
-    main {
-      text-align: center;
-      padding: 20px 20px 80px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
+    /* MOBILE RESPONSIVE */
+    @media (max-width: 900px) {
+      .nav {
+        flex-wrap: wrap;
+        gap: 20px;
+      }
 
-    main h2 {
-      font-size: 30px;
-      margin-bottom: 20px;
-    }
+      .nav img {
+        width: 45%;
+      }
 
-    main p {
-      font-size: 18px;
-      line-height: 1.6;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      font-size: 12px;
-      opacity: 0.7;
+      .title {
+        width: 95%;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- TITLE IMAGE -->
-  <header class="title-header"></header>
+  <!-- TITLE -->
+  <img src="hometitle1.jpg" alt="STATIK" class="title">
 
-  <!-- NAV BUTTONS -->
-  <nav class="nav-buttons">
+  <!-- BUTTONS -->
+  <div class="nav">
     <a href="index.html">
       <img src="homebutt.jpg" alt="Home">
     </a>
@@ -110,21 +85,7 @@
     <a href="contact.html">
       <img src="contactbutt.jpg" alt="Contact">
     </a>
-  </nav>
-
-  <!-- MAIN CONTENT -->
-  <main>
-    <h2>A magazine centered on children’s art</h2>
-    <p>
-      STATIK is a creative platform dedicated to amplifying children’s voices
-      through art, storytelling, and visual expression — especially those
-      whose stories are often overlooked.
-    </p>
-  </main>
-
-  <footer>
-    © 2026 STATIK Magazine
-  </footer>
+  </div>
 
 </body>
 </html>
