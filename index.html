@@ -21,24 +21,25 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    /* SMALLER TITLE IMAGE */
+    /* TITLE IMAGE — NEAR FULL WIDTH */
     .title-header {
-      height: 280px; /* SMALLER */
+      height: 360px; /* BIG BUT NOT OVERWHELMING */
       background-color: var(--statik-pink);
       background-image: url("hometitle1.jpg");
       background-repeat: no-repeat;
-      background-position: center top;
-      background-size: contain;
+      background-position: center;
+      background-size: contain; /* keeps full title visible */
     }
 
-    /* BUTTON BAR */
+    /* BUTTON BAR — FULL WIDTH FEEL */
     .nav-buttons {
       display: flex;
-      justify-content: space-between; /* spreads across page */
+      justify-content: space-between;
       align-items: center;
-      max-width: 1200px;
-      margin: 30px auto 60px; /* NO overlap */
-      padding: 0 20px;
+      width: 100%;
+      max-width: 1400px;
+      margin: 40px auto 70px;
+      padding: 0 30px;
     }
 
     .nav-buttons a {
@@ -47,7 +48,7 @@
     }
 
     .nav-buttons img {
-      height: 80px; /* BIGGER BUTTONS */
+      height: 95px; /* BIGGER BUTTONS */
       max-width: 100%;
       cursor: pointer;
       transition: transform 0.2s ease;
@@ -65,7 +66,7 @@
     }
 
     main h2 {
-      font-size: 28px;
+      font-size: 30px;
       margin-bottom: 20px;
     }
 
@@ -115,9 +116,9 @@
   <main>
     <h2>A magazine centered on children’s art</h2>
     <p>
-      STATIK is a creative platform dedicated to amplifying the voices of children
-      through art, storytelling, and visual expression — especially those whose
-      stories are often overlooked.
+      STATIK is a creative platform dedicated to amplifying children’s voices
+      through art, storytelling, and visual expression — especially those
+      whose stories are often overlooked.
     </p>
   </main>
 
