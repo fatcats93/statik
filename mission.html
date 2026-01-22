@@ -18,10 +18,10 @@
       display: block;
       margin: 40px auto 0;
       position: relative;
-      z-index: 1; /* lowest layer */
+      z-index: 1;
     }
 
-    /* NAV — SAME AS INDEX */
+    /* NAV — EXACT SAME AS INDEX */
     .nav {
       display: flex;
       justify-content: space-evenly;
@@ -30,7 +30,7 @@
       max-width: 1600px;
       margin: -500px auto 0;
       position: relative;
-      z-index: 10; /* always on top */
+      z-index: 10;
     }
 
     .nav a {
@@ -55,7 +55,7 @@
       }
     }
 
-    /* ✅ MISSION BOX — OVERLAPS TITLE ONLY */
+    /* MISSION BOX — SLIGHT BUTTON OVERLAP */
     .mission-container {
       background-color: #ffc0cb;
       padding: 40px;
@@ -65,10 +65,10 @@
       color: #000;
       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 
-      margin: 90px auto 60px;   /* normal spacing below buttons */
-      margin-top: -80px;        /* 👈 overlaps TITLE only */
+      margin: 90px auto 60px;
+      margin-top: -40px;        /* 👈 subtle overlap */
       position: relative;
-      z-index: 3;               /* above title, below nav */
+      z-index: 5;               /* below buttons, above title */
     }
 
     .mission-container h1 {
@@ -84,7 +84,7 @@
     @media (max-width: 900px) {
       .mission-container {
         padding: 25px;
-        margin-top: -40px;
+        margin-top: -25px;
       }
 
       .mission-container h1 {
@@ -100,8 +100,10 @@
 
 <body>
 
+  <!-- TITLE -->
   <img src="hometitle1.jpg" alt="STATIK" class="title">
 
+  <!-- NAV BUTTONS -->
   <div class="nav">
     <a href="index.html"><img src="homebutt.jpg" alt="Home"></a>
     <a href="mission.html"><img src="missionbutt.jpg" alt="Mission"></a>
@@ -110,13 +112,16 @@
     <a href="contact.html"><img src="contactbutt.jpg" alt="Contact"></a>
   </div>
 
+  <!-- MISSION CONTENT -->
   <div class="mission-container">
     <h1>Our Mission</h1>
     <p>
       Statik is a magazine showcasing the art and stories of young artists.
-      We collaborate with nonprofits that support children and donate <strong>all our profits</strong>
-      directly to them. By purchasing a magazine, you can make a difference in a child’s life.
-      You can also help by spreading the word or submitting your own art to help Statik grow.
+      We collaborate with nonprofits that support children and donate
+      <strong>all our profits</strong> directly to them.
+      By purchasing a magazine, you can make a difference in a child’s life.
+      You can also help by spreading the word or submitting your own art to help
+      Statik grow.
     </p>
   </div>
 
