@@ -55,7 +55,7 @@
       }
     }
 
-    /* MISSION BOX — SLIGHT BUTTON OVERLAP */
+    /* MISSION BOX — JUST BELOW BUTTONS */
     .mission-container {
       background-color: #ffc0cb;
       padding: 40px;
@@ -65,10 +65,9 @@
       color: #000;
       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 
-      margin: 90px auto 60px;
-      margin-top: -70px;        /* 👈 lowered further for more overlap */
+      margin: 40px auto 60px;  /* 👈 slightly below buttons */
       position: relative;
-      z-index: 5;               /* below buttons, above title */
+      z-index: 5;
     }
 
     .mission-container h1 {
@@ -84,7 +83,7 @@
     @media (max-width: 900px) {
       .mission-container {
         padding: 25px;
-        margin-top: -50px;      /* 👈 adjusted overlap for smaller screens */
+        margin-top: 30px;       /* 👈 slightly below buttons on mobile */
       }
 
       .mission-container h1 {
