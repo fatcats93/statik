@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>STATIK - Contact</title>
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #ff6398;
+      font-family: Arial, sans-serif;
+      color: #000;
+    }
+
+    /* TITLE */
+    .title {
+      width: 85%;
+      max-width: 1100px;
+      display: block;
+      margin: 40px auto 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* NAV BUTTONS */
+    .nav {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      max-width: 1600px;
+      margin: -500px auto 0;
+      position: relative;
+      z-index: 10;
+    }
+
+    .nav a {
+      width: 18%;
+      display: block;
+    }
+
+    .nav img {
+      width: 100%;
+      display: block;
+    }
+
+    @media (max-width: 900px) {
+      .nav {
+        flex-wrap: wrap;
+        gap: 28px;
+        margin-top: -300px;
+      }
+
+      .nav a {
+        width: 48%;
+      }
+    }
+
+    /* CONTACT BOX */
+    .contact-container {
+      background-color: #ffc0cb;
+      max-width: 900px;
+      margin: 40px auto 60px;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      text-align: center;
+      position: relative;
+      z-index: 5;
+    }
+
+    .contact-container h1 {
+      font-size: 2.5rem;
+      margin-top: 0;
+    }
+
+    .contact-container p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #ff6398;
+      color: #fff;
+      border: none;
+      padding: 15px;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #ff4d82;
+    }
+
+    @media (max-width: 900px) {
+      .contact-container {
+        padding: 25px;
+        margin-top: 30px;
+      }
+
+      .contact-container h1 {
+        font-size: 2rem;
+      }
+
+      .contact-container p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TITLE -->
+  <img src="hometitle1.jpg" alt="STATIK" class="title">
+
+  <!-- NAV BUTTONS -->
+  <div class="nav">
+    <a href="index.html"><img src="homebutt.jpg" alt="Home"></a>
+    <a href="mission.html"><img src="missionbutt.jpg" alt="Mission"></a>
+    <a href="purchase.html"><img src="purchasebutt.jpg" alt="Purchase"></a>
+    <a href="submitart.html"><img src="submitartbutt.jpg" alt="Submit Art"></a>
+    <a href="contact.html"><img src="contactbutt.jpg" alt="Contact"></a>
+  </div>
+
+  <!-- CONTACT BOX -->
+  <div class="contact-container">
+    <h1>Contact Us</h1>
+    <p>
+      Have questions, ideas, or art to submit? Reach out to us!  
+      You can email directly at <a href="mailto:veronicafridman63@gmail.com">veronicafridman63@gmail.com</a>  
+      or fill out the form below:
+    </p>
+
+    <form action="mailto:veronicafridman63@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+</body>
+</html>
