@@ -7,7 +7,7 @@
   <style>
     body {
       margin: 0;
-      background-color: #ff6398; /* exact pink */
+      background-color: #ff6398; /* exact pink from your image */
       font-family: Arial, sans-serif;
     }
 
@@ -22,19 +22,19 @@
 
     .nav {
       display: flex;
-      justify-content: space-around; /* 👈 MORE SPACE BETWEEN BUTTONS */
+      justify-content: space-evenly; /* 👈 more space between buttons */
       align-items: center;
       width: 100%;
       max-width: 1600px;
 
-      margin: -420px auto 0; /* 👈 WAY HIGHER */
+      margin: -500px auto 0; /* 👈 WAY HIGHER */
 
       position: relative;
       z-index: 10;
     }
 
     .nav a {
-      width: 19%; /* big but spaced */
+      width: 18%; /* keeps buttons big but spaced nicely */
       display: block;
     }
 
@@ -46,8 +46,8 @@
     @media (max-width: 900px) {
       .nav {
         flex-wrap: wrap;
-        gap: 24px;
-        margin-top: -260px;
+        gap: 28px;
+        margin-top: -300px;
       }
 
       .nav a {
