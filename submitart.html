@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>STATIK - Submit Art</title>
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #ff6398;
+      font-family: Arial, sans-serif;
+      color: #000;
+    }
+
+    /* TITLE */
+    .title {
+      width: 85%;
+      max-width: 1100px;
+      display: block;
+      margin: 40px auto 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* NAV BUTTONS */
+    .nav {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      max-width: 1600px;
+      margin: -500px auto 0;
+      position: relative;
+      z-index: 10;
+    }
+
+    .nav a {
+      width: 18%;
+      display: block;
+    }
+
+    .nav img {
+      width: 100%;
+      display: block;
+    }
+
+    @media (max-width: 900px) {
+      .nav {
+        flex-wrap: wrap;
+        gap: 28px;
+        margin-top: -300px;
+      }
+
+      .nav a {
+        width: 48%;
+      }
+    }
+
+    /* SUBMIT ART BOX */
+    .submitart-container {
+      background-color: #ffc0cb;
+      max-width: 900px;
+      margin: 40px auto 60px;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      text-align: center;
+      position: relative;
+      z-index: 5;
+    }
+
+    .submitart-container h1 {
+      font-size: 2.5rem;
+      margin-top: 0;
+    }
+
+    .submitart-container p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .submit-button {
+      background-color: #ff6398;
+      color: #fff;
+      border: none;
+      padding: 20px 30px;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .submit-button:hover {
+      background-color: #ff4d82;
+    }
+
+    @media (max-width: 900px) {
+      .submitart-container {
+        padding: 25px;
+        margin-top: 30px;
+      }
+
+      .submitart-container h1 {
+        font-size: 2rem;
+      }
+
+      .submitart-container p {
+        font-size: 1rem;
+      }
+
+      .submit-button {
+        padding: 15px 25px;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TITLE -->
+  <img src="hometitle1.jpg" alt="STATIK" class="title">
+
+  <!-- NAV BUTTONS -->
+  <div class="nav">
+    <a href="index.html"><img src="homebutt.jpg" alt="Home"></a>
+    <a href="mission.html"><img src="missionbutt.jpg" alt="Mission"></a>
+    <a href="purchase.html"><img src="purchasebutt.jpg" alt="Purchase"></a>
+    <a href="submitart.html"><img src="submitartbutt.jpg" alt="Submit Art"></a>
+    <a href="contact.html"><img src="contactbutt.jpg" alt="Contact"></a>
+  </div>
+
+  <!-- SUBMIT ART BOX -->
+  <div class="submitart-container">
+    <h1>Submit Your Art</h1>
+    <p>
+      We love showcasing young artists! Submit your artwork by clicking the button below.  
+      You’ll be taken to our Google Form where you can upload your art and include your name and a short description.
+    </p>
+
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSecLsMX6Z_MhrE-QKmYr2vRPBtyQUVR3ochw9dc3-YyN-E7_g/viewform?usp=publish-editor" 
+       target="_blank" class="submit-button">
+       Submit Your Art
+    </a>
+  </div>
+
+</body>
+</html>
