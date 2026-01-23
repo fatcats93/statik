@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>STATIK - Purchase</title>
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #ff6398;
+      font-family: Arial, sans-serif;
+      color: #000;
+    }
+
+    /* TITLE */
+    .title {
+      width: 85%;
+      max-width: 1100px;
+      display: block;
+      margin: 40px auto 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* NAV BUTTONS */
+    .nav {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      max-width: 1600px;
+      margin: -500px auto 0;
+      position: relative;
+      z-index: 10;
+    }
+
+    .nav a {
+      width: 18%;
+      display: block;
+    }
+
+    .nav img {
+      width: 100%;
+      display: block;
+    }
+
+    @media (max-width: 900px) {
+      .nav {
+        flex-wrap: wrap;
+        gap: 28px;
+        margin-top: -300px;
+      }
+
+      .nav a {
+        width: 48%;
+      }
+    }
+
+    /* PURCHASE BOX */
+    .purchase-container {
+      background-color: #ffc0cb;
+      max-width: 900px;
+      margin: 40px auto 60px;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      text-align: center;
+      position: relative;
+      z-index: 5;
+    }
+
+    .purchase-container h1 {
+      font-size: 2.5rem;
+      margin-top: 0;
+    }
+
+    .purchase-container p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .buy-button {
+      background-color: #ff6398;
+      color: #fff;
+      border: none;
+      padding: 20px 30px;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .buy-button:hover {
+      background-color: #ff4d82;
+    }
+
+    @media (max-width: 900px) {
+      .purchase-container {
+        padding: 25px;
+        margin-top: 30px;
+      }
+
+      .purchase-container h1 {
+        font-size: 2rem;
+      }
+
+      .purchase-container p {
+        font-size: 1rem;
+      }
+
+      .buy-button {
+        padding: 15px 25px;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TITLE -->
+  <img src="hometitle1.jpg" alt="STATIK" class="title">
+
+  <!-- NAV BUTTONS -->
+  <div class="nav">
+    <a href="index.html"><img src="homebutt.jpg" alt="Home"></a>
+    <a href="mission.html"><img src="missionbutt.jpg" alt="Mission"></a>
+    <a href="purchase.html"><img src="purchasebutt.jpg" alt="Purchase"></a>
+    <a href="submitart.html"><img src="submitartbutt.jpg" alt="Submit Art"></a>
+    <a href="contact.html"><img src="contactbutt.jpg" alt="Contact"></a>
+  </div>
+
+  <!-- PURCHASE BOX -->
+  <div class="purchase-container">
+    <h1>Purchase STATIK Magazine</h1>
+    <p>
+      Thank you for supporting young artists! STATIK Magazine showcases incredible artwork and stories from talented youth.  
+      Each copy is filled with inspiration, creativity, and all proceeds go to support children through nonprofit organizations.  
+    </p>
+    <p><strong>Price:</strong> $10 per magazine</p>
+    
+    <!-- Buy Now button - you can link this to PayPal, Stripe, or any future store -->
+    <a href="#" class="buy-button">Buy Now</a>
+  </div>
+
+</body>
+</html>
