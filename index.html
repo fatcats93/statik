@@ -7,7 +7,7 @@
   <style>
     body {
       margin: 0;
-      background-color: #ff6398; /* exact pink from your image */
+      background-color: #ff6398; /* exact pink */
       font-family: Arial, sans-serif;
     }
 
@@ -20,21 +20,30 @@
       z-index: 1;
     }
 
+    .subtitle {
+      width: 95%;
+      max-width: 1300px;
+      display: block;
+      margin: 10px auto 0;
+      position: relative;
+      z-index: 1;
+    }
+
     .nav {
       display: flex;
-      justify-content: space-evenly; /* 👈 more space between buttons */
+      justify-content: space-evenly;
       align-items: center;
       width: 100%;
       max-width: 1600px;
 
-      margin: -500px auto 0; /* 👈 WAY HIGHER */
+      margin: -500px auto 0;
 
       position: relative;
       z-index: 10;
     }
 
     .nav a {
-      width: 18%; /* keeps buttons big but spaced nicely */
+      width: 18%;
       display: block;
     }
 
@@ -59,10 +68,13 @@
 
 <body>
 
-  <!-- TITLE -->
+  <!-- MAIN TITLE -->
   <img src="hometitle1.jpg" alt="STATIK" class="title">
 
-  <!-- BUTTONS -->
+  <!-- SUB TITLE IMAGE -->
+  <img src="statiktitle.png" alt="STATIK Subtitle" class="subtitle">
+
+  <!-- NAV BUTTONS -->
   <div class="nav">
     <a href="index.html"><img src="homebutt.jpg" alt="Home"></a>
     <a href="mission.html"><img src="missionbutt.jpg" alt="Mission"></a>
