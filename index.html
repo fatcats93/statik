@@ -21,7 +21,7 @@
       z-index: 1;
     }
 
-    /* BUTTONS — MAJOR UPWARD SHIFT */
+    /* BUTTONS */
     .nav {
       display: flex;
       justify-content: space-evenly;
@@ -29,7 +29,7 @@
       width: 100%;
       max-width: 1600px;
 
-      margin: -480px auto 0; /* 🔥 TIMES 2 PUSH UP */
+      margin: -480px auto 0;
       position: relative;
       z-index: 2;
     }
@@ -44,10 +44,10 @@
       display: block;
     }
 
-    /* IMAGE stays fixed under buttons */
+    /* IMAGE — slightly smaller */
     .subtitle {
-      width: 95%;
-      max-width: 1300px;
+      width: 80%;
+      max-width: 900px;
       display: block;
 
       margin: 10px auto 0;
@@ -65,14 +65,20 @@
       .nav a {
         width: 48%;
       }
+
+      .subtitle {
+        width: 90%;
+      }
     }
   </style>
 </head>
 
 <body>
 
+  <!-- TITLE -->
   <img src="hometitle1.jpg" alt="STATIK" class="title">
 
+  <!-- BUTTONS -->
   <div class="nav">
     <a href="index.html"><img src="homebutt.jpg" alt="Home"></a>
     <a href="mission.html"><img src="missionbutt.jpg" alt="Mission"></a>
@@ -81,6 +87,7 @@
     <a href="contact.html"><img src="contactbutt.jpg" alt="Contact"></a>
   </div>
 
+  <!-- IMAGE -->
   <img src="statiktitle.png" alt="STATIK Subtitle" class="subtitle">
 
 </body>
