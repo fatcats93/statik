@@ -11,23 +11,17 @@
       font-family: Arial, sans-serif;
     }
 
-    /* WRAP EVERYTHING FOR CONTROL */
-    .header {
-      position: relative;
-      padding-top: 0;
-    }
-
-    /* TITLE */
+    /* TITLE stays normal */
     .title {
       width: 85%;
       max-width: 1100px;
       display: block;
-      margin: 0 auto;
+      margin: 10px auto 0;
       position: relative;
-      z-index: 3;
+      z-index: 1;
     }
 
-    /* NAV — FORCED WAY UP INTO TITLE */
+    /* BUTTONS — MOVE UP INTO TITLE (ONLY overlap here) */
     .nav {
       display: flex;
       justify-content: space-evenly;
@@ -35,9 +29,9 @@
       width: 100%;
       max-width: 1600px;
 
+      margin: -70px auto 0; /* 🔥 pushes INTO title */
       position: relative;
-      margin-top: -80px; /* 🔥 BIG MOVE UP */
-      z-index: 4;
+      z-index: 2; /* above title so overlap is visible */
     }
 
     .nav a {
@@ -50,15 +44,15 @@
       display: block;
     }
 
-    /* SUBTITLE — ALSO PUSHED WAY UP */
+    /* IMAGE — BACK UNDER BUTTONS (NO OVERLAP) */
     .subtitle {
       width: 95%;
       max-width: 1300px;
       display: block;
 
+      margin: 10px auto 0; /* normal spacing */
       position: relative;
-      margin-top: -70px; /* 🔥 BIG MOVE UP */
-      z-index: 2;
+      z-index: 1;
     }
 
     @media (max-width: 900px) {
@@ -71,34 +65,26 @@
       .nav a {
         width: 48%;
       }
-
-      .subtitle {
-        margin-top: -40px;
-      }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="header">
+  <!-- TITLE -->
+  <img src="hometitle1.jpg" alt="STATIK" class="title">
 
-    <!-- TITLE -->
-    <img src="hometitle1.jpg" alt="STATIK" class="title">
-
-    <!-- NAV -->
-    <div class="nav">
-      <a href="index.html"><img src="homebutt.jpg" alt="Home"></a>
-      <a href="mission.html"><img src="missionbutt.jpg" alt="Mission"></a>
-      <a href="purchase.html"><img src="purchasebutt.jpg" alt="Purchase"></a>
-      <a href="submitart.html"><img src="submitartbutt.jpg" alt="Submit Art"></a>
-      <a href="contact.html"><img src="contactbutt.jpg" alt="Contact"></a>
-    </div>
-
-    <!-- SUBTITLE -->
-    <img src="statiktitle.png" alt="STATIK Subtitle" class="subtitle">
-
+  <!-- BUTTONS -->
+  <div class="nav">
+    <a href="index.html"><img src="homebutt.jpg" alt="Home"></a>
+    <a href="mission.html"><img src="missionbutt.jpg" alt="Mission"></a>
+    <a href="purchase.html"><img src="purchasebutt.jpg" alt="Purchase"></a>
+    <a href="submitart.html"><img src="submitartbutt.jpg" alt="Submit Art"></a>
+    <a href="contact.html"><img src="contactbutt.jpg" alt="Contact"></a>
   </div>
+
+  <!-- IMAGE (unchanged position below buttons) -->
+  <img src="statiktitle.png" alt="STATIK Subtitle" class="subtitle">
 
 </body>
 </html>
