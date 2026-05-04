@@ -21,7 +21,7 @@
       z-index: 1;
     }
 
-    /* BUTTONS */
+    /* BUTTONS (your high position kept) */
     .nav {
       display: flex;
       justify-content: space-evenly;
@@ -44,15 +44,37 @@
       display: block;
     }
 
-    /* IMAGE — slightly smaller */
-    .subtitle {
-      width: 80%;
-      max-width: 900px;
-      display: block;
-
-      margin: 10px auto 0;
+    /* IMAGE + STARS WRAPPER */
+    .container {
       position: relative;
-      z-index: 1;
+      width: fit-content;
+      margin: 0 auto;
+    }
+
+    /* MAIN IMAGE (smaller now) */
+    .main-image {
+      width: 65%;
+      max-width: 700px;
+      display: block;
+      margin: 20px auto 60px;
+    }
+
+    /* STARS */
+    .star {
+      position: absolute;
+      width: 120px;
+    }
+
+    /* TOP STAR */
+    .star-top {
+      top: -40px;
+      left: -60px;
+    }
+
+    /* BOTTOM STAR */
+    .star-bottom {
+      bottom: -40px;
+      right: -60px;
     }
 
     @media (max-width: 900px) {
@@ -66,8 +88,8 @@
         width: 48%;
       }
 
-      .subtitle {
-        width: 90%;
+      .main-image {
+        width: 85%;
       }
     }
   </style>
@@ -87,8 +109,19 @@
     <a href="contact.html"><img src="contactbutt.jpg" alt="Contact"></a>
   </div>
 
-  <!-- IMAGE -->
-  <img src="statiktitle.png" alt="STATIK Subtitle" class="subtitle">
+  <!-- IMAGE + STARS -->
+  <div class="container">
+
+    <!-- MAIN IMAGE -->
+    <img src="statiktitle.png" alt="STATIK" class="main-image">
+
+    <!-- TOP STAR -->
+    <img src="1star.jpeg" class="star star-top">
+
+    <!-- BOTTOM STAR -->
+    <img src="comingstar.jpeg" class="star star-bottom">
+
+  </div>
 
 </body>
 </html>
