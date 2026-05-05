@@ -21,7 +21,7 @@
       z-index: 1;
     }
 
-    /* BUTTONS (your high position kept) */
+    /* BUTTONS */
     .nav {
       display: flex;
       justify-content: space-evenly;
@@ -44,37 +44,38 @@
       display: block;
     }
 
-    /* IMAGE + STARS WRAPPER */
+    /* FIXED CONTAINER */
     .container {
       position: relative;
-      width: fit-content;
-      margin: 0 auto;
+      width: 100%;        /* 🔥 FIXED (no more fit-content bug) */
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
     }
 
-    /* MAIN IMAGE (smaller now) */
+    /* BIGGER IMAGE */
     .main-image {
-      width: 65%;
-      max-width: 700px;
+      width: 75%;        /* 🔥 bigger */
+      max-width: 900px;
       display: block;
-      margin: 20px auto 60px;
     }
 
     /* STARS */
     .star {
       position: absolute;
-      width: 120px;
+      width: 160px;      /* 🔥 bigger stars */
     }
 
     /* TOP STAR */
     .star-top {
-      top: -40px;
-      left: -60px;
+      top: -60px;
+      left: 10%;
     }
 
     /* BOTTOM STAR */
     .star-bottom {
-      bottom: -40px;
-      right: -60px;
+      bottom: -60px;
+      right: 10%;
     }
 
     @media (max-width: 900px) {
@@ -89,7 +90,11 @@
       }
 
       .main-image {
-        width: 85%;
+        width: 90%;
+      }
+
+      .star {
+        width: 100px;
       }
     }
   </style>
@@ -112,13 +117,9 @@
   <!-- IMAGE + STARS -->
   <div class="container">
 
-    <!-- MAIN IMAGE -->
     <img src="statiktitle.png" alt="STATIK" class="main-image">
 
-    <!-- TOP STAR -->
     <img src="1star.jpeg" class="star star-top">
-
-    <!-- BOTTOM STAR -->
     <img src="comingstar.jpeg" class="star star-bottom">
 
   </div>
