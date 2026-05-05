@@ -9,88 +9,90 @@
       margin: 0;
       background-color: #ff6398;
       font-family: Arial, sans-serif;
+      overflow-x: hidden;
     }
 
     /* TITLE */
     .title {
-      width: 85%;
-      max-width: 1100px;
+      width: 80%;
+      max-width: 1000px;
       display: block;
-      margin: 10px auto 0;
+      margin: 20px auto 0;
       position: relative;
-      z-index: 1;
+      z-index: 2;
     }
 
     /* BUTTONS */
     .nav {
       display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      width: 100%;
-      max-width: 1600px;
-
-      margin: -480px auto 0;
+      justify-content: center;
+      gap: 20px;
+      margin: -480px auto 20px;
       position: relative;
-      z-index: 2;
+      z-index: 3;
     }
 
     .nav a {
-      width: 18%;
-      display: block;
+      width: 140px;
     }
 
     .nav img {
       width: 100%;
-      display: block;
     }
 
-    /* FIXED CONTAINER */
+    /* IMAGE AREA */
     .container {
       position: relative;
-      width: 100%;        /* 🔥 FIXED (no more fit-content bug) */
+      width: 100%;
       display: flex;
       justify-content: center;
-      margin-top: 20px;
+      margin-top: 40px;
     }
 
-    /* BIGGER IMAGE */
+    /* BIG IMAGE — NOW FILLS SCREEN NICELY */
     .main-image {
-      width: 75%;        /* 🔥 bigger */
+      width: 60vw;          /* 🔥 responsive + big */
       max-width: 900px;
+      min-width: 400px;
       display: block;
     }
 
     /* STARS */
     .star {
       position: absolute;
-      width: 160px;      /* 🔥 bigger stars */
+      width: 180px;        /* 🔥 bigger */
+      mix-blend-mode: multiply; /* helps remove gray */
     }
 
-    /* TOP STAR */
-    .star-top {
-      top: -60px;
-      left: 10%;
+    /* TOP LEFT STAR */
+    .star1 {
+      top: 5%;
+      left: 15%;
     }
 
-    /* BOTTOM STAR */
-    .star-bottom {
-      bottom: -60px;
-      right: 10%;
+    /* RIGHT STAR */
+    .star2 {
+      bottom: 10%;
+      right: 18%;
+    }
+
+    /* SMALL STAR NEAR IMAGE */
+    .star3 {
+      top: 35%;
+      right: 22%;
+      width: 120px;
+    }
+
+    /* BOTTOM LEFT */
+    .star4 {
+      bottom: 5%;
+      left: 20%;
+      width: 130px;
     }
 
     @media (max-width: 900px) {
-      .nav {
-        flex-wrap: wrap;
-        gap: 20px;
-        margin-top: -300px;
-      }
-
-      .nav a {
-        width: 48%;
-      }
-
       .main-image {
-        width: 90%;
+        width: 85vw;
       }
 
       .star {
@@ -103,24 +105,25 @@
 <body>
 
   <!-- TITLE -->
-  <img src="hometitle1.jpg" alt="STATIK" class="title">
+  <img src="hometitle1.jpg" class="title">
 
   <!-- BUTTONS -->
   <div class="nav">
-    <a href="index.html"><img src="homebutt.jpg" alt="Home"></a>
-    <a href="mission.html"><img src="missionbutt.jpg" alt="Mission"></a>
-    <a href="purchase.html"><img src="purchasebutt.jpg" alt="Purchase"></a>
-    <a href="submitart.html"><img src="submitartbutt.jpg" alt="Submit Art"></a>
-    <a href="contact.html"><img src="contactbutt.jpg" alt="Contact"></a>
+    <a href="index.html"><img src="homebutt.jpg"></a>
+    <a href="mission.html"><img src="missionbutt.jpg"></a>
+    <a href="purchase.html"><img src="purchasebutt.jpg"></a>
+    <a href="submitart.html"><img src="submitartbutt.jpg"></a>
+    <a href="contact.html"><img src="contactbutt.jpg"></a>
   </div>
 
   <!-- IMAGE + STARS -->
   <div class="container">
 
-    <img src="statiktitle.png" alt="STATIK" class="main-image">
+    <img src="statiktitle.png" class="main-image">
 
-    <img src="1star.jpeg" class="star star-top">
-    <img src="comingstar.jpeg" class="star star-bottom">
+    <!-- STARS ATTACHED TO IMAGE AREA -->
+    <img src="1star.jpeg" class="star star1">
+    <img src="comingstar.jpeg" class="star star2">
 
   </div>
 
