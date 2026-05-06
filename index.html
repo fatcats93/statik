@@ -1,58 +1,48 @@
-import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 export default function HomePage() {
-  const [loaded, setLoaded] = useState(false);
-
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col items-center justify-start p-6">
-      {/* Header */}
-      <header className="w-full flex flex-col items-center justify-center py-10">
-        <div className="text-5xl font-bold tracking-widest">STATIK</div> setLoaded(true)}
+    <div className="min-h-screen bg-pink-400 text-black">
+      {/* NAVBAR */}
+      <div className="w-full border-b-2 border-black flex items-center justify-between px-6 py-3 text-lg font-medium">
+        <div className="flex items-center gap-2">
+          <span className="text-2xl">⭐</span>
+          <span>Home</span>
+        </div>
+        <div className="flex gap-8">
+          <a href="purchase.html" className="hover:underline">Purchase</a>
+          <a href="submitart.html" className="hover:underline">Submit</a>
+          <a href="contact.html" className="hover:underline">Contact</a>
+        </div>
+      </div>
+
+      {/* TITLE IMAGE */}
+      <div className="flex justify-center items-center py-10">
+        <img
+          src="/statiktitle.png"
+          alt="Statik"
+          className="w-[90%] max-w-4xl object-contain"
         />
-        {!loaded && (
-          <p className="text-gray-400 mt-4">Loading title...</p>
-        )}
-      </header>
+      </div>
 
-      {/* Main Grid */}
-      <main className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
-        <Card className="bg-zinc-900 border-zinc-800">
-          <CardContent className="p-6">
-            <h2 className="text-xl font-bold">Dashboard</h2>
-            <p className="text-sm text-gray-400 mt-2">
-              View your stats, activity, and progress.
-            </p>
-            <Button className="mt-4 w-full">Open</Button>
-          </CardContent>
-        </Card>
+      {/* MISSION STATEMENT */}
+      <div className="flex justify-center px-6">
+        <div className="border-2 border-black rounded-[60px] px-10 py-12 text-center text-2xl max-w-3xl w-full">
+          Mission Statement
+        </div>
+      </div>
 
-        <Card className="bg-zinc-900 border-zinc-800">
-          <CardContent className="p-6">
-            <h2 className="text-xl font-bold">Projects</h2>
-            <p className="text-sm text-gray-400 mt-2">
-              Manage and organize your work.
-            </p>
-            <Button className="mt-4 w-full">View</Button>
-          </CardContent>
-        </Card>
+      {/* FIRST ISSUE SECTION */}
+      <div className="mt-16 border-t-2 border-black px-6 py-10">
+        <div className="grid md:grid-cols-2 gap-10 items-center">
+          <div className="text-3xl font-medium">
+            First Issue Ready!
+          </div>
 
-        <Card className="bg-zinc-900 border-zinc-800">
-          <CardContent className="p-6">
-            <h2 className="text-xl font-bold">Settings</h2>
-            <p className="text-sm text-gray-400 mt-2">
-              Customize your experience.
-            </p>
-            <Button className="mt-4 w-full">Edit</Button>
-          </CardContent>
-        </Card>
-      </main>
-
-      {/* Footer */}
-      <footer className="mt-auto text-gray-500 text-xs py-10">
-        © {new Date().getFullYear()} Statik. All rights reserved.
-      </footer>
+          <div className="border-2 border-black h-[300px] w-full bg-white"></div>
+        </div>
+      </div>
     </div>
   );
 }
