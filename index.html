@@ -7,16 +7,25 @@
   <style>
     body {
       margin: 0;
-      background-color: #ff6398;
+      background-color: #ff6398; /* main background */
       font-family: Arial, sans-serif;
     }
 
-    /* HEADER BAR */
+    /* LIGHT PINK BLOCK STYLE */
+    .section {
+      background-color: #ff8fb1; /* light pink */
+      margin: 20px auto;
+      width: 85%;
+      max-width: 1100px;
+      border-radius: 20px;
+      padding: 20px;
+    }
+
+    /* HEADER */
     .header {
       display: flex;
       justify-content: center;
       gap: 40px;
-      padding: 20px 0;
       border-bottom: 2px solid black;
     }
 
@@ -27,36 +36,25 @@
       font-weight: bold;
     }
 
-    /* TITLE */
+    /* TITLE (HTML FILE) */
     .title {
-      width: 70%;
-      max-width: 900px;
       display: block;
-      margin: 30px auto;
+      width: 100%;
+      height: 150px;
+      border: none;
+      margin: 20px auto;
     }
 
-    /* MISSION SECTION */
+    /* MISSION */
     .mission {
-      width: 70%;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 40px;
-      border: 3px solid black;
-      border-radius: 50px;
       text-align: center;
       font-size: 28px;
       font-family: cursive;
+      padding: 40px;
     }
 
-    /* FIRST ISSUE SECTION */
+    /* ISSUE SECTION */
     .issue-section {
-      width: 80%;
-      max-width: 1000px;
-      margin: 50px auto;
-      padding: 30px;
-      border-top: 2px solid black;
-      border-bottom: 2px solid black;
-
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -70,7 +68,6 @@
 
     .issue-image {
       width: 250px;
-      height: auto;
       border: 2px solid black;
     }
 
@@ -90,23 +87,23 @@
 <body>
 
   <!-- HEADER -->
-  <div class="header">
+  <div class="section header">
     <a href="index.html">Home</a>
     <a href="purchase.html">Purchase</a>
     <a href="submitart.html">Submit Art</a>
     <a href="contact.html">Contact</a>
   </div>
 
-  <!-- TITLE IMAGE -->
-  <img src="statiktitle.png" class="title">
+  <!-- TITLE (HTML FILE) -->
+  <iframe src="statiktitle.html" class="title"></iframe>
 
   <!-- MISSION -->
-  <div class="mission">
+  <div class="section mission">
     Mission Statement
   </div>
 
   <!-- FIRST ISSUE -->
-  <div class="issue-section">
+  <div class="section issue-section">
     <div class="issue-text">
       First Issue Ready!
     </div>
