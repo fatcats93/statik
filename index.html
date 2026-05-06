@@ -1,48 +1,134 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Statik</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ff7aa2;
+      color: black;
+    }
 
-export default function HomePage() {
-  return (
-    <div className="min-h-screen bg-pink-400 text-black">
-      {/* NAVBAR */}
-      <div className="w-full border-b-2 border-black flex items-center justify-between px-6 py-3 text-lg font-medium">
-        <div className="flex items-center gap-2">
-          <span className="text-2xl">⭐</span>
-          <span>Home</span>
-        </div>
-        <div className="flex gap-8">
-          <a href="purchase.html" className="hover:underline">Purchase</a>
-          <a href="submitart.html" className="hover:underline">Submit</a>
-          <a href="contact.html" className="hover:underline">Contact</a>
-        </div>
-      </div>
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid black;
+      padding: 10px 20px;
+      font-size: 18px;
+    }
 
-      {/* TITLE IMAGE */}
-      <div className="flex justify-center items-center py-10">
-        <img
-          src="/statiktitle.png"
-          alt="Statik"
-          className="w-[90%] max-w-4xl object-contain"
-        />
-      </div>
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
 
-      {/* MISSION STATEMENT */}
-      <div className="flex justify-center px-6">
-        <div className="border-2 border-black rounded-[60px] px-10 py-12 text-center text-2xl max-w-3xl w-full">
-          Mission Statement
-        </div>
-      </div>
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
 
-      {/* FIRST ISSUE SECTION */}
-      <div className="mt-16 border-t-2 border-black px-6 py-10">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div className="text-3xl font-medium">
-            First Issue Ready!
-          </div>
+    .nav-links a {
+      text-decoration: none;
+      color: black;
+    }
 
-          <div className="border-2 border-black h-[300px] w-full bg-white"></div>
-        </div>
-      </div>
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* TITLE */
+    .title {
+      display: flex;
+      justify-content: center;
+      margin: 40px 0;
+    }
+
+    .title img {
+      width: 80%;
+      max-width: 800px;
+    }
+
+    /* MISSION */
+    .mission {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .mission-box {
+      border: 2px solid black;
+      border-radius: 60px;
+      padding: 40px;
+      width: 70%;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    /* ISSUE SECTION */
+    .issue {
+      border-top: 2px solid black;
+      margin-top: 60px;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .issue-text {
+      font-size: 28px;
+    }
+
+    .issue-box {
+      width: 250px;
+      height: 320px;
+      border: 2px solid black;
+      background: white;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="nav-left">
+      <span>⭐</span>
+      <span>Home</span>
     </div>
-  );
-}
+
+    <div class="nav-links">
+      <a href="purchase.html">Purchase</a>
+      <a href="submitart.html">Submit</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <!-- TITLE IMAGE -->
+  <div class="title">
+    <img src="statiktitle.png" alt="Statik Title">
+  </div>
+
+  <!-- MISSION -->
+  <div class="mission">
+    <div class="mission-box">
+      Mission Statement
+    </div>
+  </div>
+
+  <!-- ISSUE -->
+  <div class="issue">
+    <div class="issue-text">
+      First Issue Ready!
+    </div>
+
+    <div class="issue-box"></div>
+  </div>
+
+</body>
+</html>
