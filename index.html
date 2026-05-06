@@ -2,132 +2,116 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Statik</title>
+  <title>STATIK</title>
+
   <style>
     body {
       margin: 0;
+      background-color: #ff6398;
       font-family: Arial, sans-serif;
-      background-color: #ff7aa2;
-      color: black;
     }
 
-    /* NAVBAR */
-    .navbar {
+    /* HEADER BAR */
+    .header {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      padding: 20px 0;
       border-bottom: 2px solid black;
-      padding: 10px 20px;
-      font-size: 18px;
     }
 
-    .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 30px;
-    }
-
-    .nav-links a {
+    .header a {
       text-decoration: none;
+      font-size: 20px;
       color: black;
-    }
-
-    .nav-links a:hover {
-      text-decoration: underline;
+      font-weight: bold;
     }
 
     /* TITLE */
     .title {
-      display: flex;
-      justify-content: center;
-      margin: 40px 0;
-    }
-
-    .title img {
-      width: 80%;
-      max-width: 800px;
-    }
-
-    /* MISSION */
-    .mission {
-      display: flex;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    .mission-box {
-      border: 2px solid black;
-      border-radius: 60px;
-      padding: 40px;
       width: 70%;
-      text-align: center;
-      font-size: 24px;
+      max-width: 900px;
+      display: block;
+      margin: 30px auto;
     }
 
-    /* ISSUE SECTION */
-    .issue {
+    /* MISSION SECTION */
+    .mission {
+      width: 70%;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 40px;
+      border: 3px solid black;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 28px;
+      font-family: cursive;
+    }
+
+    /* FIRST ISSUE SECTION */
+    .issue-section {
+      width: 80%;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 30px;
       border-top: 2px solid black;
-      margin-top: 60px;
-      padding: 40px 20px;
+      border-bottom: 2px solid black;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
+      gap: 40px;
     }
 
     .issue-text {
-      font-size: 28px;
+      font-size: 40px;
+      font-family: cursive;
     }
 
-    .issue-box {
+    .issue-image {
       width: 250px;
-      height: 320px;
+      height: auto;
       border: 2px solid black;
-      background: white;
     }
 
+    @media (max-width: 800px) {
+      .issue-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .issue-image {
+        width: 70%;
+      }
+    }
   </style>
 </head>
+
 <body>
 
-  <!-- NAVBAR -->
-  <div class="navbar">
-    <div class="nav-left">
-      <span>⭐</span>
-      <span>Home</span>
-    </div>
-
-    <div class="nav-links">
-      <a href="purchase.html">Purchase</a>
-      <a href="submitart.html">Submit</a>
-      <a href="contact.html">Contact</a>
-    </div>
+  <!-- HEADER -->
+  <div class="header">
+    <a href="index.html">Home</a>
+    <a href="purchase.html">Purchase</a>
+    <a href="submitart.html">Submit Art</a>
+    <a href="contact.html">Contact</a>
   </div>
 
   <!-- TITLE IMAGE -->
-  <div class="title">
-    <img src="statiktitle.png" alt="Statik Title">
-  </div>
+  <img src="statiktitle.png" class="title">
 
   <!-- MISSION -->
   <div class="mission">
-    <div class="mission-box">
-      Mission Statement
-    </div>
+    Mission Statement
   </div>
 
-  <!-- ISSUE -->
-  <div class="issue">
+  <!-- FIRST ISSUE -->
+  <div class="issue-section">
     <div class="issue-text">
       First Issue Ready!
     </div>
 
-    <div class="issue-box"></div>
+    <img src="statiktitle.png" class="issue-image">
   </div>
 
 </body>
