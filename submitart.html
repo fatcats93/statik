@@ -12,7 +12,7 @@
       color: #000;
     }
 
-    /* HEADER — same system as purchase page */
+    /* HEADER */
     .header {
       width: 100%;
       margin: 0;
@@ -35,22 +35,24 @@
       font-weight: bold;
     }
 
-    /* TITLE — BIGGER */
+    /* TITLE (BEHIND) */
     .title {
       width: 100%;
       max-width: 2600px;
       display: block;
       margin: 140px auto 0;
+
       position: relative;
-      z-index: 1;
+      z-index: 1; /* stays behind box */
     }
 
-    /* 🔥 SUBMIT BOX — BIGGER + HIGHER */
+    /* 🔥 SUBMIT BOX — HIGHER + ON TOP */
     .submitart-container {
       background-color: #ffc0cb;
 
       max-width: 1600px;
-      margin: -200px auto 120px; /* slight overlap like purchase */
+
+      margin: -520px auto 120px; /* 🔥 MUCH higher now */
       padding: 160px;
 
       border-radius: 40px;
@@ -59,7 +61,7 @@
       text-align: center;
 
       position: relative;
-      z-index: 5;
+      z-index: 20; /* 🔥 FORCES IT ON TOP OF TITLE */
     }
 
     .submitart-container h1 {
@@ -96,7 +98,7 @@
       }
 
       .submitart-container {
-        margin: -80px auto 80px;
+        margin: -220px auto 80px;
         padding: 60px;
       }
 
@@ -129,7 +131,7 @@
   <!-- TITLE -->
   <img src="hometitle1.jpg" alt="STATIK" class="title">
 
-  <!-- SUBMIT ART BOX -->
+  <!-- SUBMIT ART BOX (NOW HIGH + ON TOP) -->
   <div class="submitart-container">
     <h1>Submit Your Art</h1>
 
