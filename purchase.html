@@ -36,23 +36,24 @@
       font-weight: bold;
     }
 
-    /* TITLE — stays above everything */
+    /* TITLE — now BACK layer */
     .title {
       width: 100%;
       max-width: 2600px;
       display: block;
       margin: 140px auto 0;
+
       position: relative;
-      z-index: 5;
+      z-index: 1; /* behind box */
     }
 
-    /* 🔥 PURCHASE BOX — EVEN BIGGER + MUCH HIGHER */
+    /* 🔥 PURCHASE BOX — TOP LAYER */
     .purchase-container {
       background-color: #ffc0cb;
 
-      max-width: 1800px;        /* BIGGER */
-      margin: -420px auto 120px; /* 🔥 VERY HIGH OVERLAP */
-      padding: 240px;           /* HUGE SCALE */
+      max-width: 1800px;
+      margin: -420px auto 120px;
+      padding: 240px;
 
       border-radius: 40px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.3);
@@ -60,11 +61,11 @@
       text-align: center;
 
       position: relative;
-      z-index: 2; /* sits UNDER title slightly for overlap effect */
+      z-index: 20; /* 🔥 NOW ON TOP */
     }
 
     .purchase-container h1 {
-      font-size: 9rem; /* MASSIVE */
+      font-size: 9rem;
       margin-top: 0;
     }
 
@@ -127,10 +128,10 @@
     <a href="contact.html">Contact</a>
   </div>
 
-  <!-- TITLE -->
+  <!-- TITLE (NOW UNDER BOX) -->
   <img src="hometitle1.jpg" alt="STATIK" class="title">
 
-  <!-- PURCHASE BOX -->
+  <!-- PURCHASE BOX (NOW ABOVE EVERYTHING) -->
   <div class="purchase-container">
     <h1>Purchase STATIK Magazine</h1>
 
