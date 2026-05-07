@@ -11,7 +11,7 @@
       font-family: Arial, sans-serif;
     }
 
-    /* SECTIONS — near full screen but not locked */
+    /* SECTIONS */
     .section {
       background-color: #ff8fb1;
       margin: 90px auto;
@@ -21,7 +21,7 @@
       padding: 160px;
     }
 
-    /* HEADER — huge nav feel */
+    /* HEADER */
     .header {
       display: flex;
       justify-content: center;
@@ -36,28 +36,34 @@
       font-weight: bold;
     }
 
-    /* TITLE — ONLY CHANGE (bigger) */
+    /* TITLE — BIGGER */
     .title {
       width: 100%;
-      max-width: 2200px;
+      max-width: 2600px;
       display: block;
-      margin: 160px auto;
+      margin: 180px auto;
     }
 
-    /* MISSION — BIG HERO MOMENT */
+    /* MISSION — MOVED UP (OVERLAPS ALLOWED) */
     .mission {
       text-align: center;
       font-size: 120px;
       font-family: cursive;
       padding: 180px 100px;
+      margin-top: -120px; /* pulls it upward into title */
+      position: relative;
+      z-index: 2;
     }
 
-    /* ISSUE SECTION — cinematic spacing */
+    /* ISSUE SECTION — MOVED UP */
     .issue-section {
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 160px;
+      margin-top: -80px; /* pulls it upward */
+      position: relative;
+      z-index: 2;
     }
 
     .issue-text {
@@ -72,7 +78,7 @@
       border-radius: 25px;
     }
 
-    /* MOBILE — still readable */
+    /* MOBILE */
     @media (max-width: 900px) {
       .header {
         flex-wrap: wrap;
@@ -86,11 +92,13 @@
       .mission {
         font-size: 70px;
         padding: 90px;
+        margin-top: -40px;
       }
 
       .issue-section {
         flex-direction: column;
         text-align: center;
+        margin-top: -20px;
       }
 
       .issue-text {
