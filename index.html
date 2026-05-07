@@ -11,80 +11,81 @@
       font-family: Arial, sans-serif;
     }
 
-    /* SECTIONS — bigger, but still structured */
+    /* SECTIONS — near full screen but not locked */
     .section {
       background-color: #ff8fb1;
-      margin: 70px auto;
-      width: 95%;
-      max-width: 1600px;
-      border-radius: 40px;
-      padding: 120px;
+      margin: 90px auto;
+      width: 96%;
+      max-width: 1700px;
+      border-radius: 45px;
+      padding: 160px;
     }
 
-    /* HEADER — MUCH bigger nav */
+    /* HEADER — huge nav feel */
     .header {
       display: flex;
       justify-content: center;
-      gap: 120px;
-      border-bottom: 6px solid black;
+      gap: 140px;
+      border-bottom: 7px solid black;
     }
 
     .header a {
       text-decoration: none;
-      font-size: 60px;
+      font-size: 74px;
       color: black;
       font-weight: bold;
     }
 
-    /* TITLE — BIG hero scale */
+    /* TITLE — massive presence */
     .title {
       width: 98%;
-      max-width: 1500px;
+      max-width: 1600px;
       display: block;
-      margin: 80px auto;
+      margin: 120px auto;
     }
 
-    /* MISSION — giant centered block */
+    /* MISSION — BIG HERO MOMENT */
     .mission {
       text-align: center;
-      font-size: 96px;
+      font-size: 120px;
       font-family: cursive;
-      padding: 140px;
+      padding: 180px 100px;
     }
 
-    /* ISSUE SECTION — expanded layout */
+    /* ISSUE SECTION — cinematic spacing */
     .issue-section {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 120px;
+      gap: 160px;
     }
 
     .issue-text {
-      font-size: 110px;
+      font-size: 140px;
       font-family: cursive;
-      line-height: 1.1;
+      line-height: 1;
     }
 
     .issue-image {
-      width: 500px;
-      border: 5px solid black;
+      width: 600px;
+      border: 6px solid black;
+      border-radius: 25px;
     }
 
-    /* MOBILE (scaled properly) */
+    /* MOBILE — still readable */
     @media (max-width: 900px) {
       .header {
         flex-wrap: wrap;
-        gap: 40px;
+        gap: 50px;
       }
 
       .header a {
-        font-size: 34px;
+        font-size: 42px;
       }
 
       .mission {
-        font-size: 56px;
-        padding: 70px;
+        font-size: 70px;
+        padding: 90px;
       }
 
       .issue-section {
@@ -93,11 +94,11 @@
       }
 
       .issue-text {
-        font-size: 64px;
+        font-size: 80px;
       }
 
       .issue-image {
-        width: 80%;
+        width: 85%;
       }
     }
   </style>
