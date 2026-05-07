@@ -12,81 +12,69 @@
       color: #000;
     }
 
-    /* TITLE */
-    .title {
-      width: 85%;
-      max-width: 1100px;
-      display: block;
-      margin: 40px auto 0;
-      position: relative;
-      z-index: 1;
-    }
+    /* 🔥 HEADER (same as homepage version) */
+    .header {
+      width: 100%;
+      margin: 0;
+      background-color: #ff8fb1;
+      padding: 60px 0;
 
-    /* NAV BUTTONS */
-    .nav {
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-around;
       align-items: center;
+
+      border-bottom: 7px solid black;
+    }
+
+    .header a {
+      text-decoration: none;
+      font-size: 74px;
+      color: black;
+      font-weight: bold;
+    }
+
+    /* 🔥 TITLE — BIGGER */
+    .title {
       width: 100%;
-      max-width: 1600px;
-      margin: -500px auto 0;
-      position: relative;
-      z-index: 10;
-    }
-
-    .nav a {
-      width: 18%;
+      max-width: 2600px;
       display: block;
+      margin: 140px auto 0;
     }
 
-    .nav img {
-      width: 100%;
-      display: block;
+    /* NAV BUTTONS (removed old system so it doesn't conflict) */
+    .nav {
+      display: none;
     }
 
-    @media (max-width: 900px) {
-      .nav {
-        flex-wrap: wrap;
-        gap: 28px;
-        margin-top: -300px;
-      }
-
-      .nav a {
-        width: 48%;
-      }
-    }
-
-    /* PURCHASE BOX */
+    /* 🔥 PURCHASE BOX — MUCH BIGGER */
     .purchase-container {
       background-color: #ffc0cb;
-      max-width: 900px;
-      margin: 40px auto 60px;
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      max-width: 1300px;
+      margin: 80px auto 120px;
+      padding: 120px;
+      border-radius: 25px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
       text-align: center;
-      position: relative;
-      z-index: 5;
     }
 
     .purchase-container h1 {
-      font-size: 2.5rem;
+      font-size: 5rem; /* BIG upgrade */
       margin-top: 0;
     }
 
     .purchase-container p {
-      font-size: 1.2rem;
+      font-size: 2rem;
       line-height: 1.6;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
 
     .buy-button {
       background-color: #ff6398;
       color: #fff;
       border: none;
-      padding: 20px 30px;
-      font-size: 1.2rem;
-      border-radius: 10px;
+      padding: 25px 45px;
+      font-size: 2rem;
+      border-radius: 15px;
       cursor: pointer;
       transition: background-color 0.3s;
       text-decoration: none;
@@ -98,39 +86,46 @@
     }
 
     @media (max-width: 900px) {
+      .header a {
+        font-size: 42px;
+      }
+
+      .title {
+        margin: 100px auto 0;
+      }
+
       .purchase-container {
-        padding: 25px;
-        margin-top: 30px;
+        padding: 50px;
       }
 
       .purchase-container h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
       }
 
       .purchase-container p {
-        font-size: 1rem;
+        font-size: 1.2rem;
       }
 
       .buy-button {
+        font-size: 1.2rem;
         padding: 15px 25px;
-        font-size: 1rem;
       }
     }
   </style>
 </head>
+
 <body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <a href="index.html">Home</a>
+    <a href="purchase.html">Purchase</a>
+    <a href="submitart.html">Submit Art</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
   <!-- TITLE -->
   <img src="hometitle1.jpg" alt="STATIK" class="title">
-
-  <!-- NAV BUTTONS -->
-  <div class="nav">
-    <a href="index.html"><img src="homebutt.jpg" alt="Home"></a>
-    <a href="mission.html"><img src="missionbutt.jpg" alt="Mission"></a>
-    <a href="purchase.html"><img src="purchasebutt.jpg" alt="Purchase"></a>
-    <a href="submitart.html"><img src="submitartbutt.jpg" alt="Submit Art"></a>
-    <a href="contact.html"><img src="contactbutt.jpg" alt="Contact"></a>
-  </div>
 
   <!-- PURCHASE BOX -->
   <div class="purchase-container">
@@ -140,8 +135,7 @@
       Each copy is filled with inspiration, creativity, and all proceeds go to support children through nonprofit organizations.  
     </p>
     <p><strong>Price:</strong> $10 per magazine</p>
-    
-    <!-- Buy Now button - you can link this to PayPal, Stripe, or any future store -->
+
     <a href="#" class="buy-button">Buy Now</a>
   </div>
 
