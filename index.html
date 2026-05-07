@@ -14,7 +14,7 @@
     /* SECTIONS */
     .section {
       background-color: #ff8fb1;
-      margin: 90px auto;
+      margin: 40px auto; /* was 90px → moved EVERYTHING upward */
       width: 96%;
       max-width: 1700px;
       border-radius: 45px;
@@ -36,34 +36,29 @@
       font-weight: bold;
     }
 
-    /* TITLE — BIGGER */
+    /* TITLE — BIG */
     .title {
       width: 100%;
       max-width: 2600px;
       display: block;
-      margin: 180px auto;
+      margin: 120px auto 40px; /* pulled down less space under title */
     }
 
-    /* MISSION — MOVED UP (OVERLAPS ALLOWED) */
+    /* MISSION */
     .mission {
       text-align: center;
       font-size: 120px;
       font-family: cursive;
       padding: 180px 100px;
-      margin-top: -120px; /* pulls it upward into title */
-      position: relative;
-      z-index: 2;
     }
 
-    /* ISSUE SECTION — MOVED UP */
+    /* ISSUE SECTION */
     .issue-section {
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 160px;
-      margin-top: -80px; /* pulls it upward */
-      position: relative;
-      z-index: 2;
+      margin-top: 40px; /* keeps spacing consistent but closer overall */
     }
 
     .issue-text {
@@ -89,16 +84,18 @@
         font-size: 42px;
       }
 
+      .section {
+        margin: 30px auto;
+      }
+
       .mission {
         font-size: 70px;
         padding: 90px;
-        margin-top: -40px;
       }
 
       .issue-section {
         flex-direction: column;
         text-align: center;
-        margin-top: -20px;
       }
 
       .issue-text {
