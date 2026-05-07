@@ -12,96 +12,96 @@
       color: #000;
     }
 
-    /* TITLE */
-    .title {
-      width: 85%;
-      max-width: 1100px;
-      display: block;
-      margin: 40px auto 0;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* NAV BUTTONS */
-    .nav {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
+    /* HEADER — unified system */
+    .header {
       width: 100%;
-      max-width: 1600px;
-      margin: -500px auto 0;
+      margin: 0;
+      background-color: #ff8fb1;
+      padding: 60px 0;
+
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      border-bottom: 7px solid black;
       position: relative;
       z-index: 10;
     }
 
-    .nav a {
-      width: 18%;
-      display: block;
+    .header a {
+      text-decoration: none;
+      font-size: 74px;
+      color: black;
+      font-weight: bold;
     }
 
-    .nav img {
+    /* TITLE */
+    .title {
       width: 100%;
+      max-width: 2600px;
       display: block;
+      margin: 140px auto 0;
+      position: relative;
+      z-index: 1;
     }
 
-    @media (max-width: 900px) {
-      .nav {
-        flex-wrap: wrap;
-        gap: 28px;
-        margin-top: -300px;
-      }
-
-      .nav a {
-        width: 48%;
-      }
-    }
-
-    /* CONTACT BOX */
+    /* 🔥 CONTACT BOX — MASSIVE HERO PANEL */
     .contact-container {
       background-color: #ffc0cb;
-      max-width: 900px;
-      margin: 40px auto 60px;
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+
+      max-width: 1800px;          /* MUCH bigger */
+      margin: -180px auto 120px;  /* raised upward */
+      padding: 200px;             /* huge spacing */
+
+      border-radius: 50px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+
       text-align: center;
+
       position: relative;
       z-index: 5;
     }
 
     .contact-container h1 {
-      font-size: 2.5rem;
+      font-size: 7rem; /* HUGE */
       margin-top: 0;
     }
 
     .contact-container p {
-      font-size: 1.2rem;
+      font-size: 2.4rem;
       line-height: 1.6;
-      margin-bottom: 30px;
+      margin-bottom: 60px;
     }
 
     form {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 30px;
+      align-items: center;
     }
 
     input, textarea {
-      padding: 12px;
-      font-size: 1rem;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      width: 100%;
+      padding: 25px;
+      font-size: 1.8rem;
+
+      border-radius: 15px;
+      border: 2px solid #ccc;
+
+      width: 90%;
+      max-width: 1200px;
       box-sizing: border-box;
     }
 
+    /* 🔥 BIG BUTTON */
     button {
       background-color: #ff6398;
       color: #fff;
       border: none;
-      padding: 15px;
-      font-size: 1.2rem;
-      border-radius: 10px;
+
+      padding: 35px 70px;
+      font-size: 2.5rem;
+
+      border-radius: 20px;
       cursor: pointer;
       transition: background-color 0.3s;
     }
@@ -111,38 +111,53 @@
     }
 
     @media (max-width: 900px) {
+      .header a {
+        font-size: 42px;
+      }
+
       .contact-container {
-        padding: 25px;
-        margin-top: 30px;
+        margin: -80px auto 80px;
+        padding: 70px;
       }
 
       .contact-container h1 {
-        font-size: 2rem;
+        font-size: 3.5rem;
       }
 
       .contact-container p {
+        font-size: 1.3rem;
+      }
+
+      input, textarea {
         font-size: 1rem;
+        padding: 15px;
+      }
+
+      button {
+        font-size: 1.3rem;
+        padding: 18px 30px;
       }
     }
   </style>
 </head>
+
 <body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <a href="index.html">Home</a>
+    <a href="purchase.html">Purchase</a>
+    <a href="submitart.html">Submit Art</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
   <!-- TITLE -->
   <img src="hometitle1.jpg" alt="STATIK" class="title">
 
-  <!-- NAV BUTTONS -->
-  <div class="nav">
-    <a href="index.html"><img src="homebutt.jpg" alt="Home"></a>
-    <a href="mission.html"><img src="missionbutt.jpg" alt="Mission"></a>
-    <a href="purchase.html"><img src="purchasebutt.jpg" alt="Purchase"></a>
-    <a href="submitart.html"><img src="submitartbutt.jpg" alt="Submit Art"></a>
-    <a href="contact.html"><img src="contactbutt.jpg" alt="Contact"></a>
-  </div>
-
   <!-- CONTACT BOX -->
   <div class="contact-container">
     <h1>Contact Us</h1>
+
     <p>
       Have questions, ideas, or art to submit? Reach out to us!  
       You can email directly at <a href="mailto:veronicafridman63@gmail.com">veronicafridman63@gmail.com</a>  
