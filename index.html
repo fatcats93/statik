@@ -11,17 +11,15 @@
       font-family: Arial, sans-serif;
     }
 
-    /* SECTIONS — BIGGER + more dominant */
     .section {
       background-color: #ff8fb1;
-      margin: 20px auto;          /* tighter spacing overall */
+      margin: 20px auto;
       width: 98%;
       max-width: 1900px;
       border-radius: 55px;
       padding: 200px;
     }
 
-    /* HEADER */
     .header {
       display: flex;
       justify-content: center;
@@ -36,7 +34,7 @@
       font-weight: bold;
     }
 
-    /* TITLE — BIGGER */
+    /* TITLE — stays big */
     .title {
       width: 100%;
       max-width: 3000px;
@@ -44,14 +42,13 @@
       margin: 160px auto 0;
     }
 
-    /* THIS PULLS EVERYTHING UP HARD INTO TITLE */
+    /* 🔥 THIS IS THE KEY FIX */
     .content-shift {
-      margin-top: -320px; /* 🔥 MUCH higher overlap */
+      transform: translateY(-450px); /* pushes EVERYTHING WAY up */
       position: relative;
-      z-index: 2;
+      z-index: 2; /* ensures it overlaps title */
     }
 
-    /* MISSION — BIGGER BLOCK */
     .mission {
       text-align: center;
       font-size: 150px;
@@ -59,7 +56,6 @@
       padding: 220px 120px;
     }
 
-    /* ISSUE SECTION */
     .issue-section {
       display: flex;
       justify-content: space-between;
@@ -82,16 +78,8 @@
 
     /* MOBILE */
     @media (max-width: 900px) {
-      .header a {
-        font-size: 42px;
-      }
-
-      .section {
-        padding: 90px;
-      }
-
       .content-shift {
-        margin-top: -120px;
+        transform: translateY(-180px);
       }
 
       .mission {
@@ -121,6 +109,7 @@
 
   <img src="hometitle1.jpg" class="title">
 
+  <!-- 🔥 EVERYTHING YOU WANT MOVED UP IS HERE -->
   <div class="content-shift">
 
     <div class="section mission">
