@@ -20,16 +20,19 @@
       padding: 200px;
     }
 
-    /* 🔥 HEADER NOW FULL WIDTH */
+    /* 🔥 HEADER — full width BUT color restored */
     .header {
       width: 100%;
       max-width: none;
       margin: 0;
+
+      background-color: #ff8fb1; /* restored color */
       border-radius: 0;
+
       padding: 60px 0;
 
       display: flex;
-      justify-content: space-around; /* spreads across page */
+      justify-content: space-around;
       align-items: center;
 
       border-bottom: 7px solid black;
@@ -37,7 +40,7 @@
 
     .header a {
       text-decoration: none;
-      font-size: 74px; /* unchanged */
+      font-size: 74px;
       color: black;
       font-weight: bold;
     }
@@ -84,7 +87,6 @@
 
     @media (max-width: 900px) {
       .header {
-        justify-content: space-around;
         padding: 40px 0;
       }
 
