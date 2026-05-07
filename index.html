@@ -34,7 +34,7 @@
       font-weight: bold;
     }
 
-    /* TITLE — stays big */
+    /* TITLE */
     .title {
       width: 100%;
       max-width: 3000px;
@@ -42,11 +42,11 @@
       margin: 160px auto 0;
     }
 
-    /* 🔥 THIS IS THE KEY FIX */
+    /* 🔥 MOVED UP (2x stronger) */
     .content-shift {
-      transform: translateY(-450px); /* pushes EVERYTHING WAY up */
+      transform: translateY(-900px);
       position: relative;
-      z-index: 2; /* ensures it overlaps title */
+      z-index: 2;
     }
 
     .mission {
@@ -76,10 +76,13 @@
       border-radius: 30px;
     }
 
-    /* MOBILE */
     @media (max-width: 900px) {
+      .header a {
+        font-size: 42px;
+      }
+
       .content-shift {
-        transform: translateY(-180px);
+        transform: translateY(-360px);
       }
 
       .mission {
@@ -109,7 +112,6 @@
 
   <img src="hometitle1.jpg" class="title">
 
-  <!-- 🔥 EVERYTHING YOU WANT MOVED UP IS HERE -->
   <div class="content-shift">
 
     <div class="section mission">
