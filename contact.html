@@ -12,7 +12,7 @@
       color: #000;
     }
 
-    /* HEADER — unified system */
+    /* HEADER */
     .header {
       width: 100%;
       margin: 0;
@@ -45,63 +45,62 @@
       z-index: 1;
     }
 
-    /* 🔥 CONTACT BOX — MASSIVE HERO PANEL */
+    /* 🔥 CONTACT BOX — EXTRA LARGE + MUCH HIGHER */
     .contact-container {
       background-color: #ffc0cb;
 
-      max-width: 1800px;          /* MUCH bigger */
-      margin: -180px auto 120px;  /* raised upward */
-      padding: 200px;             /* huge spacing */
+      max-width: 2000px;          /* BIGGER */
+      margin: -450px auto 120px;  /* 🔥 MUCH higher (strong overlap) */
+      padding: 260px;             /* HUGE scale */
 
-      border-radius: 50px;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+      border-radius: 60px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
 
       text-align: center;
 
       position: relative;
-      z-index: 5;
+      z-index: 20; /* ON TOP of title */
     }
 
     .contact-container h1 {
-      font-size: 7rem; /* HUGE */
+      font-size: 9rem; /* VERY LARGE */
       margin-top: 0;
     }
 
     .contact-container p {
-      font-size: 2.4rem;
+      font-size: 3rem;
       line-height: 1.6;
-      margin-bottom: 60px;
+      margin-bottom: 70px;
     }
 
     form {
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      gap: 40px;
       align-items: center;
     }
 
     input, textarea {
-      padding: 25px;
-      font-size: 1.8rem;
+      padding: 30px;
+      font-size: 2rem;
 
-      border-radius: 15px;
+      border-radius: 18px;
       border: 2px solid #ccc;
 
-      width: 90%;
-      max-width: 1200px;
+      width: 92%;
+      max-width: 1400px;
       box-sizing: border-box;
     }
 
-    /* 🔥 BIG BUTTON */
     button {
       background-color: #ff6398;
       color: #fff;
       border: none;
 
-      padding: 35px 70px;
-      font-size: 2.5rem;
+      padding: 45px 90px;
+      font-size: 3rem;
 
-      border-radius: 20px;
+      border-radius: 25px;
       cursor: pointer;
       transition: background-color 0.3s;
     }
@@ -116,26 +115,26 @@
       }
 
       .contact-container {
-        margin: -80px auto 80px;
-        padding: 70px;
+        margin: -180px auto 80px;
+        padding: 80px;
       }
 
       .contact-container h1 {
-        font-size: 3.5rem;
+        font-size: 4rem;
       }
 
       .contact-container p {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
       }
 
       input, textarea {
-        font-size: 1rem;
-        padding: 15px;
+        font-size: 1.2rem;
+        padding: 18px;
       }
 
       button {
-        font-size: 1.3rem;
-        padding: 18px 30px;
+        font-size: 1.4rem;
+        padding: 20px 35px;
       }
     }
   </style>
