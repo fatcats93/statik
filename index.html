@@ -14,7 +14,7 @@
     /* SECTIONS */
     .section {
       background-color: #ff8fb1;
-      margin: 40px auto; /* was 90px → moved EVERYTHING upward */
+      margin: 40px auto;
       width: 96%;
       max-width: 1700px;
       border-radius: 45px;
@@ -36,12 +36,19 @@
       font-weight: bold;
     }
 
-    /* TITLE — BIG */
+    /* TITLE — BIGGER */
     .title {
       width: 100%;
-      max-width: 2600px;
+      max-width: 2800px;
       display: block;
-      margin: 120px auto 40px; /* pulled down less space under title */
+      margin: 160px auto 0;
+    }
+
+    /* WRAPPER SHIFT — moves BOTH sections up together */
+    .content-shift {
+      margin-top: -180px; /* this is the key overlap control */
+      position: relative;
+      z-index: 2;
     }
 
     /* MISSION */
@@ -58,7 +65,7 @@
       justify-content: space-between;
       align-items: center;
       gap: 160px;
-      margin-top: 40px; /* keeps spacing consistent but closer overall */
+      margin-top: 40px; /* keeps internal spacing intact */
     }
 
     .issue-text {
@@ -84,8 +91,12 @@
         font-size: 42px;
       }
 
-      .section {
-        margin: 30px auto;
+      .title {
+        max-width: 1600px;
+      }
+
+      .content-shift {
+        margin-top: -80px;
       }
 
       .mission {
@@ -118,18 +129,24 @@
     <a href="contact.html">Contact</a>
   </div>
 
+  <!-- BIG TITLE -->
   <img src="hometitle1.jpg" class="title">
 
-  <div class="section mission">
-    Mission Statement
-  </div>
+  <!-- THIS BLOCK MOVES UP INTO TITLE -->
+  <div class="content-shift">
 
-  <div class="section issue-section">
-    <div class="issue-text">
-      First Issue Ready!
+    <div class="section mission">
+      Mission Statement
     </div>
 
-    <img src="statiktitle.png" class="issue-image">
+    <div class="section issue-section">
+      <div class="issue-text">
+        First Issue Ready!
+      </div>
+
+      <img src="statiktitle.png" class="issue-image">
+    </div>
+
   </div>
 
 </body>
