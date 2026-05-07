@@ -11,80 +11,88 @@
       font-family: Arial, sans-serif;
     }
 
-    /* SECTIONS — more “full-page flow” style */
+    /* FULL SCREEN SECTIONS */
     .section {
       background-color: #ff8fb1;
-      margin: 50px auto;
       width: 94%;
       max-width: 1400px;
-      border-radius: 35px;
-      padding: 80px;
+      margin: 80px auto;
+      border-radius: 40px;
+      padding: 120px;
     }
 
-    /* HEADER */
+    /* HEADER (bigger + more spaced) */
     .header {
       display: flex;
       justify-content: center;
-      gap: 70px;
-      border-bottom: 4px solid black;
-      padding-bottom: 20px;
+      gap: 100px;
+      border-bottom: 5px solid black;
+      padding-bottom: 30px;
     }
 
     .header a {
       text-decoration: none;
-      font-size: 38px;
+      font-size: 52px;
       color: black;
       font-weight: bold;
     }
 
-    /* TITLE */
+    /* HERO TITLE — BIG BILLBOARD STYLE */
     .title {
-      width: 92%;
-      max-width: 1200px;
+      width: 95%;
+      max-width: 1300px;
       display: block;
-      margin: 40px auto 70px;
+      margin: 100px auto;
     }
 
-    /* MISSION — big hero feel */
+    /* MISSION = FULL SCREEN HERO SECTION */
     .mission {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      font-size: 56px;
+
+      font-size: 88px;
       font-family: cursive;
-      padding: 110px 70px;
+      padding: 80px;
     }
 
-    /* ISSUE SECTION */
+    /* ISSUE SECTION = ALSO HUGE */
     .issue-section {
+      min-height: 100vh;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 60px;
+      justify-content: space-between;
+      gap: 100px;
     }
 
     .issue-text {
-      font-size: 72px;
+      font-size: 96px;
       font-family: cursive;
+      line-height: 1.1;
     }
 
     .issue-image {
-      width: 320px;
-      border: 3px solid black;
+      width: 420px;
+      border: 4px solid black;
+      border-radius: 20px;
     }
 
     /* MOBILE */
     @media (max-width: 900px) {
       .header {
         flex-wrap: wrap;
-        gap: 25px;
+        gap: 30px;
       }
 
       .header a {
-        font-size: 24px;
+        font-size: 30px;
       }
 
       .mission {
-        font-size: 36px;
-        padding: 60px 30px;
+        font-size: 48px;
+        min-height: 70vh;
       }
 
       .issue-section {
@@ -93,11 +101,11 @@
       }
 
       .issue-text {
-        font-size: 46px;
+        font-size: 52px;
       }
 
       .issue-image {
-        width: 70%;
+        width: 80%;
       }
     }
   </style>
@@ -105,6 +113,7 @@
 
 <body>
 
+  <!-- HEADER -->
   <div class="section header">
     <a href="index.html">Home</a>
     <a href="purchase.html">Purchase</a>
@@ -112,12 +121,15 @@
     <a href="contact.html">Contact</a>
   </div>
 
+  <!-- HERO -->
   <img src="hometitle1.jpg" class="title">
 
+  <!-- FULL SCREEN MISSION -->
   <div class="section mission">
     Mission Statement
   </div>
 
+  <!-- FULL SCREEN FEATURE -->
   <div class="section issue-section">
     <div class="issue-text">
       First Issue Ready!
