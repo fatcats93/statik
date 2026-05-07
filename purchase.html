@@ -12,7 +12,7 @@
       color: #000;
     }
 
-    /* HEADER — same as homepage */
+    /* HEADER */
     .header {
       width: 100%;
       margin: 0;
@@ -24,6 +24,9 @@
       align-items: center;
 
       border-bottom: 7px solid black;
+
+      position: relative;
+      z-index: 10;
     }
 
     .header a {
@@ -33,51 +36,51 @@
       font-weight: bold;
     }
 
-    /* TITLE — BIG */
+    /* TITLE — stays above everything */
     .title {
       width: 100%;
       max-width: 2600px;
       display: block;
       margin: 140px auto 0;
       position: relative;
-      z-index: 1;
+      z-index: 5;
     }
 
-    /* 🔥 PURCHASE BOX — MASSIVE + OVERLAPPING */
+    /* 🔥 PURCHASE BOX — EVEN BIGGER + MUCH HIGHER */
     .purchase-container {
       background-color: #ffc0cb;
 
-      max-width: 1600px;   /* BIGGER */
-      margin: -220px auto 120px; /* 🔥 pulls it UP into title */
-      padding: 180px;      /* HUGE internal spacing */
+      max-width: 1800px;        /* BIGGER */
+      margin: -420px auto 120px; /* 🔥 VERY HIGH OVERLAP */
+      padding: 240px;           /* HUGE SCALE */
 
-      border-radius: 35px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      border-radius: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 
       text-align: center;
 
       position: relative;
-      z-index: 5; /* ensures it sits ON TOP of title */
+      z-index: 2; /* sits UNDER title slightly for overlap effect */
     }
 
     .purchase-container h1 {
-      font-size: 7rem; /* HUGE HUGE */
+      font-size: 9rem; /* MASSIVE */
       margin-top: 0;
     }
 
     .purchase-container p {
-      font-size: 2.6rem;
+      font-size: 3rem;
       line-height: 1.6;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
     }
 
     .buy-button {
       background-color: #ff6398;
       color: #fff;
       border: none;
-      padding: 35px 60px;
-      font-size: 2.4rem;
-      border-radius: 18px;
+      padding: 45px 80px;
+      font-size: 2.8rem;
+      border-radius: 22px;
       cursor: pointer;
       transition: background-color 0.3s;
       text-decoration: none;
@@ -94,21 +97,21 @@
       }
 
       .purchase-container {
-        margin: -100px auto 80px;
-        padding: 60px;
+        margin: -180px auto 80px;
+        padding: 80px;
       }
 
       .purchase-container h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
       }
 
       .purchase-container p {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
       }
 
       .buy-button {
-        font-size: 1.2rem;
-        padding: 18px 30px;
+        font-size: 1.4rem;
+        padding: 20px 35px;
       }
     }
   </style>
@@ -127,7 +130,7 @@
   <!-- TITLE -->
   <img src="hometitle1.jpg" alt="STATIK" class="title">
 
-  <!-- PURCHASE BOX (NOW OVERLAPPING + HUGE) -->
+  <!-- PURCHASE BOX -->
   <div class="purchase-container">
     <h1>Purchase STATIK Magazine</h1>
 
