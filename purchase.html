@@ -12,7 +12,7 @@
       color: #000;
     }
 
-    /* 🔥 HEADER (same as homepage version) */
+    /* HEADER — same as homepage */
     .header {
       width: 100%;
       margin: 0;
@@ -33,48 +33,51 @@
       font-weight: bold;
     }
 
-    /* 🔥 TITLE — BIGGER */
+    /* TITLE — BIG */
     .title {
       width: 100%;
       max-width: 2600px;
       display: block;
       margin: 140px auto 0;
+      position: relative;
+      z-index: 1;
     }
 
-    /* NAV BUTTONS (removed old system so it doesn't conflict) */
-    .nav {
-      display: none;
-    }
-
-    /* 🔥 PURCHASE BOX — MUCH BIGGER */
+    /* 🔥 PURCHASE BOX — MASSIVE + OVERLAPPING */
     .purchase-container {
       background-color: #ffc0cb;
-      max-width: 1300px;
-      margin: 80px auto 120px;
-      padding: 120px;
-      border-radius: 25px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+
+      max-width: 1600px;   /* BIGGER */
+      margin: -220px auto 120px; /* 🔥 pulls it UP into title */
+      padding: 180px;      /* HUGE internal spacing */
+
+      border-radius: 35px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+
       text-align: center;
+
+      position: relative;
+      z-index: 5; /* ensures it sits ON TOP of title */
     }
 
     .purchase-container h1 {
-      font-size: 5rem; /* BIG upgrade */
+      font-size: 7rem; /* HUGE HUGE */
       margin-top: 0;
     }
 
     .purchase-container p {
-      font-size: 2rem;
+      font-size: 2.6rem;
       line-height: 1.6;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
     }
 
     .buy-button {
       background-color: #ff6398;
       color: #fff;
       border: none;
-      padding: 25px 45px;
-      font-size: 2rem;
-      border-radius: 15px;
+      padding: 35px 60px;
+      font-size: 2.4rem;
+      border-radius: 18px;
       cursor: pointer;
       transition: background-color 0.3s;
       text-decoration: none;
@@ -90,25 +93,22 @@
         font-size: 42px;
       }
 
-      .title {
-        margin: 100px auto 0;
-      }
-
       .purchase-container {
-        padding: 50px;
+        margin: -100px auto 80px;
+        padding: 60px;
       }
 
       .purchase-container h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
       }
 
       .purchase-container p {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
       }
 
       .buy-button {
         font-size: 1.2rem;
-        padding: 15px 25px;
+        padding: 18px 30px;
       }
     }
   </style>
@@ -127,13 +127,15 @@
   <!-- TITLE -->
   <img src="hometitle1.jpg" alt="STATIK" class="title">
 
-  <!-- PURCHASE BOX -->
+  <!-- PURCHASE BOX (NOW OVERLAPPING + HUGE) -->
   <div class="purchase-container">
     <h1>Purchase STATIK Magazine</h1>
+
     <p>
       Thank you for supporting young artists! STATIK Magazine showcases incredible artwork and stories from talented youth.  
       Each copy is filled with inspiration, creativity, and all proceeds go to support children through nonprofit organizations.  
     </p>
+
     <p><strong>Price:</strong> $10 per magazine</p>
 
     <a href="#" class="buy-button">Buy Now</a>
