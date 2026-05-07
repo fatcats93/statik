@@ -35,7 +35,7 @@
       font-weight: bold;
     }
 
-    /* TITLE (BEHIND) */
+    /* TITLE */
     .title {
       width: 100%;
       max-width: 2600px;
@@ -43,46 +43,49 @@
       margin: 140px auto 0;
 
       position: relative;
-      z-index: 1; /* stays behind box */
+      z-index: 1;
     }
 
-    /* 🔥 SUBMIT BOX — HIGHER + ON TOP */
+    /* 🔥 SUBMIT BOX — MUCH BIGGER + HIGHER */
     .submitart-container {
       background-color: #ffc0cb;
 
-      max-width: 1600px;
+      max-width: 1900px;          /* bigger */
+      margin: -700px auto 120px;  /* 🔥 VERY HIGH OVERLAP */
+      padding: 240px;             /* HUGE internal space */
 
-      margin: -520px auto 120px; /* 🔥 MUCH higher now */
-      padding: 160px;
-
-      border-radius: 40px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      border-radius: 50px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.3);
 
       text-align: center;
 
       position: relative;
-      z-index: 20; /* 🔥 FORCES IT ON TOP OF TITLE */
+      z-index: 20; /* ON TOP of title */
     }
 
     .submitart-container h1 {
-      font-size: 6rem;
+      font-size: 8rem;
       margin-top: 0;
     }
 
     .submitart-container p {
-      font-size: 2.2rem;
+      font-size: 2.8rem;
       line-height: 1.6;
-      margin-bottom: 50px;
+      margin-bottom: 70px;
     }
 
+    /* 🔥 BIG BUTTON */
     .submit-button {
       background-color: #ff6398;
       color: #fff;
       border: none;
-      padding: 30px 55px;
-      font-size: 2rem;
-      border-radius: 15px;
+
+      padding: 50px 90px;   /* HUGE button */
+      font-size: 3rem;      /* BIG TEXT */
+
+      border-radius: 25px;
       cursor: pointer;
+
       transition: background-color 0.3s;
       text-decoration: none;
       display: inline-block;
@@ -98,21 +101,21 @@
       }
 
       .submitart-container {
-        margin: -220px auto 80px;
-        padding: 60px;
+        margin: -280px auto 80px;
+        padding: 70px;
       }
 
       .submitart-container h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
       }
 
       .submitart-container p {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
       }
 
       .submit-button {
-        font-size: 1.2rem;
-        padding: 18px 30px;
+        font-size: 1.5rem;
+        padding: 20px 35px;
       }
     }
   </style>
@@ -131,7 +134,7 @@
   <!-- TITLE -->
   <img src="hometitle1.jpg" alt="STATIK" class="title">
 
-  <!-- SUBMIT ART BOX (NOW HIGH + ON TOP) -->
+  <!-- SUBMIT ART BOX -->
   <div class="submitart-container">
     <h1>Submit Your Art</h1>
 
