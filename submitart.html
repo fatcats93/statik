@@ -41,18 +41,17 @@
       max-width: 2600px;
       display: block;
       margin: 140px auto 0;
-
       position: relative;
       z-index: 1;
     }
 
-    /* 🔥 SUBMIT BOX — MUCH BIGGER + HIGHER */
+    /* SUBMIT BOX — BIG + HIGH */
     .submitart-container {
       background-color: #ffc0cb;
 
-      max-width: 1900px;          /* bigger */
-      margin: -700px auto 120px;  /* 🔥 VERY HIGH OVERLAP */
-      padding: 240px;             /* HUGE internal space */
+      max-width: 1900px;
+      margin: -700px auto 120px;
+      padding: 240px;
 
       border-radius: 50px;
       box-shadow: 0 12px 35px rgba(0,0,0,0.3);
@@ -60,7 +59,7 @@
       text-align: center;
 
       position: relative;
-      z-index: 20; /* ON TOP of title */
+      z-index: 20;
     }
 
     .submitart-container h1 {
@@ -71,17 +70,17 @@
     .submitart-container p {
       font-size: 2.8rem;
       line-height: 1.6;
-      margin-bottom: 70px;
+      margin-bottom: 30px; /* tighter so button moves up */
     }
 
-    /* 🔥 BIG BUTTON */
+    /* 🔥 BIG BUTTON — NEAR BOX EDGE */
     .submit-button {
       background-color: #ff6398;
       color: #fff;
       border: none;
 
-      padding: 50px 90px;   /* HUGE button */
-      font-size: 3rem;      /* BIG TEXT */
+      padding: 60px 110px; /* BIGGER */
+      font-size: 3.4rem;   /* BIG TEXT */
 
       border-radius: 25px;
       cursor: pointer;
@@ -89,6 +88,8 @@
       transition: background-color 0.3s;
       text-decoration: none;
       display: inline-block;
+
+      margin-top: 10px; /* pulls it closer to text/box bottom */
     }
 
     .submit-button:hover {
@@ -114,8 +115,8 @@
       }
 
       .submit-button {
-        font-size: 1.5rem;
-        padding: 20px 35px;
+        font-size: 1.6rem;
+        padding: 25px 40px;
       }
     }
   </style>
