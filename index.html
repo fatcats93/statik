@@ -42,12 +42,12 @@
 
     /* 🔥 EVERYTHING HIGHER */
     .content-shift {
-      margin-top: -800px; /* pushed EVEN higher */
+      margin-top: -900px; /* higher again */
       position: relative;
       z-index: 20;
     }
 
-    /* ARTMAG (ABOVE MISSION, SAME POSITION STYLE) */
+    /* ARTMAG */
     .artmag {
       width: 70%;
       display: block;
@@ -76,29 +76,32 @@
     .issue-section {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: stretch;
       gap: 120px;
       padding: 120px;
     }
 
-    /* SOONSTAR FILLS LEFT BOX */
+    /* LEFT IMAGE FULL FILL */
+    .issue-left {
+      width: 900px;
+      height: 650px;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+    }
+
     .issue-left img {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* 🔥 fills space properly */
+      object-fit: cover; /* fills box completely */
       display: block;
     }
 
-    .issue-left {
-      width: 900px;
-      height: 600px; /* gives it full box feel */
-      overflow: hidden;
-    }
-
-    /* RIGHT SIDE */
+    /* RIGHT IMAGE */
     .issue-right {
       position: relative;
       width: 900px;
+      z-index: 2;
     }
 
     .issue-right img {
@@ -106,9 +109,11 @@
       display: block;
       border: 8px solid black;
       border-radius: 20px;
+      position: relative;
+      z-index: 1;
     }
 
-    /* 🔥 BANNER (WIDER + BORDER) */
+    /* 🔥 BIGGER VERTICAL + TEXT BANNER */
     .issue-banner {
       position: absolute;
       top: 50%;
@@ -116,16 +121,18 @@
       transform: translate(-50%, -50%);
 
       background-color: rgba(255, 143, 177, 0.95);
-      padding: 50px 70px;
 
-      width: 110%; /* wider than image */
-      text-align: center;
+      padding: 80px 90px; /* 🔥 taller vertically */
+      width: 120%;
 
-      border: 5px solid black; /* 🔥 requested border */
+      border: 6px solid black;
       border-radius: 25px;
 
-      font-size: 52px;
+      font-size: 68px; /* 🔥 bigger text */
       font-weight: bold;
+      text-align: center;
+
+      z-index: 5;
     }
 
     @media (max-width: 900px) {
@@ -158,7 +165,8 @@
       }
 
       .issue-banner {
-        font-size: 28px;
+        font-size: 30px;
+        padding: 30px;
         width: 100%;
       }
     }
@@ -180,7 +188,7 @@
 
   <div class="content-shift">
 
-    <!-- ARTMAG (ABOVE MISSION) -->
+    <!-- ARTMAG -->
     <img src="artmag.jpeg" class="artmag">
 
     <!-- MISSION -->
