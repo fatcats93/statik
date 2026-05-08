@@ -40,33 +40,36 @@
       margin: 160px auto 0;
     }
 
-    /* ARTMAG (keep high if you still want it) */
+    /* ARTMAG (still high if you want it) */
     .artmag {
       width: 65%;
       display: block;
       margin: -500px auto 40px;
-      position: relative;
-      z-index: 5;
     }
 
     /* ABOUT */
     .about-img {
       width: 70%;
       display: block;
-      margin: 80px auto 40px;
+      margin: 60px auto 20px;
     }
 
-    /* BOXES */
+    /* MOVE EVERYTHING HIGHER */
+    .content-shift {
+      margin-top: -250px; /* 🔥 pushes ALL boxes up */
+    }
+
+    /* WIDE BOXES (RESTORED STYLE) */
     .section {
       background-color: #ffc0cb;
       margin: 20px auto;
       width: 98%;
-      max-width: 2200px; /* 🔥 WIDER FOR TEXT */
+      max-width: 1900px;
       border-radius: 55px;
       padding: 200px;
     }
 
-    /* MISSION (kept large style) */
+    /* MISSION (back to original scale feel) */
     .mission {
       text-align: center;
       font-size: 150px;
@@ -74,28 +77,32 @@
       padding: 220px 120px;
     }
 
-    /* FIRST ISSUE BOX */
+    /* FIRST ISSUE LAYOUT */
     .issue-section {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
+      gap: 120px;
     }
 
-    .issue-wrapper {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 40px;
-    }
-
-    .issue-wrapper img {
-      width: 700px;
+    .issue-left img {
+      width: 650px;
       display: block;
       border: none;
     }
 
-    /* BANNER OVER TOP IMAGE */
+    .issue-right {
+      position: relative;
+      width: 650px;
+    }
+
+    .issue-right img {
+      width: 100%;
+      display: block;
+      border: none;
+    }
+
+    /* BANNER ON TOP OF RIGHT IMAGE */
     .issue-banner {
       position: absolute;
       top: 20px;
@@ -103,11 +110,13 @@
       transform: translateX(-50%);
 
       background-color: rgba(255, 143, 177, 0.95);
-      padding: 20px 40px;
+      padding: 20px 30px;
       border-radius: 20px;
 
-      font-size: 40px;
+      font-size: 36px;
       font-weight: bold;
+      text-align: center;
+      width: 90%;
     }
 
     @media (max-width: 900px) {
@@ -115,18 +124,26 @@
         font-size: 42px;
       }
 
-      .mission {
-        font-size: 80px;
-        padding: 100px;
+      .content-shift {
+        margin-top: -120px;
       }
 
       .section {
         padding: 80px;
-        max-width: 95%;
       }
 
-      .issue-wrapper img {
-        width: 85%;
+      .issue-section {
+        flex-direction: column;
+      }
+
+      .issue-left img,
+      .issue-right {
+        width: 90%;
+      }
+
+      .mission {
+        font-size: 70px;
+        padding: 100px;
       }
     }
   </style>
@@ -151,22 +168,32 @@
   <!-- ABOUT -->
   <img src="aboutus.jpeg" class="about-img">
 
-  <!-- MISSION (WIDER BOX FIXED) -->
-  <div class="section mission">
-    STATIK is a youth-run magazine featuring artwork from young artists, including organizations supporting children in underserved areas. We curate and design each issue to showcase their artwork. All profits from magazine sales are split and donated back to participating organizations.
-  </div>
+  <!-- EVERYTHING MOVES HIGHER -->
+  <div class="content-shift">
 
-  <!-- FIRST ISSUE BOX -->
-  <div class="section issue-section">
+    <!-- MISSION -->
+    <div class="section mission">
+      STATIK is a youth-run magazine featuring artwork from young artists, including organizations supporting children in underserved areas. We curate and design each issue to showcase their artwork. All profits from magazine sales are split and donated back to participating organizations.
+    </div>
 
-    <div class="issue-wrapper">
+    <!-- FIRST ISSUE -->
+    <div class="section issue-section">
 
-      <!-- BANNER -->
-      <div class="issue-banner">First Issue Coming This Summer</div>
+      <!-- LEFT IMAGE -->
+      <div class="issue-left">
+        <img src="soonstar.jpeg">
+      </div>
 
-      <!-- BOTH IMAGES INSIDE BOX -->
-      <img src="soonstar.jpeg" alt="Soon Star">
-      <img src="statiktitle.png" alt="Statik Title">
+      <!-- RIGHT IMAGE + BANNER -->
+      <div class="issue-right">
+
+        <div class="issue-banner">
+          First Issue Coming This Summer
+        </div>
+
+        <img src="statiktitle.png">
+
+      </div>
 
     </div>
 
