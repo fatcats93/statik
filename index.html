@@ -37,88 +37,74 @@
       width: 100%;
       max-width: 3000px;
       display: block;
-      margin: 120px auto 0;
+      margin: 160px auto 0;
       position: relative;
       z-index: 1;
     }
 
-    /* OVERLAP IMAGE (ARTMAG) */
+    /* ART MAG — HIGH OVERLAP */
     .artmag {
-      width: 55%;
+      width: 65%;
       display: block;
-      margin: -180px auto 40px;
+      margin: -300px auto 40px; /* 🔥 higher overlap */
       position: relative;
       z-index: 5;
-      border-radius: 20px;
     }
 
-    /* ABOUT SECTION */
-    .about {
-      background-color: #ffc0cb;
-      width: 92%;
-      max-width: 1400px;
-
-      margin: 40px auto;
-      padding: 80px;
-
-      border-radius: 40px;
-      text-align: center;
-
-      font-size: 40px;
+    /* ABOUT IMAGE */
+    .about-img {
+      width: 70%;
+      display: block;
+      margin: 80px auto 40px;
+      position: relative;
+      z-index: 3;
     }
 
-    /* MISSION + ISSUE BOXES */
+    /* SECTIONS */
     .section {
       background-color: #ffc0cb;
-      width: 92%;
-      max-width: 1400px;
-
+      width: 98%;
+      max-width: 1900px;
       margin: 40px auto;
-      padding: 80px;
-
-      border-radius: 40px;
+      padding: 200px;
+      border-radius: 55px;
     }
 
     .mission {
-      font-size: 36px;
-      line-height: 1.6;
+      font-size: 120px;
+      font-family: cursive;
       text-align: center;
     }
 
     .issue-section {
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    .issue-image {
-      width: 60%;
-      border-radius: 20px;
-      margin-top: 20px;
-    }
-
-    /* BANNER OVER IMAGE */
-    .banner {
+    /* ISSUE IMAGE + BANNER */
+    .issue-wrapper {
       position: relative;
       display: inline-block;
-      width: 100%;
-      text-align: center;
     }
 
-    .banner img {
-      width: 60%;
-      border-radius: 20px;
+    .issue-wrapper img {
+      width: 700px;
+      border: 6px solid black;
+      border-radius: 30px;
     }
 
-    .banner-text {
+    .issue-banner {
       position: absolute;
-      bottom: 10%;
+      top: 20px;
       left: 50%;
       transform: translateX(-50%);
 
-      background-color: rgba(255, 143, 177, 0.9);
+      background-color: rgba(255, 143, 177, 0.95);
       padding: 20px 40px;
       border-radius: 20px;
 
-      font-size: 32px;
+      font-size: 40px;
       font-weight: bold;
     }
 
@@ -127,19 +113,15 @@
         font-size: 42px;
       }
 
-      .banner img,
-      .issue-image,
-      .artmag {
-        width: 85%;
+      .mission {
+        font-size: 60px;
+        padding: 100px;
       }
 
-      .about,
-      .section {
-        padding: 40px;
-        font-size: 20px;
+      .issue-wrapper img {
+        width: 90%;
       }
     }
-
   </style>
 </head>
 
@@ -156,25 +138,23 @@
   <!-- TITLE -->
   <img src="hometitle1.jpg" class="title">
 
-  <!-- ARTMAG OVERLAPPING TITLE -->
+  <!-- ART MAG (OVERLAPS TITLE) -->
   <img src="artmag.jpeg" class="artmag">
 
-  <!-- ABOUT US (BEFORE MISSION) -->
-  <div class="about">
-    About Us: STATIK is a youth-run creative magazine platform centered around showcasing young artists and supporting community-driven art initiatives.
-  </div>
+  <!-- ABOUT US (ABOVE MISSION) -->
+  <img src="aboutus.jpeg" class="about-img">
 
   <!-- MISSION -->
   <div class="section mission">
     STATIK is a youth-run magazine featuring artwork from young artists, including organizations supporting children in underserved areas. We curate and design each issue to showcase their artwork. All profits from magazine sales are split and donated back to participating organizations.
   </div>
 
-  <!-- FIRST ISSUE BOX -->
+  <!-- FIRST ISSUE -->
   <div class="section issue-section">
 
-    <div class="banner">
-      <img src="soon star.jpeg" alt="Soon Star">
-      <div class="banner-text">First Issue Coming This Summer</div>
+    <div class="issue-wrapper">
+      <img src="soonstar.jpeg" alt="Soon Star">
+      <div class="issue-banner">First Issue Coming This Summer</div>
     </div>
 
   </div>
