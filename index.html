@@ -38,51 +38,49 @@
       max-width: 3000px;
       display: block;
       margin: 160px auto 0;
-      position: relative;
-      z-index: 1;
     }
 
-    /* ART MAG — HIGH OVERLAP */
+    /* 🔥 ARTMAG — WAY HIGHER OVERLAP */
     .artmag {
       width: 65%;
       display: block;
-      margin: -300px auto 40px; /* 🔥 higher overlap */
+      margin: -600px auto 40px; /* 🔥 MUCH higher */
       position: relative;
       z-index: 5;
     }
 
-    /* ABOUT IMAGE */
+    /* ABOUT IMAGE (unchanged placement idea) */
     .about-img {
       width: 70%;
       display: block;
       margin: 80px auto 40px;
-      position: relative;
-      z-index: 3;
     }
 
-    /* SECTIONS */
+    /* BOXES */
     .section {
       background-color: #ffc0cb;
+      margin: 20px auto;
       width: 98%;
       max-width: 1900px;
-      margin: 40px auto;
-      padding: 200px;
       border-radius: 55px;
+      padding: 200px;
     }
 
+    /* 🔥 MISSION — BACK TO ORIGINAL STYLE */
     .mission {
-      font-size: 120px;
-      font-family: cursive;
       text-align: center;
+      font-size: 150px;
+      font-family: cursive;
+      padding: 220px 120px;
     }
 
+    /* FIRST ISSUE (ORIGINAL STRUCTURE RESTORED) */
     .issue-section {
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
-    /* ISSUE IMAGE + BANNER */
     .issue-wrapper {
       position: relative;
       display: inline-block;
@@ -90,10 +88,10 @@
 
     .issue-wrapper img {
       width: 700px;
-      border: 6px solid black;
-      border-radius: 30px;
+      display: block; /* no border */
     }
 
+    /* BANNER OVER IMAGE */
     .issue-banner {
       position: absolute;
       top: 20px;
@@ -114,12 +112,16 @@
       }
 
       .mission {
-        font-size: 60px;
+        font-size: 80px;
         padding: 100px;
       }
 
+      .artmag {
+        margin: -250px auto 40px;
+      }
+
       .issue-wrapper img {
-        width: 90%;
+        width: 85%;
       }
     }
   </style>
@@ -138,18 +140,18 @@
   <!-- TITLE -->
   <img src="hometitle1.jpg" class="title">
 
-  <!-- ART MAG (OVERLAPS TITLE) -->
+  <!-- ARTMAG (VERY HIGH OVERLAP) -->
   <img src="artmag.jpeg" class="artmag">
 
-  <!-- ABOUT US (ABOVE MISSION) -->
+  <!-- ABOUT -->
   <img src="aboutus.jpeg" class="about-img">
 
-  <!-- MISSION -->
+  <!-- MISSION (RESTORED ORIGINAL STYLE) -->
   <div class="section mission">
     STATIK is a youth-run magazine featuring artwork from young artists, including organizations supporting children in underserved areas. We curate and design each issue to showcase their artwork. All profits from magazine sales are split and donated back to participating organizations.
   </div>
 
-  <!-- FIRST ISSUE -->
+  <!-- FIRST ISSUE (RESTORED STYLE + BANNER) -->
   <div class="section issue-section">
 
     <div class="issue-wrapper">
