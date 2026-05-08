@@ -38,23 +38,30 @@
       max-width: 3000px;
       display: block;
       margin: 160px auto 0;
-      position: relative;
-      z-index: 1;
     }
 
-    /* EVERYTHING MOVED HIGHER */
+    /* MOVE CONTENT HIGHER */
     .content-shift {
-      margin-top: -650px; /* 🔥 WAY HIGHER */
+      margin-top: -650px;
       position: relative;
       z-index: 20;
     }
 
-    /* WIDER MISSION BOX */
+    /* ARTMAG (NOW ABOVE MISSION) */
+    .artmag {
+      width: 70%;
+      display: block;
+      margin: 40px auto 40px;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* WIDER BOXES */
     .section {
       background-color: #ffc0cb;
       margin: 20px auto;
       width: 98%;
-      max-width: 2600px; /* 🔥 wider */
+      max-width: 2600px;
       border-radius: 55px;
       padding: 180px;
     }
@@ -67,12 +74,7 @@
       padding: 200px 120px;
     }
 
-    /* SPACE BETWEEN BOXES */
-    .spacer {
-      height: 80px;
-    }
-
-    /* FIRST ISSUE */
+    /* FIRST ISSUE LAYOUT */
     .issue-section {
       display: flex;
       justify-content: space-between;
@@ -81,25 +83,34 @@
       padding: 120px;
     }
 
-    /* BIGGER IMAGES */
-    .issue-left img,
-    .issue-right img {
-      width: 850px; /* 🔥 bigger everything */
+    /* SOONSTAR FILLS SPACE */
+    .issue-left img {
+      width: 900px; /* 🔥 bigger to fill space */
       display: block;
+      border: none;
     }
 
+    /* RIGHT SIDE */
     .issue-right {
       position: relative;
-      width: 850px;
+      width: 900px;
     }
 
-    /* BANNER CENTERED ON IMAGE */
+    /* STATIK IMAGE WITH BORDER */
+    .issue-right img {
+      width: 100%;
+      display: block;
+      border: 8px solid black; /* 🔥 requested border */
+      border-radius: 20px;
+    }
+
+    /* BANNER CENTERED */
     .issue-banner {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%); /* 🔥 CENTER */
-      
+      transform: translate(-50%, -50%);
+
       background-color: rgba(255, 143, 177, 0.95);
       padding: 40px 60px;
       border-radius: 25px;
@@ -138,9 +149,8 @@
         width: 90%;
       }
 
-      .issue-banner {
-        font-size: 28px;
-        padding: 20px;
+      .issue-right img {
+        border: 5px solid black;
       }
     }
   </style>
@@ -159,16 +169,15 @@
   <!-- TITLE -->
   <img src="hometitle1.jpg" class="title">
 
-  <!-- EVERYTHING BELOW MOVED HIGHER -->
   <div class="content-shift">
 
-    <!-- MISSION (WIDER + CLEAN) -->
+    <!-- ARTMAG (NOW ABOVE MISSION) -->
+    <img src="artmag.jpeg" class="artmag">
+
+    <!-- MISSION -->
     <div class="section mission">
       STATIK is a youth-run magazine featuring artwork from young artists, including organizations supporting children in underserved areas. We curate and design each issue to showcase their artwork. All profits from magazine sales are split and donated back to participating organizations.
     </div>
-
-    <!-- SPACING -->
-    <div class="spacer"></div>
 
     <!-- FIRST ISSUE -->
     <div class="section issue-section">
