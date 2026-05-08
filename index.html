@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>STATIK</title>
 
   <style>
@@ -11,21 +12,9 @@
       font-family: Arial, sans-serif;
     }
 
-    /* BOXES (Mission + Issue) */
-    .section {
-      background-color: #ffc0cb;
-      margin: 20px auto;
-      width: 98%;
-      max-width: 2200px;
-      border-radius: 55px;
-      padding: 200px;
-    }
-
     /* HEADER */
     .header {
       width: 100%;
-      max-width: none;
-      margin: 0;
       background-color: #ff8fb1;
       padding: 60px 0;
 
@@ -43,46 +32,94 @@
       font-weight: bold;
     }
 
+    /* TITLE */
     .title {
       width: 100%;
       max-width: 3000px;
       display: block;
-      margin: 160px auto 0;
-    }
-
-    .content-shift {
-      transform: translateY(-900px);
+      margin: 120px auto 0;
       position: relative;
-      z-index: 2;
+      z-index: 1;
     }
 
-    /* MISSION FIXED */
-    .mission {
+    /* OVERLAP IMAGE (ARTMAG) */
+    .artmag {
+      width: 55%;
+      display: block;
+      margin: -180px auto 40px;
+      position: relative;
+      z-index: 5;
+      border-radius: 20px;
+    }
+
+    /* ABOUT SECTION */
+    .about {
+      background-color: #ffc0cb;
+      width: 92%;
+      max-width: 1400px;
+
+      margin: 40px auto;
+      padding: 80px;
+
+      border-radius: 40px;
       text-align: center;
-      font-size: 64px;
-      font-family: cursive;
+
+      font-size: 40px;
+    }
+
+    /* MISSION + ISSUE BOXES */
+    .section {
+      background-color: #ffc0cb;
+      width: 92%;
+      max-width: 1400px;
+
+      margin: 40px auto;
+      padding: 80px;
+
+      border-radius: 40px;
+    }
+
+    .mission {
+      font-size: 36px;
       line-height: 1.6;
-      padding: 180px 160px;
+      text-align: center;
     }
 
     .issue-section {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 180px;
-      margin-top: 60px;
-    }
-
-    .issue-text {
-      font-size: 170px;
-      font-family: cursive;
-      line-height: 1;
+      text-align: center;
     }
 
     .issue-image {
-      width: 700px;
-      border: 6px solid black;
-      border-radius: 30px;
+      width: 60%;
+      border-radius: 20px;
+      margin-top: 20px;
+    }
+
+    /* BANNER OVER IMAGE */
+    .banner {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+    }
+
+    .banner img {
+      width: 60%;
+      border-radius: 20px;
+    }
+
+    .banner-text {
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+
+      background-color: rgba(255, 143, 177, 0.9);
+      padding: 20px 40px;
+      border-radius: 20px;
+
+      font-size: 32px;
+      font-weight: bold;
     }
 
     @media (max-width: 900px) {
@@ -90,33 +127,25 @@
         font-size: 42px;
       }
 
-      .content-shift {
-        transform: translateY(-360px);
-      }
-
-      .section {
-        max-width: 95%;
-        padding: 80px;
-      }
-
-      .mission {
-        font-size: 28px;
-        padding: 80px;
-      }
-
-      .issue-text {
-        font-size: 90px;
-      }
-
-      .issue-image {
+      .banner img,
+      .issue-image,
+      .artmag {
         width: 85%;
       }
+
+      .about,
+      .section {
+        padding: 40px;
+        font-size: 20px;
+      }
     }
+
   </style>
 </head>
 
 <body>
 
+  <!-- HEADER -->
   <div class="header">
     <a href="index.html">Home</a>
     <a href="purchase.html">Purchase</a>
@@ -124,20 +153,28 @@
     <a href="contact.html">Contact</a>
   </div>
 
+  <!-- TITLE -->
   <img src="hometitle1.jpg" class="title">
 
-  <div class="content-shift">
+  <!-- ARTMAG OVERLAPPING TITLE -->
+  <img src="artmag.jpeg" class="artmag">
 
-    <div class="section mission">
-      STATIK is a youth-run magazine featuring artwork from young artists, including organizations supporting children in underserved areas. We curate and design each issue to showcase their artwork. All profits from magazine sales are split and donated back to participating organizations.
-    </div>
+  <!-- ABOUT US (BEFORE MISSION) -->
+  <div class="about">
+    About Us: STATIK is a youth-run creative magazine platform centered around showcasing young artists and supporting community-driven art initiatives.
+  </div>
 
-    <div class="section issue-section">
-      <div class="issue-text">
-        First Issue Ready!
-      </div>
+  <!-- MISSION -->
+  <div class="section mission">
+    STATIK is a youth-run magazine featuring artwork from young artists, including organizations supporting children in underserved areas. We curate and design each issue to showcase their artwork. All profits from magazine sales are split and donated back to participating organizations.
+  </div>
 
-      <img src="statiktitle.png" class="issue-image">
+  <!-- FIRST ISSUE BOX -->
+  <div class="section issue-section">
+
+    <div class="banner">
+      <img src="soon star.jpeg" alt="Soon Star">
+      <div class="banner-text">First Issue Coming This Summer</div>
     </div>
 
   </div>
