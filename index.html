@@ -23,6 +23,8 @@
       align-items: center;
 
       border-bottom: 7px solid black;
+      position: relative;
+      z-index: 5;
     }
 
     .header a {
@@ -38,38 +40,48 @@
       max-width: 3000px;
       display: block;
       margin: 160px auto 0;
+      position: relative;
+      z-index: 1;
     }
 
-    /* ARTMAG (still high if you want it) */
+    /* ARTMAG (still high, but now OVERLAPS TITLE) */
     .artmag {
-      width: 65%;
+      width: 70%;
       display: block;
-      margin: -500px auto 40px;
+      margin: -900px auto 0; /* 🔥 MUCH higher */
+      position: relative;
+      z-index: 10; /* sits ON TOP of title */
     }
 
     /* ABOUT */
     .about-img {
-      width: 70%;
+      width: 75%;
       display: block;
-      margin: 60px auto 20px;
+      margin: 60px auto 0;
+      position: relative;
+      z-index: 10;
     }
 
-    /* MOVE EVERYTHING HIGHER */
+    /* 🔥 PUSH EVERYTHING WAY UP */
     .content-shift {
-      margin-top: -250px; /* 🔥 pushes ALL boxes up */
+      margin-top: -700px; /* 🔥 10x higher effect */
+      position: relative;
+      z-index: 20; /* ON TOP of title */
     }
 
-    /* WIDE BOXES (RESTORED STYLE) */
+    /* WIDE BOXES */
     .section {
       background-color: #ffc0cb;
       margin: 20px auto;
       width: 98%;
-      max-width: 1900px;
+      max-width: 2400px; /* 🔥 wider mission box */
       border-radius: 55px;
       padding: 200px;
+      position: relative;
+      z-index: 20;
     }
 
-    /* MISSION (back to original scale feel) */
+    /* MISSION */
     .mission {
       text-align: center;
       font-size: 150px;
@@ -77,23 +89,23 @@
       padding: 220px 120px;
     }
 
-    /* FIRST ISSUE LAYOUT */
+    /* FIRST ISSUE */
     .issue-section {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 120px;
+      gap: 140px;
     }
 
     .issue-left img {
-      width: 650px;
+      width: 750px; /* 🔥 bigger soonstar */
       display: block;
       border: none;
     }
 
     .issue-right {
       position: relative;
-      width: 650px;
+      width: 750px;
     }
 
     .issue-right img {
@@ -102,21 +114,21 @@
       border: none;
     }
 
-    /* BANNER ON TOP OF RIGHT IMAGE */
+    /* 🔥 BIG BANNER */
     .issue-banner {
       position: absolute;
-      top: 20px;
+      top: 0;
       left: 50%;
       transform: translateX(-50%);
 
       background-color: rgba(255, 143, 177, 0.95);
-      padding: 20px 30px;
-      border-radius: 20px;
+      padding: 40px 50px;
+      border-radius: 25px;
 
-      font-size: 36px;
+      font-size: 52px;
       font-weight: bold;
       text-align: center;
-      width: 90%;
+      width: 95%;
     }
 
     @media (max-width: 900px) {
@@ -125,7 +137,7 @@
       }
 
       .content-shift {
-        margin-top: -120px;
+        margin-top: -250px;
       }
 
       .section {
@@ -145,6 +157,11 @@
         font-size: 70px;
         padding: 100px;
       }
+
+      .issue-banner {
+        font-size: 28px;
+        padding: 20px;
+      }
     }
   </style>
 </head>
@@ -162,16 +179,16 @@
   <!-- TITLE -->
   <img src="hometitle1.jpg" class="title">
 
-  <!-- ARTMAG -->
+  <!-- ARTMAG (NOW OVERLAPS TITLE) -->
   <img src="artmag.jpeg" class="artmag">
 
   <!-- ABOUT -->
   <img src="aboutus.jpeg" class="about-img">
 
-  <!-- EVERYTHING MOVES HIGHER -->
+  <!-- EVERYTHING HIGHER -->
   <div class="content-shift">
 
-    <!-- MISSION -->
+    <!-- MISSION (WIDER) -->
     <div class="section mission">
       STATIK is a youth-run magazine featuring artwork from young artists, including organizations supporting children in underserved areas. We curate and design each issue to showcase their artwork. All profits from magazine sales are split and donated back to participating organizations.
     </div>
@@ -179,12 +196,10 @@
     <!-- FIRST ISSUE -->
     <div class="section issue-section">
 
-      <!-- LEFT IMAGE -->
       <div class="issue-left">
         <img src="soonstar.jpeg">
       </div>
 
-      <!-- RIGHT IMAGE + BANNER -->
       <div class="issue-right">
 
         <div class="issue-banner">
