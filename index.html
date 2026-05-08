@@ -40,23 +40,21 @@
       margin: 160px auto 0;
     }
 
-    /* MOVE CONTENT HIGHER */
+    /* 🔥 EVERYTHING HIGHER */
     .content-shift {
-      margin-top: -650px;
+      margin-top: -800px; /* pushed EVEN higher */
       position: relative;
       z-index: 20;
     }
 
-    /* ARTMAG (NOW ABOVE MISSION) */
+    /* ARTMAG (ABOVE MISSION, SAME POSITION STYLE) */
     .artmag {
       width: 70%;
       display: block;
       margin: 40px auto 40px;
-      position: relative;
-      z-index: 10;
     }
 
-    /* WIDER BOXES */
+    /* BOXES */
     .section {
       background-color: #ffc0cb;
       margin: 20px auto;
@@ -74,7 +72,7 @@
       padding: 200px 120px;
     }
 
-    /* FIRST ISSUE LAYOUT */
+    /* FIRST ISSUE */
     .issue-section {
       display: flex;
       justify-content: space-between;
@@ -83,11 +81,18 @@
       padding: 120px;
     }
 
-    /* SOONSTAR FILLS SPACE */
+    /* SOONSTAR FILLS LEFT BOX */
     .issue-left img {
-      width: 900px; /* 🔥 bigger to fill space */
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* 🔥 fills space properly */
       display: block;
-      border: none;
+    }
+
+    .issue-left {
+      width: 900px;
+      height: 600px; /* gives it full box feel */
+      overflow: hidden;
     }
 
     /* RIGHT SIDE */
@@ -96,15 +101,14 @@
       width: 900px;
     }
 
-    /* STATIK IMAGE WITH BORDER */
     .issue-right img {
       width: 100%;
       display: block;
-      border: 8px solid black; /* 🔥 requested border */
+      border: 8px solid black;
       border-radius: 20px;
     }
 
-    /* BANNER CENTERED */
+    /* 🔥 BANNER (WIDER + BORDER) */
     .issue-banner {
       position: absolute;
       top: 50%;
@@ -112,13 +116,16 @@
       transform: translate(-50%, -50%);
 
       background-color: rgba(255, 143, 177, 0.95);
-      padding: 40px 60px;
+      padding: 50px 70px;
+
+      width: 110%; /* wider than image */
+      text-align: center;
+
+      border: 5px solid black; /* 🔥 requested border */
       border-radius: 25px;
 
-      font-size: 48px;
+      font-size: 52px;
       font-weight: bold;
-      text-align: center;
-      width: 90%;
     }
 
     @media (max-width: 900px) {
@@ -127,7 +134,7 @@
       }
 
       .content-shift {
-        margin-top: -250px;
+        margin-top: -300px;
       }
 
       .section {
@@ -144,13 +151,15 @@
         flex-direction: column;
       }
 
-      .issue-left img,
+      .issue-left,
       .issue-right {
         width: 90%;
+        height: auto;
       }
 
-      .issue-right img {
-        border: 5px solid black;
+      .issue-banner {
+        font-size: 28px;
+        width: 100%;
       }
     }
   </style>
@@ -171,7 +180,7 @@
 
   <div class="content-shift">
 
-    <!-- ARTMAG (NOW ABOVE MISSION) -->
+    <!-- ARTMAG (ABOVE MISSION) -->
     <img src="artmag.jpeg" class="artmag">
 
     <!-- MISSION -->
