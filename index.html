@@ -14,14 +14,20 @@
       overflow-x: hidden;
     }
 
+    /* HEADER */
     .header {
       width: 100%;
       background-color: #ff8fb1;
       padding: 60px 0;
+
       display: flex;
       justify-content: space-around;
       align-items: center;
+
       border-bottom: 7px solid black;
+
+      position: relative;
+      z-index: 100;
     }
 
     .header a {
@@ -31,47 +37,78 @@
       font-weight: bold;
     }
 
+    /* TITLE */
     .title {
       width: 100%;
       max-width: 3000px;
+
       display: block;
+
       margin: 160px auto 0;
+
+      position: relative;
+      z-index: 1;
     }
 
+    /* 🔥 LOWERED EVERYTHING */
     .content-shift {
       margin-top: -1250px;
+      position: relative;
+      z-index: 20;
     }
 
+    /* ⭐ STARS + ARTMAG */
     .artmag-row {
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      gap: 70px;
+
+      gap: 70px; /* closer to center */
+
       margin-top: -160px;
       margin-bottom: 60px;
+
+      position: relative;
+      z-index: 50;
     }
 
+    /* ⭐ BIGGER */
     .side-star {
       height: 520px;
+
+      object-fit: contain;
+
+      margin-top: -180px;
     }
 
+    /* ARTMAG */
     .artmag {
       width: 72%;
+      display: block;
     }
 
+    /* BOXES */
     .section {
       background-color: #ffc0cb;
+
       margin: 10px auto;
+
       width: 99%;
+
       max-width: 3200px;
+
       border-radius: 55px;
+
       padding: 180px;
     }
 
+    /* MISSION */
     .mission {
       text-align: center;
+
       font-size: 145px;
       font-family: cursive;
+
       padding: 220px 180px;
     }
 
@@ -79,77 +116,143 @@
       margin-bottom: 160px;
     }
 
-    /* ========================= */
-    /* FIRST ISSUE (FIXED CLEAN) */
-    /* ========================= */
-
+    /* FIRST ISSUE */
     .issue-section {
       display: flex;
+
       justify-content: space-between;
       align-items: center;
 
-      gap: 40px;
+      gap: 30px;
+
       padding: 70px;
+
+      overflow: visible;
+
+      position: relative;
+      z-index: 1;
     }
 
-    /* 🌟 SOONSTAR (MEDIUM, NO OVERLAP POSSIBLE) */
+    /* 🌟 SOONSTAR SIDE */
     .issue-left {
-      width: 1050px;
-      height: 780px;
+      width: 1400px;
+      height: 1000px;
 
       display: flex;
       justify-content: center;
       align-items: center;
 
-      flex-shrink: 0;
+      overflow: visible;
+
+      margin-left: 20px;
+
+      position: relative;
+      z-index: 999; /* ABOVE EVERYTHING */
     }
 
+    /* 🌟 SOONSTAR IMAGE */
     .issue-left img {
-      width: 100%;
-      height: 100%;
+      width: 125%;
+      height: 125%;
+
       object-fit: cover;
 
       display: block;
+
+      position: relative;
+      z-index: 999; /* ABOVE EVERYTHING */
     }
 
-    /* RIGHT SIDE CLOSER TO LEFT */
+    /* RIGHT SIDE */
     .issue-right {
       position: relative;
-      width: 900px;
 
-      margin-left: -80px; /* moves closer to left side */
+      width: 850px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      margin-left: -60px; /* moves left so banner fits */
     }
 
     .issue-right img {
       width: 100%;
+
       display: block;
 
       border: 8px solid black;
       border-radius: 20px;
     }
 
-    /* BANNER (INSIDE BOX, NO OVERFLOW) */
+    /* BANNER */
     .issue-banner {
       position: absolute;
 
       top: 50%;
       left: 50%;
+
       transform: translate(-50%, -50%);
 
       background-color: rgba(255, 143, 177, 0.96);
 
-      padding: 70px 80px;
+      padding: 80px 80px;
 
-      width: 100%;
+      width: 100%; /* stays INSIDE */
 
       border: 6px solid black;
       border-radius: 25px;
 
-      font-size: 66px;
+      font-size: 68px;
       font-weight: bold;
+
       text-align: center;
 
+      z-index: 20;
+
       box-sizing: border-box;
+    }
+
+    /* TABLET + PHONE */
+    @media (max-width: 1024px) {
+
+      .side-star {
+        display: none;
+      }
+
+      .content-shift {
+        margin-top: -450px;
+      }
+
+      .header a {
+        font-size: 42px;
+      }
+
+      .section {
+        padding: 80px;
+      }
+
+      .mission {
+        font-size: 70px;
+        padding: 100px;
+      }
+
+      .issue-section {
+        flex-direction: column;
+      }
+
+      .issue-left,
+      .issue-right {
+        width: 95%;
+        height: auto;
+      }
+
+      .issue-banner {
+        font-size: 30px;
+        padding: 30px;
+        width: 100%;
+      }
+
     }
 
   </style>
@@ -157,6 +260,7 @@
 
 <body>
 
+  <!-- HEADER -->
   <div class="header">
     <a href="index.html">Home</a>
     <a href="purchase.html">Purchase</a>
@@ -164,26 +268,38 @@
     <a href="contact.html">Contact</a>
   </div>
 
+  <!-- TITLE -->
   <img src="hometitle1.jpg" class="title">
 
   <div class="content-shift">
 
+    <!-- ⭐ STARS + ARTMAG -->
     <div class="artmag-row">
+
       <img src="star2.jpg" class="side-star">
+
       <img src="artmag.jpg" class="artmag">
+
       <img src="starstar.jpg" class="side-star">
+
     </div>
 
+    <!-- MISSION -->
     <div class="section mission mission-box">
+
       STATIK is a youth-run magazine featuring artwork from young artists, including organizations supporting children in underserved areas. We curate and design each issue to showcase their artwork. All profits from magazine sales are split and donated back to participating organizations.
+
     </div>
 
+    <!-- FIRST ISSUE -->
     <div class="section issue-section">
 
+      <!-- 🌟 HUGE SOONSTAR -->
       <div class="issue-left">
         <img src="soonstar.jpg">
       </div>
 
+      <!-- RIGHT SIDE -->
       <div class="issue-right">
 
         <div class="issue-banner">
