@@ -90,7 +90,7 @@
     }
 
     /* ========================= */
-    /* ISSUE SECTION (FINAL ALIGN) */
+    /* ISSUE SECTION (BOX STAYS FIXED) */
     /* ========================= */
 
     .issue-section {
@@ -100,8 +100,18 @@
 
       gap: 60px;
       padding: 70px;
+    }
 
-      transform: translateX(-20px); /* ⬅️ slight internal left shift */
+    /* 🔧 INNER CONTENT SHIFT LEFT (ONLY CONTENT MOVES) */
+    .issue-inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      gap: 60px;
+
+      transform: translateX(-40px); /* ⬅️ slight left adjustment */
+      width: 100%;
     }
 
     .issue-left {
@@ -114,8 +124,6 @@
 
       overflow: hidden;
       flex-shrink: 0;
-
-      margin-left: -60px;
     }
 
     .issue-left img {
@@ -133,8 +141,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-
-      margin-left: -160px;
     }
 
     .issue-right img {
@@ -195,17 +201,22 @@
 
     <div class="section issue-section">
 
-      <div class="issue-left">
-        <img src="soonstar.jpg">
-      </div>
+      <!-- ONLY CONTENT MOVES LEFT -->
+      <div class="issue-inner">
 
-      <div class="issue-right">
-
-        <div class="issue-banner">
-          First Issue Coming This Summer
+        <div class="issue-left">
+          <img src="soonstar.jpg">
         </div>
 
-        <img src="statiktitle.png">
+        <div class="issue-right">
+
+          <div class="issue-banner">
+            First Issue Coming This Summer
+          </div>
+
+          <img src="statiktitle.png">
+
+        </div>
 
       </div>
 
