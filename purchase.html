@@ -25,22 +25,22 @@
     .hero {
       position: relative;
       width: 100%;
-      height: 130vh; /* taller area so image can go higher + bigger */
+      height: 130vh;
 
       display: flex;
       justify-content: center;
       align-items: flex-start;
 
-      padding-top: 0px; /* removed padding so it can rise higher */
+      padding-top: 0px;
     }
 
-    /* IMAGE (BIGGER + HIGHER) */
+    /* IMAGE (SLIGHTLY SMALLER + HIGHER) */
     .hero img {
-      width: 120%;       /* bigger */
-      height: 120%;      /* bigger */
+      width: 112%;        /* slightly reduced from before */
+      height: 112%;       /* slightly reduced from before */
       object-fit: contain;
 
-      margin-top: -120px; /* ⬅️ pushes image WAY higher */
+      margin-top: -180px; /* ⬅️ HIGHER than before */
 
       display: block;
 
@@ -48,11 +48,11 @@
       z-index: 1;
     }
 
-    /* COMING SOON BANNER */
+    /* BANNER (UNCHANGED STYLE) */
     .banner {
       position: absolute;
 
-      top: 48%; /* stays centered on new larger image */
+      top: 48%;
       left: 50%;
       transform: translate(-50%, -50%);
 
