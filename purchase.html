@@ -2,147 +2,104 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>STATIK - Purchase</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STATIK</title>
 
   <style>
+
     body {
       margin: 0;
       background-color: #ff6398;
       font-family: Arial, sans-serif;
-      color: #000;
+      overflow-x: hidden;
     }
 
-    /* HEADER */
-    .header {
+    /* TOP TITLE (stays above everything) */
+    .title {
       width: 100%;
-      margin: 0;
-      background-color: #ff8fb1;
-      padding: 60px 0;
-
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-
-      border-bottom: 7px solid black;
+      max-width: 3000px;
+      display: block;
+      margin: 80px auto 20px;
       position: relative;
       z-index: 10;
     }
 
-    .header a {
-      text-decoration: none;
-      font-size: 74px;
-      color: black;
-      font-weight: bold;
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh; /* full screen */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: -50px;
     }
 
-    /* TITLE (background layer) */
-    .title {
-      width: 100%;
-      max-width: 2600px;
-      display: block;
-      margin: 140px auto 0;
-
+    /* BIG STATIK IMAGE */
+    .hero img {
+      width: 110%;
+      height: 110%;
+      object-fit: contain;
+      transform: scale(1.1); /* makes it feel massive */
       position: relative;
       z-index: 1;
     }
 
-    /* 🔥 PURCHASE BOX — EVEN HIGHER NOW */
-    .purchase-container {
-      background-color: #ffc0cb;
+    /* DARK OVERLAY (optional but makes banner pop) */
+    .overlay-dark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
 
-      max-width: 1800px;
+      background: rgba(0, 0, 0, 0.15);
+      z-index: 2;
+    }
 
-      margin: -650px auto 120px; /* 🔥 MUCH higher than before */
-      padding: 240px;
+    /* COMING SOON BANNER */
+    .banner {
+      position: absolute;
 
-      border-radius: 40px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      background-color: rgba(255, 143, 177, 0.95);
+
+      padding: 60px 120px;
+
+      border: 6px solid black;
+      border-radius: 30px;
+
+      font-size: 90px;
+      font-weight: bold;
+      color: black;
 
       text-align: center;
 
-      position: relative;
-      z-index: 20; /* stays on top of title */
+      z-index: 5;
     }
 
-    .purchase-container h1 {
-      font-size: 9rem;
-      margin-top: 0;
-    }
-
-    .purchase-container p {
-      font-size: 3rem;
-      line-height: 1.6;
-      margin-bottom: 60px;
-    }
-
-    .buy-button {
-      background-color: #ff6398;
-      color: #fff;
-      border: none;
-      padding: 45px 80px;
-      font-size: 2.8rem;
-      border-radius: 22px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .buy-button:hover {
-      background-color: #ff4d82;
-    }
-
-    @media (max-width: 900px) {
-      .header a {
-        font-size: 42px;
-      }
-
-      .purchase-container {
-        margin: -250px auto 80px;
-        padding: 80px;
-      }
-
-      .purchase-container h1 {
-        font-size: 3.5rem;
-      }
-
-      .purchase-container p {
-        font-size: 1.5rem;
-      }
-
-      .buy-button {
-        font-size: 1.4rem;
-        padding: 20px 35px;
-      }
-    }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <div class="header">
-    <a href="index.html">Home</a>
-    <a href="purchase.html">Purchase</a>
-    <a href="submitart.html">Submit Art</a>
-    <a href="contact.html">Contact</a>
-  </div>
+  <!-- TITLE (stays on top) -->
+  <img src="hometitle1.jpg" class="title">
 
-  <!-- TITLE (behind) -->
-  <img src="hometitle1.jpg" alt="STATIK" class="title">
+  <!-- HERO -->
+  <div class="hero">
 
-  <!-- PURCHASE BOX (NOW VERY HIGH + ON TOP) -->
-  <div class="purchase-container">
-    <h1>Purchase STATIK Magazine</h1>
+    <img src="statiktitle.png">
 
-    <p>
-      Thank you for supporting young artists! STATIK Magazine showcases incredible artwork and stories from talented youth.  
-      Each copy is filled with inspiration, creativity, and all proceeds go to support children through nonprofit organizations.  
-    </p>
+    <div class="overlay-dark"></div>
 
-    <p><strong>Price:</strong> $10 per magazine</p>
+    <div class="banner">
+      COMING SOON!!
+    </div>
 
-    <a href="#" class="buy-button">Buy Now</a>
   </div>
 
 </body>
