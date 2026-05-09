@@ -33,7 +33,7 @@
       align-items: flex-start;
     }
 
-    /* STATIK IMAGE (UNCHANGED) */
+    /* STATIK IMAGE (UNCHANGED POSITION) */
     .hero img {
       width: 112%;
       height: 112%;
@@ -45,11 +45,11 @@
       z-index: 5;
     }
 
-    /* 🔥 BANNER OVER STATIK IMAGE */
+    /* 🔥 BANNER ABOVE IMAGE (FULL WIDTH) */
     .banner {
       position: absolute;
 
-      top: 55%; /* ⬅️ now sits ON the image */
+      top: 10%; /* ⬅️ ABOVE the statik image */
       left: 0;
 
       width: 100%;
@@ -79,11 +79,13 @@
 
   <div class="hero">
 
-    <img src="statiktitle.png">
-
+    <!-- ABOVE -->
     <div class="banner">
       COMING SOON!!
     </div>
+
+    <!-- IMAGE BELOW -->
+    <img src="statiktitle.png">
 
   </div>
 
