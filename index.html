@@ -50,9 +50,9 @@
       z-index: 1;
     }
 
-    /* 🔥 EVERYTHING HIGHER */
+    /* 🔥 LOWERED EVERYTHING */
     .content-shift {
-      margin-top: -1650px;
+      margin-top: -1250px;
       position: relative;
       z-index: 20;
     }
@@ -63,19 +63,22 @@
       justify-content: center;
       align-items: flex-start;
 
-      gap: 140px;
+      gap: 70px; /* closer to center */
 
-      margin-top: -260px;
+      margin-top: -160px;
       margin-bottom: 60px;
+
+      position: relative;
+      z-index: 50;
     }
 
-    /* ⭐ BIGGER + HIGHER */
+    /* ⭐ BIGGER */
     .side-star {
       height: 520px;
 
       object-fit: contain;
 
-      margin-top: -260px;
+      margin-top: -180px;
     }
 
     /* ARTMAG */
@@ -109,7 +112,6 @@
       padding: 220px 180px;
     }
 
-    /* SPACE BETWEEN BOXES */
     .mission-box {
       margin-bottom: 160px;
     }
@@ -121,17 +123,20 @@
       justify-content: space-between;
       align-items: center;
 
-      gap: 70px;
+      gap: 30px;
 
       padding: 70px;
 
       overflow: visible;
+
+      position: relative;
+      z-index: 1;
     }
 
     /* 🌟 SOONSTAR SIDE */
     .issue-left {
-      width: 1300px;
-      height: 950px;
+      width: 1400px;
+      height: 1000px;
 
       display: flex;
       justify-content: center;
@@ -139,33 +144,36 @@
 
       overflow: visible;
 
-      margin-left: 60px;
+      margin-left: 20px;
+
       position: relative;
-      z-index: 20;
+      z-index: 999; /* ABOVE EVERYTHING */
     }
 
     /* 🌟 SOONSTAR IMAGE */
     .issue-left img {
-      width: 115%;
-      height: 115%;
+      width: 125%;
+      height: 125%;
 
       object-fit: cover;
 
       display: block;
 
       position: relative;
-      z-index: 20;
+      z-index: 999; /* ABOVE EVERYTHING */
     }
 
     /* RIGHT SIDE */
     .issue-right {
       position: relative;
 
-      width: 1000px;
+      width: 850px;
 
       display: flex;
       justify-content: center;
       align-items: center;
+
+      margin-left: -60px; /* moves left so banner fits */
     }
 
     .issue-right img {
@@ -188,19 +196,21 @@
 
       background-color: rgba(255, 143, 177, 0.96);
 
-      padding: 95px 110px;
+      padding: 80px 80px;
 
-      width: 125%;
+      width: 100%; /* stays INSIDE */
 
       border: 6px solid black;
       border-radius: 25px;
 
-      font-size: 76px;
+      font-size: 68px;
       font-weight: bold;
 
       text-align: center;
 
-      z-index: 5;
+      z-index: 20;
+
+      box-sizing: border-box;
     }
 
     /* TABLET + PHONE */
