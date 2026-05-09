@@ -14,15 +14,13 @@
       overflow-x: hidden;
     }
 
-    /* 🧠 HOMETITLE GOES TO BACK */
     .title {
       width: 100%;
       max-width: 3000px;
       display: block;
       margin: 80px auto 0;
-
       position: relative;
-      z-index: 1; /* ⬅️ BACK LAYER */
+      z-index: 1;
     }
 
     .hero {
@@ -34,10 +32,9 @@
       justify-content: center;
       align-items: flex-start;
 
-      z-index: 5; /* ⬅️ ABOVE HOMETITLE */
+      z-index: 5;
     }
 
-    /* STATIK IMAGE */
     .hero img {
       width: 112%;
       height: 112%;
@@ -49,11 +46,12 @@
       z-index: 6;
     }
 
-    /* BANNER ABOVE IMAGE */
+    /* 🔥 BANNER HIGHER */
     .banner {
       position: absolute;
 
-      top: -250px;
+      top: -380px; /* ⬅️ moved higher again */
+
       left: 50%;
       transform: translateX(-50%);
 
@@ -72,7 +70,7 @@
       background-color: rgba(255, 143, 177, 0.95);
       color: black;
 
-      z-index: 7; /* ABOVE IMAGE */
+      z-index: 7;
     }
 
   </style>
@@ -80,10 +78,8 @@
 
 <body>
 
-  <!-- BACK LAYER -->
   <img src="hometitle1.jpg" class="title">
 
-  <!-- FRONT LAYER -->
   <div class="hero">
 
     <div class="banner">
