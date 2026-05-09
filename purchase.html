@@ -14,7 +14,6 @@
       overflow-x: hidden;
     }
 
-    /* TOP TITLE (stays above everything) */
     .title {
       width: 100%;
       max-width: 3000px;
@@ -24,61 +23,49 @@
       z-index: 10;
     }
 
-    /* HERO SECTION */
+    /* HERO WRAPPER */
     .hero {
       position: relative;
       width: 100%;
-      height: 100vh; /* full screen */
+      height: 110vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: -50px;
     }
 
-    /* BIG STATIK IMAGE */
+    /* BIG IMAGE (NO COLOR CHANGES, NO OVERLAP) */
     .hero img {
-      width: 110%;
-      height: 110%;
+      width: 105%;
+      height: 105%;
       object-fit: contain;
-      transform: scale(1.1); /* makes it feel massive */
+      display: block;
       position: relative;
       z-index: 1;
     }
 
-    /* DARK OVERLAY (optional but makes banner pop) */
-    .overlay-dark {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-
-      background: rgba(0, 0, 0, 0.15);
-      z-index: 2;
-    }
-
-    /* COMING SOON BANNER */
+    /* BANNER (BIGGER + HIGHER) */
     .banner {
       position: absolute;
 
-      top: 50%;
+      top: 25%; /* ⬅️ higher */
       left: 50%;
       transform: translate(-50%, -50%);
 
-      background-color: rgba(255, 143, 177, 0.95);
-
-      padding: 60px 120px;
+      padding: 120px 220px; /* ⬅️ MUCH bigger */
 
       border: 6px solid black;
-      border-radius: 30px;
+      border-radius: 35px;
 
-      font-size: 90px;
+      font-size: 120px; /* ⬅️ way bigger text */
       font-weight: bold;
-      color: black;
 
       text-align: center;
 
       z-index: 5;
+
+      /* IMPORTANT: no new colors added, just using same pink feel */
+      background-color: rgba(255, 143, 177, 0.95);
+      color: black;
     }
 
   </style>
@@ -86,15 +73,11 @@
 
 <body>
 
-  <!-- TITLE (stays on top) -->
   <img src="hometitle1.jpg" class="title">
 
-  <!-- HERO -->
   <div class="hero">
 
     <img src="statiktitle.png">
-
-    <div class="overlay-dark"></div>
 
     <div class="banner">
       COMING SOON!!
