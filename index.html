@@ -90,7 +90,7 @@
     }
 
     /* ========================= */
-    /* ISSUE SECTION (BOX STAYS FIXED) */
+    /* ISSUE SECTION FINAL */
     /* ========================= */
 
     .issue-section {
@@ -98,11 +98,10 @@
       justify-content: center;
       align-items: center;
 
-      gap: 60px;
       padding: 70px;
     }
 
-    /* 🔧 INNER CONTENT SHIFT LEFT (ONLY CONTENT MOVES) */
+    /* 🔧 SHIFT EVERYTHING INSIDE LEFT */
     .issue-inner {
       display: flex;
       justify-content: center;
@@ -110,7 +109,8 @@
 
       gap: 60px;
 
-      transform: translateX(-40px); /* ⬅️ slight left adjustment */
+      transform: translateX(-80px); /* ⬅️ moves BOTH images + banner left */
+
       width: 100%;
     }
 
@@ -201,7 +201,6 @@
 
     <div class="section issue-section">
 
-      <!-- ONLY CONTENT MOVES LEFT -->
       <div class="issue-inner">
 
         <div class="issue-left">
