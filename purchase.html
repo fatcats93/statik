@@ -14,11 +14,14 @@
       overflow-x: hidden;
     }
 
+    /* HEADER (BACK AND SAFE ON TOP) */
     .title {
       width: 100%;
       max-width: 3000px;
       display: block;
       margin: 80px auto 0;
+      position: relative;
+      z-index: 10;
     }
 
     .hero {
@@ -31,6 +34,7 @@
       align-items: flex-start;
     }
 
+    /* STATIK IMAGE (UNCHANGED POSITION) */
     .hero img {
       width: 112%;
       height: 112%;
@@ -42,11 +46,12 @@
       z-index: 1;
     }
 
-    /* 🔥 FORCE BANNER WAY HIGHER (REAL OVERLAY LAYER) */
+    /* 🔥 BANNER BACK INSIDE FLOW (WAY HIGH ABOVE IMAGE) */
     .banner {
-      position: fixed; /* key change */
+      position: absolute;
 
-      top: 120px; /* WAY higher on screen */
+      top: -250px; /* ⬅️ HIGH ABOVE statik image */
+
       left: 50%;
       transform: translateX(-50%);
 
@@ -65,7 +70,7 @@
       background-color: rgba(255, 143, 177, 0.95);
       color: black;
 
-      z-index: 999;
+      z-index: 5;
     }
 
   </style>
@@ -73,14 +78,19 @@
 
 <body>
 
+  <!-- HEADER (BACK WHERE IT BELONGS) -->
   <img src="hometitle1.jpg" class="title">
 
   <div class="hero">
-    <img src="statiktitle.png">
-  </div>
 
-  <div class="banner">
-    COMING SOON!!
+    <!-- BANNER ABOVE IMAGE -->
+    <div class="banner">
+      COMING SOON!!
+    </div>
+
+    <!-- STATIK IMAGE -->
+    <img src="statiktitle.png">
+
   </div>
 
 </body>
