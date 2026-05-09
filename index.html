@@ -40,30 +40,31 @@
       margin: 160px auto 0;
     }
 
-    /* EVERYTHING HIGHER */
+    /* PUSH EVERYTHING HIGHER */
     .content-shift {
       margin-top: -1150px;
       position: relative;
       z-index: 20;
     }
 
-    /* ⭐ ARTMAG ROW (NEW LAYOUT) */
+    /* ⭐ ARTMAG WRAPPER (NO SIZE CHANGES) */
     .artmag-row {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 40px;
-
       margin: 20px auto 30px;
     }
 
-    .artmag-row img {
-      height: 180px;
-      object-fit: contain;
+    /* KEEP ORIGINAL SIZE */
+    .artmag {
+      width: 70%;
+      display: block;
     }
 
-    .artmag {
-      height: 220px;
+    .side-star {
+      height: 160px;
+      object-fit: contain;
     }
 
     /* BOXES */
@@ -136,6 +137,13 @@
       text-align: center;
     }
 
+    /* ❌ REMOVE STARS ON TABLET + PHONE */
+    @media (max-width: 1024px) {
+      .side-star {
+        display: none;
+      }
+    }
+
     @media (max-width: 900px) {
       .header a {
         font-size: 42px;
@@ -143,10 +151,6 @@
 
       .content-shift {
         margin-top: -400px;
-      }
-
-      .artmag-row img {
-        height: 90px;
       }
 
       .section {
@@ -193,11 +197,15 @@
 
   <div class="content-shift">
 
-    <!-- ⭐ ARTMAG WITH SIDE STARS -->
+    <!-- ⭐ ARTMAG (UNCHANGED SIZE) -->
     <div class="artmag-row">
-      <img src="star2.jpg">
+
+      <img src="star2.jpg" class="side-star">
+
       <img src="artmag.jpeg" class="artmag">
-      <img src="starstar.jpg">
+
+      <img src="starstar.jpg" class="side-star">
+
     </div>
 
     <!-- MISSION -->
