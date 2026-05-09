@@ -14,14 +14,15 @@
       overflow-x: hidden;
     }
 
-    /* HEADER (BACK AND SAFE ON TOP) */
+    /* 🧠 HOMETITLE GOES TO BACK */
     .title {
       width: 100%;
       max-width: 3000px;
       display: block;
       margin: 80px auto 0;
+
       position: relative;
-      z-index: 10;
+      z-index: 1; /* ⬅️ BACK LAYER */
     }
 
     .hero {
@@ -32,9 +33,11 @@
       display: flex;
       justify-content: center;
       align-items: flex-start;
+
+      z-index: 5; /* ⬅️ ABOVE HOMETITLE */
     }
 
-    /* STATIK IMAGE (UNCHANGED POSITION) */
+    /* STATIK IMAGE */
     .hero img {
       width: 112%;
       height: 112%;
@@ -43,15 +46,14 @@
       margin-top: -600px;
 
       position: relative;
-      z-index: 1;
+      z-index: 6;
     }
 
-    /* 🔥 BANNER BACK INSIDE FLOW (WAY HIGH ABOVE IMAGE) */
+    /* BANNER ABOVE IMAGE */
     .banner {
       position: absolute;
 
-      top: -250px; /* ⬅️ HIGH ABOVE statik image */
-
+      top: -250px;
       left: 50%;
       transform: translateX(-50%);
 
@@ -70,7 +72,7 @@
       background-color: rgba(255, 143, 177, 0.95);
       color: black;
 
-      z-index: 5;
+      z-index: 7; /* ABOVE IMAGE */
     }
 
   </style>
@@ -78,17 +80,16 @@
 
 <body>
 
-  <!-- HEADER (BACK WHERE IT BELONGS) -->
+  <!-- BACK LAYER -->
   <img src="hometitle1.jpg" class="title">
 
+  <!-- FRONT LAYER -->
   <div class="hero">
 
-    <!-- BANNER ABOVE IMAGE -->
     <div class="banner">
       COMING SOON!!
     </div>
 
-    <!-- STATIK IMAGE -->
     <img src="statiktitle.png">
 
   </div>
