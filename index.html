@@ -14,13 +14,16 @@
       overflow-x: hidden;
     }
 
+    /* HEADER */
     .header {
       width: 100%;
       background-color: #ff8fb1;
       padding: 60px 0;
+
       display: flex;
       justify-content: space-around;
       align-items: center;
+
       border-bottom: 7px solid black;
     }
 
@@ -31,6 +34,7 @@
       font-weight: bold;
     }
 
+    /* TITLE */
     .title {
       width: 100%;
       max-width: 3000px;
@@ -38,27 +42,35 @@
       margin: 160px auto 0;
     }
 
+    /* EVERYTHING HIGHER */
     .content-shift {
-      margin-top: -1250px;
+      margin-top: -1650px;
+      position: relative;
+      z-index: 20;
     }
 
+    /* STARS + ARTMAG */
     .artmag-row {
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      gap: 70px;
-      margin-top: -160px;
+
+      gap: 140px;
+      margin-top: -260px;
       margin-bottom: 60px;
     }
 
     .side-star {
       height: 520px;
+      object-fit: contain;
     }
 
     .artmag {
       width: 72%;
+      display: block;
     }
 
+    /* BOXES */
     .section {
       background-color: #ffc0cb;
       margin: 10px auto;
@@ -80,7 +92,7 @@
     }
 
     /* ========================= */
-    /* FIRST ISSUE (FIXED CLEAN) */
+    /* FIRST ISSUE (FIXED ONLY) */
     /* ========================= */
 
     .issue-section {
@@ -88,11 +100,11 @@
       justify-content: space-between;
       align-items: center;
 
-      gap: 40px;
+      gap: 25px;
       padding: 70px;
     }
 
-    /* 🌟 SOONSTAR (MEDIUM, NO OVERLAP POSSIBLE) */
+    /* SOONSTAR SAFE */
     .issue-left {
       width: 1050px;
       height: 780px;
@@ -102,22 +114,27 @@
       align-items: center;
 
       flex-shrink: 0;
+      position: relative;
+      z-index: 1;
     }
 
     .issue-left img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-
       display: block;
     }
 
-    /* RIGHT SIDE CLOSER TO LEFT */
+    /* RIGHT SIDE CLOSER */
     .issue-right {
       position: relative;
       width: 900px;
 
-      margin-left: -80px; /* moves closer to left side */
+      margin-left: -140px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .issue-right img {
@@ -126,29 +143,33 @@
 
       border: 8px solid black;
       border-radius: 20px;
+
+      position: relative;
+      z-index: 1;
     }
 
-    /* BANNER (INSIDE BOX, NO OVERFLOW) */
+    /* BANNER SAFE INSIDE */
     .issue-banner {
       position: absolute;
 
-      top: 50%;
+      top: 15px;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translateX(-50%);
 
       background-color: rgba(255, 143, 177, 0.96);
 
-      padding: 70px 80px;
+      padding: 40px 50px;
 
-      width: 100%;
+      width: 90%;
 
       border: 6px solid black;
       border-radius: 25px;
 
-      font-size: 66px;
+      font-size: 60px;
       font-weight: bold;
       text-align: center;
 
+      z-index: 2;
       box-sizing: border-box;
     }
 
