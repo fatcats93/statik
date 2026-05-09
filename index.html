@@ -48,6 +48,7 @@
       z-index: 20;
     }
 
+    /* ⭐ STARS + ARTMAG */
     .artmag-row {
       display: flex;
       justify-content: center;
@@ -64,8 +65,9 @@
       margin-top: -180px;
     }
 
+    /* 🔧 SMALLER ART MAG (so title wins visually) */
     .artmag {
-      width: 72%;
+      width: 68%;
       display: block;
     }
 
@@ -90,29 +92,30 @@
     }
 
     /* ========================= */
-    /* FIRST ISSUE (UPDATED) */
+    /* ISSUE SECTION FINAL TWEAK */
     /* ========================= */
 
     .issue-section {
       display: flex;
-      justify-content: center; /* brings both sides together */
+      justify-content: center;
       align-items: center;
 
       gap: 60px;
       padding: 70px;
+
+      transform: translateX(-40px); /* 🔧 slight LEFT shift for centering feel */
     }
 
-    /* 🌟 SOONSTAR (BIGGER BUT SAFE) */
+    /* 🌟 SOONSTAR */
     .issue-left {
-      width: 1350px;  /* increased */
-      height: 980px;  /* increased */
+      width: 1350px;
+      height: 980px;
 
       display: flex;
       justify-content: center;
       align-items: center;
 
       overflow: hidden;
-
       flex-shrink: 0;
     }
 
@@ -123,7 +126,7 @@
       display: block;
     }
 
-    /* RIGHT SIDE MOVED LEFT */
+    /* RIGHT SIDE */
     .issue-right {
       position: relative;
 
@@ -133,7 +136,7 @@
       justify-content: center;
       align-items: center;
 
-      margin-left: -120px; /* pulls it LEFT toward SOONSTAR */
+      margin-left: -100px; /* 🔧 pulls closer for balance */
     }
 
     .issue-right img {
