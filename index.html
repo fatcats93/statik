@@ -40,24 +40,36 @@
       margin: 160px auto 0;
     }
 
-    /* 🔥 EVERYTHING HIGHER (INCREASED) */
+    /* EVERYTHING HIGHER */
     .content-shift {
-      margin-top: -1150px; /* ⬆️ BIGGER LIFT */
+      margin-top: -1150px;
       position: relative;
       z-index: 20;
     }
 
-    /* ARTMAG */
+    /* ⭐ ARTMAG ROW (NEW LAYOUT) */
+    .artmag-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+
+      margin: 20px auto 30px;
+    }
+
+    .artmag-row img {
+      height: 180px;
+      object-fit: contain;
+    }
+
     .artmag {
-      width: 70%;
-      display: block;
-      margin: 20px auto 30px; /* tighter spacing */
+      height: 220px;
     }
 
     /* BOXES */
     .section {
       background-color: #ffc0cb;
-      margin: 10px auto; /* tighter spacing */
+      margin: 10px auto;
       width: 98%;
       max-width: 2600px;
       border-radius: 55px;
@@ -81,7 +93,6 @@
       padding: 120px;
     }
 
-    /* LEFT IMAGE */
     .issue-left {
       width: 900px;
       height: 650px;
@@ -92,10 +103,8 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
     }
 
-    /* RIGHT IMAGE */
     .issue-right {
       position: relative;
       width: 900px;
@@ -106,11 +115,8 @@
       display: block;
       border: 8px solid black;
       border-radius: 20px;
-      position: relative;
-      z-index: 1;
     }
 
-    /* BANNER */
     .issue-banner {
       position: absolute;
       top: 50%;
@@ -128,8 +134,6 @@
       font-size: 68px;
       font-weight: bold;
       text-align: center;
-
-      z-index: 5;
     }
 
     @media (max-width: 900px) {
@@ -139,6 +143,10 @@
 
       .content-shift {
         margin-top: -400px;
+      }
+
+      .artmag-row img {
+        height: 90px;
       }
 
       .section {
@@ -185,8 +193,12 @@
 
   <div class="content-shift">
 
-    <!-- ARTMAG -->
-    <img src="artmag.jpeg" class="artmag">
+    <!-- ⭐ ARTMAG WITH SIDE STARS -->
+    <div class="artmag-row">
+      <img src="star2.jpg">
+      <img src="artmag.jpeg" class="artmag">
+      <img src="starstar.jpg">
+    </div>
 
     <!-- MISSION -->
     <div class="section mission">
