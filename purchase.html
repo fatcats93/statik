@@ -14,16 +14,18 @@
       overflow-x: hidden;
     }
 
-    /* HEADER (RESTORED, ALWAYS ON TOP) */
+    /* 🧠 HEADER ALWAYS BEHIND HERO */
     .title {
       width: 100%;
       max-width: 3000px;
       display: block;
       margin: 80px auto 0;
+
       position: relative;
-      z-index: 20;
+      z-index: 1; /* BACK LAYER */
     }
 
+    /* 🧠 HERO STACKS ABOVE HEADER */
     .hero {
       position: relative;
       width: 100%;
@@ -32,25 +34,26 @@
       display: flex;
       justify-content: center;
       align-items: flex-start;
+
+      z-index: 10; /* ABOVE HEADER */
+      margin-top: -200px; /* pulls hero upward WITHOUT breaking layout */
     }
 
-    /* STATIK IMAGE (BACK TO YOUR ORIGINAL STYLE) */
+    /* STATIK IMAGE (NORMALIZED POSITION) */
     .hero img {
       width: 112%;
       height: 112%;
       object-fit: contain;
 
-      margin-top: -600px;
-
       position: relative;
-      z-index: 5;
+      z-index: 10;
     }
 
-    /* 🔥 BANNER — HIGHER ABOVE IMAGE (ONLY CHANGE THAT MATTERS) */
+    /* 🔥 BANNER HIGH ABOVE IMAGE */
     .banner {
       position: absolute;
 
-      top: -900px; /* ⬅️ MUCH higher than before */
+      top: -500px; /* strong upward position */
 
       left: 50%;
       transform: translateX(-50%);
@@ -70,7 +73,7 @@
       background-color: rgba(255, 143, 177, 0.95);
       color: black;
 
-      z-index: 10;
+      z-index: 20; /* ABOVE IMAGE */
     }
 
   </style>
@@ -78,7 +81,7 @@
 
 <body>
 
-  <!-- HEADER (BACK, NOT REMOVED) -->
+  <!-- HEADER (NOW BEHIND HERO) -->
   <img src="hometitle1.jpg" class="title">
 
   <div class="hero">
