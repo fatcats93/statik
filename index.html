@@ -10,6 +10,7 @@
       margin: 0;
       background-color: #ff6398;
       font-family: Arial, sans-serif;
+      overflow-x: hidden;
     }
 
     /* HEADER */
@@ -23,6 +24,8 @@
       align-items: center;
 
       border-bottom: 7px solid black;
+      position: relative;
+      z-index: 100;
     }
 
     .header a {
@@ -38,30 +41,36 @@
       max-width: 3000px;
       display: block;
       margin: 160px auto 0;
+      position: relative;
+      z-index: 1;
     }
 
-    /* EVERYTHING HIGHER */
+    /* 🔥 EVERYTHING HIGHER */
     .content-shift {
-      margin-top: -1150px;
+      margin-top: -1350px;
       position: relative;
       z-index: 20;
     }
 
-    /* ARTMAG ROW */
+    /* ⭐ STARS + ARTMAG */
     .artmag-row {
       display: flex;
       justify-content: center;
-      align-items: center;
-      gap: 60px;
-      margin: 20px auto 30px;
+      align-items: flex-start;
+      gap: 80px;
+
+      margin-top: -120px; /* ⭐ pushes stars higher */
+      margin-bottom: 20px;
     }
 
-    /* ⭐ BIGGER STARS */
+    /* ⭐ BIGGER + HIGHER */
     .side-star {
-      height: 240px;
+      height: 340px;
       object-fit: contain;
+      margin-top: -120px; /* almost touching header */
     }
 
+    /* KEEP ARTMAG SAME */
     .artmag {
       width: 70%;
       display: block;
@@ -90,22 +99,26 @@
       display: flex;
       justify-content: space-between;
       align-items: stretch;
-      gap: 120px;
-      padding: 120px;
+      gap: 80px;
+
+      padding: 70px; /* less padding so image touches edges more */
     }
 
-    /* 🌟 LEFT BOX FILLS ENTIRE SPACE */
+    /* 🌟 SOONSTAR FILLS ENTIRE LEFT SIDE */
     .issue-left {
-      width: 900px;
-      height: 650px;
+      width: 1000px;
+      height: 850px;
+
       overflow: hidden;
       border-radius: 20px;
+
+      flex-shrink: 0;
     }
 
     .issue-left img {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* 🔥 fills entire box */
+      object-fit: cover;
       display: block;
     }
 
@@ -113,11 +126,15 @@
     .issue-right {
       position: relative;
       width: 900px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .issue-right img {
       width: 100%;
       display: block;
+
       border: 8px solid black;
       border-radius: 20px;
     }
@@ -125,37 +142,40 @@
     /* BANNER */
     .issue-banner {
       position: absolute;
+
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
 
       background-color: rgba(255, 143, 177, 0.95);
 
-      padding: 80px 90px;
+      padding: 90px 100px;
+
       width: 120%;
 
       border: 6px solid black;
       border-radius: 25px;
 
-      font-size: 68px;
+      font-size: 74px;
       font-weight: bold;
       text-align: center;
+
+      z-index: 5;
     }
 
-    /* MOBILE */
+    /* MOBILE/TABLET */
     @media (max-width: 1024px) {
+
       .side-star {
         display: none;
       }
-    }
-
-    @media (max-width: 900px) {
-      .header a {
-        font-size: 42px;
-      }
 
       .content-shift {
-        margin-top: -400px;
+        margin-top: -450px;
+      }
+
+      .header a {
+        font-size: 42px;
       }
 
       .section {
@@ -173,7 +193,7 @@
 
       .issue-left,
       .issue-right {
-        width: 90%;
+        width: 95%;
         height: auto;
       }
 
@@ -183,6 +203,7 @@
         width: 100%;
       }
     }
+
   </style>
 </head>
 
@@ -201,7 +222,7 @@
 
   <div class="content-shift">
 
-    <!-- ARTMAG + STARS -->
+    <!-- ⭐ STARS + ARTMAG -->
     <div class="artmag-row">
 
       <img src="star2.jpg" class="side-star">
@@ -220,10 +241,12 @@
     <!-- FIRST ISSUE -->
     <div class="section issue-section">
 
+      <!-- 🌟 HUGE SOONSTAR -->
       <div class="issue-left">
-        <img src="soonstar.jpeg">
+        <img src="soonstar.jpg">
       </div>
 
+      <!-- RIGHT SIDE -->
       <div class="issue-right">
 
         <div class="issue-banner">
