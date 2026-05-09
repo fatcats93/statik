@@ -40,31 +40,31 @@
       margin: 160px auto 0;
     }
 
-    /* PUSH EVERYTHING HIGHER */
+    /* EVERYTHING HIGHER */
     .content-shift {
       margin-top: -1150px;
       position: relative;
       z-index: 20;
     }
 
-    /* ⭐ ARTMAG WRAPPER (NO SIZE CHANGES) */
+    /* ARTMAG ROW */
     .artmag-row {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 40px;
+      gap: 60px;
       margin: 20px auto 30px;
     }
 
-    /* KEEP ORIGINAL SIZE */
+    /* ⭐ BIGGER STARS */
+    .side-star {
+      height: 240px;
+      object-fit: contain;
+    }
+
     .artmag {
       width: 70%;
       display: block;
-    }
-
-    .side-star {
-      height: 160px;
-      object-fit: contain;
     }
 
     /* BOXES */
@@ -94,18 +94,22 @@
       padding: 120px;
     }
 
+    /* 🌟 LEFT BOX FILLS ENTIRE SPACE */
     .issue-left {
       width: 900px;
       height: 650px;
       overflow: hidden;
+      border-radius: 20px;
     }
 
     .issue-left img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: cover; /* 🔥 fills entire box */
+      display: block;
     }
 
+    /* RIGHT SIDE */
     .issue-right {
       position: relative;
       width: 900px;
@@ -118,6 +122,7 @@
       border-radius: 20px;
     }
 
+    /* BANNER */
     .issue-banner {
       position: absolute;
       top: 50%;
@@ -137,7 +142,7 @@
       text-align: center;
     }
 
-    /* ❌ REMOVE STARS ON TABLET + PHONE */
+    /* MOBILE */
     @media (max-width: 1024px) {
       .side-star {
         display: none;
@@ -155,7 +160,6 @@
 
       .section {
         padding: 80px;
-        max-width: 95%;
       }
 
       .mission {
@@ -197,7 +201,7 @@
 
   <div class="content-shift">
 
-    <!-- ⭐ ARTMAG (UNCHANGED SIZE) -->
+    <!-- ARTMAG + STARS -->
     <div class="artmag-row">
 
       <img src="star2.jpg" class="side-star">
