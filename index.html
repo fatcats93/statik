@@ -89,7 +89,10 @@
       margin-bottom: 160px;
     }
 
-    /* ISSUE SECTION */
+    /* ========================= */
+    /* ISSUE SECTION FIXED */
+    /* ========================= */
+
     .issue-section {
       display: flex;
       justify-content: center;
@@ -97,10 +100,9 @@
 
       gap: 60px;
       padding: 70px;
-
-      transform: translateX(-180px); /* ⬅️ updated */
     }
 
+    /* 🔧 MOVE CONTENT INSIDE LEFT (both sides together) */
     .issue-left {
       width: 1350px;
       height: 980px;
@@ -111,6 +113,8 @@
 
       overflow: hidden;
       flex-shrink: 0;
+
+      margin-left: -60px; /* ⬅️ slight left shift */
     }
 
     .issue-left img {
@@ -129,7 +133,7 @@
       justify-content: center;
       align-items: center;
 
-      margin-left: -100px;
+      margin-left: -160px; /* ⬅️ pulls right side left too */
     }
 
     .issue-right img {
