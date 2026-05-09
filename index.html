@@ -79,66 +79,77 @@
       margin-bottom: 160px;
     }
 
-    /* ===================== */
-    /* 🔥 FIRST ISSUE ONLY */
-    /* ===================== */
+    /* ========================= */
+    /* FIRST ISSUE (FIXED CLEAN) */
+    /* ========================= */
 
     .issue-section {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 20px;
+
+      gap: 40px;
       padding: 70px;
     }
 
-    /* 🌟 SMALLER SOONSTAR */
+    /* 🌟 SOONSTAR (MEDIUM, NO OVERLAP POSSIBLE) */
     .issue-left {
-      width: 900px;     /* smaller */
-      height: 700px;    /* smaller */
+      width: 1050px;
+      height: 780px;
 
       display: flex;
       justify-content: center;
       align-items: center;
+
+      flex-shrink: 0;
     }
 
     .issue-left img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+
+      display: block;
     }
 
     /* RIGHT SIDE CLOSER TO LEFT */
     .issue-right {
       position: relative;
-      width: 850px;
+      width: 900px;
 
-      margin-left: -120px; /* pulls it LEFT */
+      margin-left: -80px; /* moves closer to left side */
     }
 
     .issue-right img {
       width: 100%;
+      display: block;
+
       border: 8px solid black;
       border-radius: 20px;
-      display: block;
     }
 
+    /* BANNER (INSIDE BOX, NO OVERFLOW) */
     .issue-banner {
       position: absolute;
+
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
 
       background-color: rgba(255, 143, 177, 0.96);
 
-      padding: 80px 80px;
+      padding: 70px 80px;
+
       width: 100%;
 
       border: 6px solid black;
       border-radius: 25px;
 
-      font-size: 68px;
+      font-size: 66px;
       font-weight: bold;
       text-align: center;
+
+      box-sizing: border-box;
     }
 
   </style>
