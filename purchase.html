@@ -14,52 +14,49 @@
       overflow-x: hidden;
     }
 
-    /* MAIN TOP TITLE (can be overlapped now) */
+    /* HOME TITLE (LOWEST LAYER) */
     .title {
       width: 100%;
       max-width: 3000px;
       display: block;
-      margin: 80px auto 20px;
+      margin: 80px auto 0;
       position: relative;
-      z-index: 2;
+      z-index: 1;
     }
 
+    /* HERO WRAPPER */
     .hero {
       position: relative;
       width: 100%;
-      height: 130vh;
-
+      height: 140vh;
       display: flex;
       justify-content: center;
       align-items: flex-start;
     }
 
-    /* 🔥 IMAGE MUCH HIGHER NOW */
+    /* 🔥 STATIK IMAGE: WAY HIGHER (ABOVE HOMETITLE) */
     .hero img {
       width: 112%;
       height: 112%;
       object-fit: contain;
 
-      margin-top: -420px; /* ⬅️ WAY higher than before */
-
-      display: block;
+      margin-top: -600px; /* ⬅️ VERY HIGH now */
 
       position: relative;
-      z-index: 1;
+      z-index: 5;
     }
 
-    /* 🔥 BANNER ONLY ACROSS IMAGE */
+    /* 🔥 BANNER ONLY OVER STATIK IMAGE */
     .banner {
       position: absolute;
 
-      top: 45%; /* sits across image */
-      left: 0;
+      top: 20%; /* only across statik image area */
+      left: 50%;
+      transform: translate(-50%, -50%);
 
-      width: 100%;
+      width: 90%; /* ONLY spans image width */
 
-      transform: translateY(-50%);
-
-      padding: 70px 0;
+      padding: 80px 0;
 
       border-top: 6px solid black;
       border-bottom: 6px solid black;
@@ -72,7 +69,7 @@
       background-color: rgba(255, 143, 177, 0.95);
       color: black;
 
-      z-index: 5;
+      z-index: 10;
     }
 
   </style>
