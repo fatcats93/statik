@@ -23,17 +23,19 @@
       z-index: 10;
     }
 
-    /* HERO WRAPPER */
+    /* HERO AREA */
     .hero {
       position: relative;
       width: 100%;
       height: 110vh;
+
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start; /* ⬅️ pushes image higher */
+      padding-top: 40px; /* extra lift */
     }
 
-    /* BIG IMAGE (NO COLOR CHANGES, NO OVERLAP) */
+    /* IMAGE (HIGHER NOW) */
     .hero img {
       width: 105%;
       height: 105%;
@@ -43,27 +45,26 @@
       z-index: 1;
     }
 
-    /* BANNER (BIGGER + HIGHER) */
+    /* BIGGER BUT SAME POSITION */
     .banner {
       position: absolute;
 
-      top: 25%; /* ⬅️ higher */
+      top: 45%; /* stays roughly same vertical area */
       left: 50%;
       transform: translate(-50%, -50%);
 
-      padding: 120px 220px; /* ⬅️ MUCH bigger */
+      padding: 160px 260px; /* ⬅️ MUCH bigger */
 
       border: 6px solid black;
-      border-radius: 35px;
+      border-radius: 40px;
 
-      font-size: 120px; /* ⬅️ way bigger text */
+      font-size: 150px; /* ⬅️ BIGGER text */
+
       font-weight: bold;
-
       text-align: center;
 
       z-index: 5;
 
-      /* IMPORTANT: no new colors added, just using same pink feel */
       background-color: rgba(255, 143, 177, 0.95);
       color: black;
     }
