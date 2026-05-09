@@ -14,18 +14,39 @@
       overflow-x: hidden;
     }
 
-    /* 🧠 HEADER ALWAYS BEHIND HERO */
+    /* 🔥 HEADER RESTORED (NAV BAR) */
+    .header {
+      width: 100%;
+      background-color: #ff8fb1;
+      padding: 60px 0;
+
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      border-bottom: 7px solid black;
+
+      position: relative;
+      z-index: 50; /* stays above background, but below banner if needed */
+    }
+
+    .header a {
+      text-decoration: none;
+      font-size: 74px;
+      color: black;
+      font-weight: bold;
+    }
+
     .title {
       width: 100%;
       max-width: 3000px;
       display: block;
-      margin: 80px auto 0;
-
+      margin: 40px auto 0;
       position: relative;
-      z-index: 1; /* BACK LAYER */
+      z-index: 1;
     }
 
-    /* 🧠 HERO STACKS ABOVE HEADER */
+    /* HERO SECTION */
     .hero {
       position: relative;
       width: 100%;
@@ -35,11 +56,10 @@
       justify-content: center;
       align-items: flex-start;
 
-      z-index: 10; /* ABOVE HEADER */
-      margin-top: -200px; /* pulls hero upward WITHOUT breaking layout */
+      z-index: 10;
+      margin-top: -200px;
     }
 
-    /* STATIK IMAGE (NORMALIZED POSITION) */
     .hero img {
       width: 112%;
       height: 112%;
@@ -53,8 +73,7 @@
     .banner {
       position: absolute;
 
-      top: -500px; /* strong upward position */
-
+      top: -500px;
       left: 50%;
       transform: translateX(-50%);
 
@@ -73,7 +92,7 @@
       background-color: rgba(255, 143, 177, 0.95);
       color: black;
 
-      z-index: 20; /* ABOVE IMAGE */
+      z-index: 20;
     }
 
   </style>
@@ -81,7 +100,14 @@
 
 <body>
 
-  <!-- HEADER (NOW BEHIND HERO) -->
+  <!-- 🔥 HEADER BACK WHERE IT BELONGS -->
+  <div class="header">
+    <a href="index.html">Home</a>
+    <a href="purchase.html">Purchase</a>
+    <a href="submitart.html">Submit Art</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
   <img src="hometitle1.jpg" class="title">
 
   <div class="hero">
