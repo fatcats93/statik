@@ -44,14 +44,14 @@
       z-index: 5;
     }
 
-    /* 🔥 EVEN HIGHER */
+    /* 🔥 PROPER FIX: anchor above image instead of guessing pixels */
     .banner {
       position: absolute;
 
-      top: -320px; /* ⬅️ raised again */
+      top: 0; /* anchor to top of hero */
 
       left: 50%;
-      transform: translateX(-50%);
+      transform: translate(-50%, -120%); /* pushes it ABOVE the image area */
 
       width: 100%;
 
