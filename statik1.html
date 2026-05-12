@@ -8,11 +8,53 @@
   <style>
     body {
       margin: 0;
-      background-color: #ff6398;
+      background-color: #ffd1dc; /* light pink */
+      font-family: Arial, sans-serif;
       overflow: hidden;
     }
 
+    /* Start screen */
+    .start-screen {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 30px;
+      font-size: 1.2rem;
+    }
+
+    .btn {
+      padding: 16px 32px;
+      font-size: 18px;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      opacity: 0.8;
+    }
+
+    /* Flipbook container (hidden at first) */
     .magazine {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
       width: 100vw;
       height: 100vh;
     }
@@ -27,9 +69,24 @@
 
 <body>
 
-  <div class="magazine">
+  <!-- START SCREEN -->
+  <div class="start-screen" id="startScreen">
+    <h1>STATIK ISSUE 01</h1>
+    <p>Click below to read the first issue</p>
+    <button class="btn" onclick="openMagazine()">Click to Read</button>
+  </div>
+
+  <!-- FLIPBOOK -->
+  <div class="magazine" id="magazine">
     <iframe src="https://online.flippingbook.com/view/504092241/"></iframe>
   </div>
+
+  <script>
+    function openMagazine() {
+      document.getElementById("startScreen").style.display = "none";
+      document.getElementById("magazine").style.display = "block";
+    }
+  </script>
 
 </body>
 </html>
