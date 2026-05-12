@@ -8,12 +8,12 @@
   <style>
     body {
       margin: 0;
-      background-color: #ffd1dc; /* light pink */
+      background-color: #ff6398; /* SAME STATIK PINK */
       font-family: Arial, sans-serif;
       overflow: hidden;
     }
 
-    /* Start screen */
+    /* START SCREEN */
     .start-screen {
       height: 100vh;
       width: 100vw;
@@ -25,18 +25,21 @@
     }
 
     h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
+      font-size: 4rem;
+      margin-bottom: 20px;
+      color: black;
     }
 
     p {
-      margin-bottom: 30px;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
+      margin-bottom: 50px;
+      color: black;
     }
 
+    /* HUGE BUTTON */
     .btn {
-      padding: 16px 32px;
-      font-size: 18px;
+      padding: 40px 90px;
+      font-size: 3rem;
       background-color: black;
       color: white;
       border: none;
@@ -46,10 +49,11 @@
     }
 
     .btn:hover {
-      opacity: 0.8;
+      transform: scale(1.05);
+      opacity: 0.85;
     }
 
-    /* Flipbook container (hidden at first) */
+    /* FLIPBOOK */
     .magazine {
       display: none;
       position: fixed;
@@ -73,7 +77,7 @@
   <div class="start-screen" id="startScreen">
     <h1>STATIK ISSUE 01</h1>
     <p>Click below to read the first issue</p>
-    <button class="btn" onclick="openMagazine()">Click to Read</button>
+    <button class="btn" onclick="openMagazine()">CLICK TO READ</button>
   </div>
 
   <!-- FLIPBOOK -->
