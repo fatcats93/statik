@@ -43,11 +43,9 @@
       max-width: 3000px;
       display: block;
       margin: 40px auto 0;
-      position: relative;
-      z-index: 1;
     }
 
-    /* EVEN HIGHER */
+    /* 🔥 HIGH POSITION, JUST BELOW HEADER */
     .purchase-container {
       width: 100%;
       display: flex;
@@ -55,13 +53,13 @@
       align-items: center;
       gap: 220px;
 
-      height: 150vh;
-      padding: 0 80px;
+      padding: 40px 80px;
+
+      /* pulls it UP slightly toward header */
+      margin-top: -80px;
 
       position: relative;
-      z-index: 100;
-
-      transform: translateY(-1300px); /* 🔥 HIGHER AGAIN */
+      z-index: 20;
     }
 
     .purchase-btn {
@@ -111,11 +109,9 @@
 
       .purchase-container {
         flex-direction: column;
-        height: auto;
         gap: 90px;
-
-        transform: translateY(-350px); /* adjusted for mobile */
-        padding: 40px 20px;
+        margin-top: -20px;
+        padding: 30px 20px;
       }
 
       .purchase-btn {
