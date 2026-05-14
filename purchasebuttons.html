@@ -45,7 +45,7 @@
       margin: 40px auto 0;
     }
 
-    /* 🔥 MAXIMUM HIGH POSITION (CLEAN VERSION) */
+    /* 🔥 ABSOLUTE HIGHEST SAFE POSITION */
     .purchase-container {
       width: 100%;
       display: flex;
@@ -55,9 +55,10 @@
 
       padding: 0 80px;
 
-      /* instead of extreme negative margins, we pull upward gently */
       position: relative;
-      top: -420px;   /* 🔥 VERY HIGH, but still stable */
+
+      /* THIS IS THE LIMIT BEFORE BREAKING UI */
+      top: -520px;
 
       z-index: 20;
     }
@@ -110,7 +111,7 @@
       .purchase-container {
         flex-direction: column;
         gap: 80px;
-        top: -120px; /* adjusted for mobile */
+        top: -140px;
         padding: 20px;
       }
 
