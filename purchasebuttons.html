@@ -42,10 +42,10 @@
       width: 100%;
       max-width: 3000px;
       display: block;
-      margin: 10px auto 0; /* pulled UP closer to header */
+      margin: 40px auto 0;
     }
 
-    /* 🔥 MAXIMUM OVERLAP */
+    /* 🔥 PUSHED ALL THE WAY UP INTO HEADER */
     .purchase-container {
       width: 100%;
       display: flex;
@@ -55,7 +55,8 @@
 
       padding: 0 80px;
 
-      margin-top: -350px; /* 👈 NOW IT PUSHES INTO HEADER AREA */
+      margin-top: -600px; /* 👈 THIS MAKES IT TOUCH/OVERLAP HEADER */
+
       position: relative;
       z-index: 50;
     }
@@ -103,13 +104,12 @@
 
       .title {
         width: 95%;
-        margin: 5px auto 0;
       }
 
       .purchase-container {
         flex-direction: column;
         gap: 80px;
-        margin-top: -120px;
+        margin-top: -180px;
         padding: 20px;
       }
 
