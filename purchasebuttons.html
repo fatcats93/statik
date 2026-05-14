@@ -47,31 +47,31 @@
       z-index: 1;
     }
 
-    /* ABSURD OVERLAP (PUSHED WAY UP) */
+    /* VERY HIGH OVERLAP (REALISTIC LIMIT) */
     .purchase-container {
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 200px;
+      gap: 220px;
 
-      height: 140vh;
+      height: 150vh;
 
       padding: 0 80px;
 
-      margin-top: -1200px; /* 🔥 EXTREME OVERLAP */
+      margin-top: -1600px; /* 🔥 MAXIMUM PRACTICAL OVERLAP */
       position: relative;
       z-index: 100;
     }
 
-    /* MASSIVE BUTTONS */
+    /* EVEN BIGGER BUTTONS */
     .purchase-btn {
-      width: 1200px;
-      height: 900px;
+      width: 1400px;
+      height: 1000px;
 
       background-color: #ff8fb1;
-      border: 14px solid black;
-      border-radius: 180px;
+      border: 16px solid black;
+      border-radius: 220px;
 
       display: flex;
       justify-content: center;
@@ -81,9 +81,9 @@
       color: black;
 
       font-weight: bold;
-      font-size: 150px;
+      font-size: 170px;
       text-align: center;
-      line-height: 1.1;
+      line-height: 1.05;
 
       padding: 40px;
 
@@ -91,7 +91,7 @@
     }
 
     .purchase-btn:hover {
-      transform: scale(1.06);
+      transform: scale(1.05);
     }
 
     /* MOBILE */
@@ -114,16 +114,16 @@
       .purchase-container {
         flex-direction: column;
         height: auto;
-        gap: 80px;
-        margin-top: -300px;
+        gap: 90px;
+        margin-top: -350px;
         padding: 40px 20px;
       }
 
       .purchase-btn {
         width: 95%;
-        height: 380px;
-        font-size: 72px;
-        border-radius: 120px;
+        height: 420px;
+        font-size: 78px;
+        border-radius: 140px;
       }
 
     }
