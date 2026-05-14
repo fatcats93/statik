@@ -27,6 +27,8 @@
       justify-content: space-around;
       align-items: center;
       border-bottom: 7px solid black;
+      position: relative;
+      z-index: 10;
     }
 
     .header a {
@@ -45,31 +47,31 @@
       z-index: 1;
     }
 
-    /* PUSH BUTTONS UP OVER TITLE */
+    /* EXTREME OVERLAP + PUSH UP */
     .purchase-container {
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 140px;
+      gap: 160px;
+
+      height: 120vh;
 
       padding: 0 60px;
 
-      height: 90vh;
-
-      margin-top: -180px; /* 👈 OVERLAPS TITLE */
+      margin-top: -600px; /* 👈 MASSIVE OVERLAP */
       position: relative;
-      z-index: 5;
+      z-index: 50;
     }
 
-    /* MASSIVE BUTTONS */
+    /* GIANT BUTTONS */
     .purchase-btn {
-      width: 800px;
-      height: 550px;
+      width: 950px;
+      height: 700px;
 
       background-color: #ff8fb1;
-      border: 10px solid black;
-      border-radius: 100px;
+      border: 12px solid black;
+      border-radius: 140px;
 
       display: flex;
       justify-content: center;
@@ -79,17 +81,17 @@
       color: black;
 
       font-weight: bold;
-      font-size: 96px;
+      font-size: 120px;
       text-align: center;
       line-height: 1.1;
 
-      padding: 30px;
+      padding: 40px;
 
       transition: 0.2s ease;
     }
 
     .purchase-btn:hover {
-      transform: scale(1.05);
+      transform: scale(1.06);
     }
 
     /* MOBILE */
@@ -112,16 +114,16 @@
       .purchase-container {
         flex-direction: column;
         height: auto;
-        gap: 50px;
-        margin-top: -60px;
+        gap: 60px;
+        margin-top: -200px;
         padding: 40px 20px;
       }
 
       .purchase-btn {
         width: 95%;
-        height: 280px;
-        font-size: 56px;
-        border-radius: 70px;
+        height: 320px;
+        font-size: 64px;
+        border-radius: 90px;
       }
 
     }
