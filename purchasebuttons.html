@@ -45,7 +45,7 @@
       margin: 40px auto 0;
     }
 
-    /* 🔥 PUSHED ALL THE WAY UP INTO HEADER */
+    /* 🔥 ABSOLUTE MAX HEIGHT WITHOUT BREAKING HEADER */
     .purchase-container {
       width: 100%;
       display: flex;
@@ -55,7 +55,8 @@
 
       padding: 0 80px;
 
-      margin-top: -600px; /* 👈 THIS MAKES IT TOUCH/OVERLAP HEADER */
+      /* FINAL NUDGE UP */
+      margin-top: -750px; /* 👈 HIGHER THAN BEFORE */
 
       position: relative;
       z-index: 50;
@@ -109,7 +110,7 @@
       .purchase-container {
         flex-direction: column;
         gap: 80px;
-        margin-top: -180px;
+        margin-top: -220px;
         padding: 20px;
       }
 
