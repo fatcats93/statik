@@ -42,10 +42,10 @@
       width: 100%;
       max-width: 3000px;
       display: block;
-      margin: 0; /* REMOVE GAP COMPLETELY */
+      margin: 10px auto 0; /* almost touching header */
     }
 
-    /* 🔥 MAX POSSIBLE OVERLAP (REAL VERSION) */
+    /* 🔥 MAXIMUM POSSIBLE OVERLAP */
     .purchase-container {
       width: 100%;
       display: flex;
@@ -55,11 +55,11 @@
 
       padding: 0 80px;
 
-      /* only slight controlled overlap */
-      margin-top: -120px;
+      /* FINAL POSITION: directly overlaps header edge */
+      margin-top: -820px;
 
       position: relative;
-      z-index: 50;
+      z-index: 999;
     }
 
     .purchase-btn {
@@ -103,10 +103,15 @@
         font-size: 28px;
       }
 
+      .title {
+        width: 95%;
+        margin: 5px auto 0;
+      }
+
       .purchase-container {
         flex-direction: column;
         gap: 80px;
-        margin-top: -40px;
+        margin-top: -250px;
         padding: 20px;
       }
 
