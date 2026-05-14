@@ -45,7 +45,7 @@
       margin: 40px auto 0;
     }
 
-    /* 🔥 HIGH POSITION, JUST BELOW HEADER */
+    /* 🔥 EXTREMELY HIGH POSITION (NEAR HEADER) */
     .purchase-container {
       width: 100%;
       display: flex;
@@ -53,10 +53,9 @@
       align-items: center;
       gap: 220px;
 
-      padding: 40px 80px;
+      padding: 10px 80px; /* very small padding */
 
-      /* pulls it UP slightly toward header */
-      margin-top: -80px;
+      margin-top: -200px; /* almost touching header */
 
       position: relative;
       z-index: 20;
@@ -109,9 +108,9 @@
 
       .purchase-container {
         flex-direction: column;
-        gap: 90px;
-        margin-top: -20px;
-        padding: 30px 20px;
+        gap: 80px;
+        margin-top: -40px;
+        padding: 20px;
       }
 
       .purchase-btn {
