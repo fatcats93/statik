@@ -47,7 +47,6 @@
       z-index: 1;
     }
 
-    /* VERY HIGH OVERLAP (REALISTIC LIMIT) */
     .purchase-container {
       width: 100%;
       display: flex;
@@ -59,12 +58,11 @@
 
       padding: 0 80px;
 
-      margin-top: -1600px; /* 🔥 MAXIMUM PRACTICAL OVERLAP */
+      margin-top: -1600px;
       position: relative;
       z-index: 100;
     }
 
-    /* EVEN BIGGER BUTTONS */
     .purchase-btn {
       width: 1400px;
       height: 1000px;
@@ -94,7 +92,6 @@
       transform: scale(1.05);
     }
 
-    /* MOBILE */
     @media screen and (max-width: 1024px) {
 
       .header {
@@ -144,6 +141,7 @@
 
   <div class="purchase-container">
 
+    <!-- PHYSICAL -->
     <a 
       class="purchase-btn" 
       href="https://veronique826.gumroad.com/l/nautxo"
@@ -152,9 +150,10 @@
       Physical Copy ($10)
     </a>
 
+    <!-- DIGITAL (UPDATED) -->
     <a 
       class="purchase-btn" 
-      href="PUT_DIGITAL_LINK_HERE"
+      href="read.html"
       target="_blank"
     >
       Digital Copy ($5)
