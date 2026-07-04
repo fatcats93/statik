@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>STATIK</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STATIK Purchase</title>
 
   <style>
 
@@ -16,7 +16,6 @@
 
     * {
       font-family: Arial, sans-serif !important;
-      -webkit-text-size-adjust: 100%;
       box-sizing: border-box;
     }
 
@@ -28,6 +27,8 @@
       justify-content: space-around;
       align-items: center;
       border-bottom: 7px solid black;
+      position: relative;
+      z-index: 10;
     }
 
     .header a {
@@ -37,21 +38,56 @@
       font-weight: bold;
     }
 
-    .button-container {
+    .title {
+      width: 100%;
+      max-width: 3000px;
+      display: block;
+      margin: 10px auto 0; /* almost touching header */
+    }
+
+    /* 🔥 MAXIMUM POSSIBLE OVERLAP */
+    .purchase-container {
+      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 120px 20px;
+      gap: 220px;
+
+      padding: 0 80px;
+
+      /* FINAL POSITION: directly overlaps header edge */
+      margin-top: -820px;
+
+      position: relative;
+      z-index: 999;
     }
 
-    .button-container img {
-      width: 700px;
-      max-width: 90%;
-      height: auto;
-      transition: transform 0.2s ease;
+    .purchase-btn {
+      width: 1400px;
+      height: 1000px;
+
+      background-color: #ff8fb1;
+      border: 16px solid black;
+      border-radius: 220px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      text-decoration: none;
+      color: black;
+
+      font-weight: bold;
+      font-size: 170px;
+      text-align: center;
+      line-height: 1.05;
+
+      padding: 40px;
+
+      transition: 0.2s ease;
     }
 
-    .button-container img:hover {
+    .purchase-btn:hover {
       transform: scale(1.05);
     }
 
@@ -67,8 +103,23 @@
         font-size: 28px;
       }
 
-      .button-container {
-        padding: 60px 20px;
+      .title {
+        width: 95%;
+        margin: 5px auto 0;
+      }
+
+      .purchase-container {
+        flex-direction: column;
+        gap: 80px;
+        margin-top: -250px;
+        padding: 20px;
+      }
+
+      .purchase-btn {
+        width: 95%;
+        height: 420px;
+        font-size: 78px;
+        border-radius: 140px;
       }
 
     }
@@ -85,10 +136,26 @@
     <a href="contact.html">Contact</a>
   </div>
 
-  <div class="button-container">
-    <a href="purchasebuttons.html">
-      <img src="purchasebutt.jpg" alt="Purchase">
+  <img src="hometitle1.jpg" class="title">
+
+  <div class="purchase-container">
+
+    <a 
+      class="purchase-btn" 
+      href="https://veronique826.gumroad.com/l/nautxo"
+      target="_blank"
+    >
+      Physical Copy ($10)
     </a>
+
+    <a 
+      class="purchase-btn" 
+      href="read.html"
+      target="_blank"
+    >
+      Digital Copy ($5)
+    </a>
+
   </div>
 
 </body>
