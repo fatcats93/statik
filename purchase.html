@@ -17,20 +17,17 @@
     * {
       font-family: Arial, sans-serif !important;
       -webkit-text-size-adjust: 100%;
+      box-sizing: border-box;
     }
 
     .header {
       width: 100%;
       background-color: #ff8fb1;
       padding: 60px 0;
-
       display: flex;
       justify-content: space-around;
       align-items: center;
-
       border-bottom: 7px solid black;
-      position: relative;
-      z-index: 50;
     }
 
     .header a {
@@ -40,63 +37,23 @@
       font-weight: bold;
     }
 
-    .title {
-      width: 100%;
-      max-width: 3000px;
-      display: block;
-      margin: 40px auto 0;
-    }
-
-    /* FIXED HERO (no more breaking height math) */
-    .hero {
-      position: relative;
-      width: 100%;
-
+    .button-container {
       display: flex;
       justify-content: center;
       align-items: center;
-
-      margin-top: 40px;
+      padding: 120px 20px;
     }
 
-    .hero img {
-      width: 110%;
-      max-width: 1600px;
+    .button-container img {
+      width: 700px;
+      max-width: 90%;
       height: auto;
-      object-fit: contain;
-
-      position: relative;
-      z-index: 10;
+      transition: transform 0.2s ease;
     }
 
-    /* FIXED BANNER (no more -500px positioning) */
-    .banner {
-      position: absolute;
-
-      top: 20%;
-      left: 50%;
-      transform: translateX(-50%);
-
-      width: 100%;
-
-      padding: 80px 0;
-
-      border-top: 6px solid black;
-      border-bottom: 6px solid black;
-
-      font-size: 140px;
-      font-weight: bold;
-      text-align: center;
-
-      background-color: rgba(255, 143, 177, 0.95);
-      color: black;
-
-      z-index: 20;
+    .button-container img:hover {
+      transform: scale(1.05);
     }
-
-    /* ========================= */
-    /* RESPONSIVE FIX */
-    /* ========================= */
 
     @media screen and (max-width: 1024px) {
 
@@ -110,23 +67,8 @@
         font-size: 28px;
       }
 
-      .title {
-        width: 95%;
-      }
-
-      .hero {
-        margin-top: 20px;
-        padding: 40px 0;
-      }
-
-      .hero img {
-        width: 95%;
-      }
-
-      .banner {
-        top: 25%;
-        font-size: 28px;
-        padding: 25px 10px;
+      .button-container {
+        padding: 60px 20px;
       }
 
     }
@@ -143,16 +85,10 @@
     <a href="contact.html">Contact</a>
   </div>
 
-  <img src="hometitle1.jpg" class="title">
-
-  <div class="hero">
-
-    <div class="banner">
-      COMING SOON!!
-    </div>
-
-    <img src="statiktitle.png">
-
+  <div class="button-container">
+    <a href="purchasebuttons.html">
+      <img src="purchasebutt.jpg" alt="Purchase">
+    </a>
   </div>
 
 </body>
