@@ -42,20 +42,17 @@
       width: 100%;
       max-width: 3000px;
       display: block;
-      margin: 10px auto 0; /* almost touching header */
+      margin: 10px auto 0;
     }
 
-    /* 🔥 MAXIMUM POSSIBLE OVERLAP */
     .purchase-container {
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 220px;
 
       padding: 0 80px;
 
-      /* FINAL POSITION: directly overlaps header edge */
       margin-top: -820px;
 
       position: relative;
@@ -109,8 +106,7 @@
       }
 
       .purchase-container {
-        flex-direction: column;
-        gap: 80px;
+        justify-content: center;
         margin-top: -250px;
         padding: 20px;
       }
@@ -140,20 +136,12 @@
 
   <div class="purchase-container">
 
-    <a 
-      class="purchase-btn" 
+    <a
+      class="purchase-btn"
       href="https://veronique826.gumroad.com/l/nautxo"
       target="_blank"
     >
       Physical Copy ($10)
-    </a>
-
-    <a 
-      class="purchase-btn" 
-      href="read.html"
-      target="_blank"
-    >
-      Digital Copy ($5)
     </a>
 
   </div>
