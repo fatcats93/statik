@@ -63,10 +63,12 @@
       gap: clamp(15px, 3vw, 50px);
 
       /*
-        ONLY THIS GROUP OVERLAPS
-        THE BIG STATIK TITLE
+        THIS IS THE ONLY OVERLAP.
+
+        Pulls the ART + STARS
+        WAY UP over the STATIK title.
       */
-      margin: -260px auto 0;
+      margin: -430px auto 80px;
 
       width: 95%;
       max-width: 1600px;
@@ -88,17 +90,6 @@
     }
 
 
-    /* ================= SPACE AFTER ART ================= */
-
-    /*
-      Keeps the mission box COMPLETELY SEPARATE
-      from the art.
-    */
-    .artmag-row {
-      margin-bottom: 90px;
-    }
-
-
     /* ================= MISSION BOX ================= */
 
     .mission-box {
@@ -107,6 +98,9 @@
       width: 94%;
       max-width: 1500px;
 
+      /*
+        Completely separate from art.
+      */
       margin: 0 auto;
 
       border-radius: 30px;
@@ -123,12 +117,7 @@
     }
 
 
-    /* ================= SPACE BETWEEN BOXES ================= */
-
-    /*
-      The second box stays clearly separate
-      from the mission box.
-    */
+    /* ================= SECOND BOX ================= */
 
     .issue-section {
       background-color: #ffc0cb;
@@ -136,7 +125,10 @@
       width: 94%;
       max-width: 1500px;
 
-      margin: 50px auto 20px;
+      /*
+        CLEAR SPACE between the two boxes.
+      */
+      margin: 45px auto 20px;
 
       border-radius: 30px;
 
@@ -251,11 +243,12 @@
       }
 
 
-      /* ONLY ART + STARS OVERLAP TITLE */
+      /* ART + STARS OVERLAP TITLE */
 
       .artmag-row {
         gap: 15px;
-        margin-top: -170px;
+
+        margin-top: -270px;
         margin-bottom: 70px;
       }
 
@@ -270,7 +263,7 @@
       }
 
 
-      /* MISSION IS SEPARATE */
+      /* SEPARATE MISSION BOX */
 
       .mission-box {
         width: 94%;
@@ -285,7 +278,7 @@
       }
 
 
-      /* SECOND BOX IS SEPARATE */
+      /* SEPARATE SECOND BOX */
 
       .issue-section {
         width: 94%;
@@ -347,8 +340,8 @@
 
 
       /*
-        ART + STARS OVERLAP TITLE,
-        BUT NOTHING BELOW THEM DOES.
+        ART + STARS ONLY.
+        They overlap the title heavily.
       */
 
       .artmag-row {
@@ -357,7 +350,7 @@
 
         gap: 15px;
 
-        margin-top: -100px;
+        margin-top: -180px;
 
         margin-bottom: 60px;
       }
@@ -373,7 +366,7 @@
       }
 
 
-      /* MISSION BOX */
+      /* SEPARATE MISSION BOX */
 
       .mission-box {
 
@@ -389,7 +382,7 @@
       }
 
 
-      /* SECOND BOX */
+      /* SEPARATE SECOND BOX */
 
       .issue-section {
 
@@ -459,8 +452,7 @@
 
 
   <!-- ART + STARS
-       THESE ARE THE ONLY THINGS
-       THAT OVERLAP THE TITLE -->
+       THE ONLY ELEMENTS THAT OVERLAP THE TITLE -->
 
   <div class="artmag-row">
 
@@ -490,7 +482,6 @@
 
     <div class="issue-inner">
 
-
       <div class="issue-left">
 
         <img src="soonstar.jpg">
@@ -504,9 +495,7 @@
 
       </div>
 
-
     </div>
-
   </div>
 
 
