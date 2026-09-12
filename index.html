@@ -7,6 +7,10 @@
 
   <style>
 
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       background-color: #ff6398;
@@ -14,117 +18,130 @@
       overflow-x: hidden;
     }
 
+    /* ========================= */
+    /* HEADER */
+    /* ========================= */
+
     .header {
       width: 100%;
       background-color: #ff8fb1;
-      padding: 60px 0;
-
+      padding: 22px 5%;
       display: flex;
       justify-content: space-around;
       align-items: center;
-
-      border-bottom: 7px solid black;
+      border-bottom: 5px solid black;
       position: relative;
       z-index: 100;
     }
 
     .header a {
       text-decoration: none;
-      font-size: 74px;
+      font-size: clamp(20px, 2.5vw, 42px);
       color: black;
       font-weight: bold;
       font-family: Arial, sans-serif;
     }
 
+    /* ========================= */
+    /* TITLE */
+    /* ========================= */
+
     .title {
-      width: 100%;
-      max-width: 3000px;
+      width: min(85%, 1400px);
       display: block;
-      margin: 160px auto 0;
+      margin: 70px auto 0;
     }
 
-    .content-shift {
-      margin-top: -1250px;
-      position: relative;
-      z-index: 20;
-    }
+    /* ========================= */
+    /* ART MAG */
+    /* ========================= */
 
     .artmag-row {
       display: flex;
       justify-content: center;
-      align-items: flex-start;
-
-      gap: 70px;
-      margin-top: -160px;
-      margin-bottom: 60px;
+      align-items: center;
+      gap: clamp(15px, 3vw, 50px);
+      margin: 60px auto 70px;
+      width: 95%;
+      max-width: 1600px;
     }
 
     .side-star {
-      height: 520px;
+      width: clamp(80px, 12vw, 180px);
+      height: auto;
       object-fit: contain;
-      margin-top: -180px;
+      flex-shrink: 0;
     }
 
     .artmag {
-      width: 68%;
+      width: min(65%, 1000px);
       display: block;
     }
 
+    /* ========================= */
+    /* SECTIONS */
+    /* ========================= */
+
     .section {
       background-color: #ffc0cb;
-      margin: 10px auto;
-      width: 99%;
-      max-width: 3200px;
-      border-radius: 55px;
-      padding: 180px;
+      margin: 20px auto;
+      width: 94%;
+      max-width: 1500px;
+      border-radius: 30px;
+      padding: clamp(30px, 5vw, 80px);
     }
 
     .mission {
       text-align: center;
-      font-size: 145px;
+      font-size: clamp(22px, 3vw, 48px);
+      line-height: 1.25;
       font-family: Arial, sans-serif;
-      padding: 220px 180px;
+      padding: clamp(40px, 6vw, 90px);
     }
 
     .mission-box {
-      margin-bottom: 160px;
+      margin-bottom: 60px;
     }
+
+    /* ========================= */
+    /* ISSUE SECTION */
+    /* ========================= */
 
     .issue-section {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 70px;
+      padding: clamp(30px, 5vw, 70px);
     }
 
     .issue-inner {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 60px;
-      transform: translateX(-130px);
+      gap: clamp(25px, 4vw, 70px);
       width: 100%;
     }
 
     .issue-left {
-      width: 1500px;
-      height: 1080px;
+      width: 55%;
+      max-width: 750px;
       display: flex;
       justify-content: center;
       align-items: center;
       overflow: hidden;
-      flex-shrink: 0;
+      flex-shrink: 1;
     }
 
     .issue-left img {
       width: 100%;
-      height: 100%;
+      height: auto;
       object-fit: contain;
     }
 
     .issue-right {
       position: relative;
-      width: 850px;
+      width: 35%;
+      max-width: 500px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -132,9 +149,10 @@
 
     .issue-right img {
       width: 100%;
+      height: auto;
       display: block;
-      border: 8px solid black;
-      border-radius: 20px;
+      border: 5px solid black;
+      border-radius: 15px;
     }
 
     .issue-banner {
@@ -143,52 +161,107 @@
       left: 50%;
       transform: translate(-50%, -50%);
       background-color: rgba(255, 143, 177, 0.96);
-      padding: 80px;
+      padding: 35px;
       width: 100%;
-      border: 6px solid black;
-      border-radius: 25px;
-      font-size: 68px;
+      border: 5px solid black;
+      border-radius: 20px;
+      font-size: clamp(20px, 3vw, 42px);
       font-weight: bold;
       text-align: center;
-      box-sizing: border-box;
       font-family: Arial, sans-serif;
     }
 
     /* ========================= */
-    /* RESPONSIVE FIX (WORKING) */
+    /* TABLETS */
     /* ========================= */
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 900px) {
 
       .header {
-        flex-wrap: wrap;
-        padding: 25px 10px;
+        padding: 18px 10px;
         gap: 15px;
       }
 
       .header a {
-        font-size: 28px;
+        font-size: 20px;
       }
 
       .title {
-        margin: 60px auto 0;
-        width: 95%;
+        width: 90%;
+        margin-top: 50px;
       }
 
-      .content-shift {
-        margin-top: 0;
+      .artmag-row {
+        gap: 15px;
+        margin-top: 45px;
+      }
+
+      .side-star {
+        width: 100px;
+      }
+
+      .artmag {
+        width: 65%;
+      }
+
+      .section {
+        width: 94%;
+        padding: 35px 20px;
+        border-radius: 25px;
+      }
+
+      .mission {
+        font-size: 25px;
+        padding: 40px 25px;
+      }
+
+      .issue-inner {
+        gap: 20px;
+      }
+
+      .issue-left {
+        width: 55%;
+      }
+
+      .issue-right {
+        width: 40%;
+      }
+
+      .issue-banner {
+        font-size: 22px;
+        padding: 25px;
+      }
+    }
+
+    /* ========================= */
+    /* PHONES */
+    /* ========================= */
+
+    @media screen and (max-width: 600px) {
+
+      .header {
+        flex-wrap: wrap;
+        padding: 15px 5px;
+        gap: 8px;
+      }
+
+      .header a {
+        font-size: 16px;
+      }
+
+      .title {
+        width: 95%;
+        margin-top: 35px;
       }
 
       .artmag-row {
         flex-direction: column;
-        gap: 25px;
-        margin-top: 20px;
-        align-items: center;
+        gap: 15px;
+        margin: 35px auto 45px;
       }
 
       .side-star {
-        height: 180px;
-        margin-top: 0;
+        width: 100px;
       }
 
       .artmag {
@@ -196,33 +269,32 @@
       }
 
       .section {
-        padding: 40px 20px;
-        width: 95%;
+        width: 94%;
+        padding: 25px 15px;
+        border-radius: 20px;
       }
 
       .mission {
-        font-size: 36px;
-        padding: 40px 20px;
+        font-size: 20px;
+        padding: 30px 20px;
       }
 
       .issue-inner {
         flex-direction: column;
-        transform: none;
         gap: 30px;
       }
 
       .issue-left {
         width: 90%;
-        height: auto;
       }
 
       .issue-right {
-        width: 90%;
+        width: 80%;
       }
 
       .issue-banner {
-        font-size: 26px;
-        padding: 30px;
+        font-size: 20px;
+        padding: 20px;
       }
     }
 
@@ -240,33 +312,26 @@
 
   <img src="hometitle1.jpg" class="title">
 
-  <div class="content-shift">
+  <div class="artmag-row">
+    <img src="star2.jpg" class="side-star">
+    <img src="artmag.jpg" class="artmag">
+    <img src="starstar.jpg" class="side-star">
+  </div>
 
-    <div class="artmag-row">
-      <img src="star2.jpg" class="side-star">
-      <img src="artmag.jpg" class="artmag">
-      <img src="starstar.jpg" class="side-star">
-    </div>
+  <div class="section mission mission-box">
+    STATIK is a youth-run magazine featuring artwork from young artists, including organizations supporting children in underserved areas. We curate and design each issue to showcase their artwork. All profits from magazine sales are split and donated back to participating organizations.
+  </div>
 
-    <div class="section mission mission-box">
-      STATIK is a youth-run magazine featuring artwork from young artists, including organizations supporting children in underserved areas. We curate and design each issue to showcase their artwork. All profits from magazine sales are split and donated back to participating organizations.
-    </div>
+  <div class="section issue-section">
 
-    <div class="section issue-section">
+    <div class="issue-inner">
 
-      <div class="issue-inner">
+      <div class="issue-left">
+        <img src="soonstar.jpg">
+      </div>
 
-        <div class="issue-left">
-          <img src="soonstar.jpg">
-        </div>
-
-        <div class="issue-right">
-
-
-          <img src="statiktitle.png">
-
-        </div>
-
+      <div class="issue-right">
+        <img src="statiktitle.png">
       </div>
 
     </div>
