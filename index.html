@@ -58,12 +58,11 @@
       align-items: center;
       gap: clamp(15px, 3vw, 50px);
 
-      /* Makes the artwork overlap the title */
-      margin: -100px auto 70px;
+      /* PULLS EVERYTHING WAY UP */
+      margin: -220px auto 20px;
 
       width: 95%;
       max-width: 1600px;
-
       position: relative;
       z-index: 5;
     }
@@ -84,7 +83,10 @@
 
     .section {
       background-color: #ffc0cb;
-      margin: 20px auto;
+
+      /* PULLS MISSION BOX HIGHER */
+      margin: -20px auto 20px;
+
       width: 94%;
       max-width: 1500px;
       border-radius: 30px;
@@ -102,7 +104,7 @@
     }
 
     .mission-box {
-      margin-bottom: 60px;
+      margin-bottom: 20px;
     }
 
     /* ISSUE SECTION */
@@ -111,7 +113,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: clamp(30px, 5vw, 70px);
+
+      /* LESS SPACE ABOVE ISSUE */
+      padding: clamp(20px, 3vw, 50px);
     }
 
     .issue-inner {
@@ -191,8 +195,10 @@
 
       .artmag-row {
         gap: 15px;
-        margin-top: -60px;
-        margin-bottom: 50px;
+
+        /* MUCH HIGHER */
+        margin-top: -130px;
+        margin-bottom: 10px;
       }
 
       .side-star {
@@ -207,6 +213,9 @@
         width: 94%;
         padding: 35px 20px;
         border-radius: 25px;
+
+        /* HIGHER */
+        margin-top: -10px;
       }
 
       .mission {
@@ -255,8 +264,8 @@
         flex-direction: column;
         gap: 15px;
 
-        /* Keeps artwork overlapping title */
-        margin: -40px auto 45px;
+        /* HIGHER */
+        margin: -100px auto 20px;
       }
 
       .side-star {
@@ -271,6 +280,7 @@
         width: 94%;
         padding: 25px 15px;
         border-radius: 20px;
+        margin-top: -10px;
       }
 
       .mission {
