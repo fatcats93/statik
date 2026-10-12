@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,6 @@
   <title>STATIK</title>
 
   <style>
-
     * {
       box-sizing: border-box;
     }
@@ -17,7 +17,6 @@
       font-family: Arial, sans-serif;
       overflow-x: hidden;
     }
-
 
     /* ================= HEADER ================= */
 
@@ -41,7 +40,6 @@
       font-family: Arial, sans-serif;
     }
 
-
     /* ================= BIG STATIK TITLE ================= */
 
     .title {
@@ -52,27 +50,16 @@
       z-index: 1;
     }
 
-
     /* ================= ART + STARS ================= */
 
     .artmag-row {
       display: flex;
       justify-content: center;
       align-items: center;
-
       gap: clamp(15px, 3vw, 50px);
-
-      /*
-        THIS IS THE ONLY OVERLAP.
-
-        Pulls the ART + STARS
-        WAY UP over the STATIK title.
-      */
       margin: -430px auto 80px;
-
       width: 95%;
       max-width: 1600px;
-
       position: relative;
       z-index: 5;
     }
@@ -89,55 +76,34 @@
       display: block;
     }
 
-
     /* ================= MISSION BOX ================= */
 
     .mission-box {
       background-color: #ffc0cb;
-
       width: 94%;
       max-width: 1500px;
-
-      /*
-        Completely separate from art.
-      */
       margin: 0 auto;
-
       border-radius: 30px;
-
       padding: clamp(40px, 6vw, 90px);
-
       position: relative;
       z-index: 10;
-
       text-align: center;
-
       font-size: clamp(22px, 3vw, 48px);
       line-height: 1.25;
     }
-
 
     /* ================= SECOND BOX ================= */
 
     .issue-section {
       background-color: #ffc0cb;
-
       width: 94%;
       max-width: 1500px;
-
-      /*
-        CLEAR SPACE between the two boxes.
-      */
       margin: 45px auto 20px;
-
       border-radius: 30px;
-
       padding: clamp(25px, 4vw, 60px);
-
       position: relative;
       z-index: 10;
     }
-
 
     /* ================= ISSUE CONTENT ================= */
 
@@ -145,23 +111,17 @@
       display: flex;
       justify-content: center;
       align-items: center;
-
       gap: clamp(25px, 4vw, 70px);
-
       width: 100%;
     }
-
 
     .issue-left {
       width: 55%;
       max-width: 750px;
-
       display: flex;
       justify-content: center;
       align-items: center;
-
       overflow: hidden;
-
       flex-shrink: 1;
     }
 
@@ -171,13 +131,10 @@
       object-fit: contain;
     }
 
-
     .issue-right {
       position: relative;
-
       width: 35%;
       max-width: 500px;
-
       display: flex;
       justify-content: center;
       align-items: center;
@@ -186,47 +143,73 @@
     .issue-right img {
       width: 100%;
       height: auto;
-
       display: block;
-
       border: 5px solid black;
       border-radius: 15px;
     }
-
 
     /* ================= ISSUE BANNER ================= */
 
     .issue-banner {
       position: absolute;
-
       top: 50%;
       left: 50%;
-
       transform: translate(-50%, -50%);
-
       background-color: rgba(255, 143, 177, 0.96);
-
       padding: 35px;
-
       width: 100%;
-
       border: 5px solid black;
       border-radius: 20px;
-
       font-size: clamp(20px, 3vw, 42px);
-
       font-weight: bold;
-
       text-align: center;
-
       font-family: Arial, sans-serif;
     }
 
+    /* ================= OKTOBERFEST THANK-YOU SECTION ================= */
+
+    .market-section {
+      width: 94%;
+      max-width: 1500px;
+      margin: 55px auto 60px;
+      padding: clamp(25px, 5vw, 65px);
+      background-color: #ffc0cb;
+      border: 5px solid black;
+      border-radius: 30px;
+      text-align: center;
+    }
+
+    .market-section h2 {
+      font-size: clamp(30px, 4.5vw, 65px);
+      line-height: 1.15;
+      margin: 0 0 25px;
+      font-weight: bold;
+    }
+
+    .market-section p {
+      font-size: clamp(20px, 2.5vw, 36px);
+      line-height: 1.5;
+      margin: 0 auto 30px;
+      max-width: 1150px;
+    }
+
+    .market-section img {
+      display: block;
+      width: 100%;
+      max-width: 1000px;
+      height: auto;
+      margin: 0 auto;
+      border: 5px solid black;
+      border-radius: 20px;
+    }
+
+    .market-highlight {
+      font-weight: bold;
+    }
 
     /* ================= TABLETS ================= */
 
     @media screen and (max-width: 900px) {
-
       .header {
         padding: 18px 10px;
         gap: 15px;
@@ -236,268 +219,219 @@
         font-size: 20px;
       }
 
-
       .title {
         width: 90%;
         margin-top: 40px;
       }
 
-
-      /* ART + STARS OVERLAP TITLE */
-
       .artmag-row {
         gap: 15px;
-
         margin-top: -270px;
         margin-bottom: 70px;
       }
-
 
       .side-star {
         width: 100px;
       }
 
-
       .artmag {
         width: 65%;
       }
 
-
-      /* SEPARATE MISSION BOX */
-
       .mission-box {
         width: 94%;
-
         margin: 0 auto;
-
         padding: 40px 25px;
-
         font-size: 25px;
-
         border-radius: 25px;
       }
-
-
-      /* SEPARATE SECOND BOX */
 
       .issue-section {
         width: 94%;
-
         margin: 40px auto 20px;
-
         padding: 30px 20px;
-
         border-radius: 25px;
       }
-
 
       .issue-inner {
         gap: 20px;
       }
 
-
       .issue-left {
         width: 55%;
       }
 
-
       .issue-right {
         width: 40%;
       }
-
 
       .issue-banner {
         font-size: 22px;
         padding: 25px;
       }
 
+      .market-section {
+        margin-top: 45px;
+        padding: 35px 25px;
+      }
     }
-
 
     /* ================= PHONES ================= */
 
     @media screen and (max-width: 600px) {
-
       .header {
         flex-wrap: wrap;
-
         padding: 15px 5px;
-
         gap: 8px;
       }
-
 
       .header a {
         font-size: 16px;
       }
 
-
       .title {
         width: 95%;
-
         margin-top: 30px;
       }
 
-
-      /*
-        ART + STARS ONLY.
-        They overlap the title heavily.
-      */
-
       .artmag-row {
-
         flex-direction: column;
-
         gap: 15px;
-
         margin-top: -180px;
-
         margin-bottom: 60px;
       }
-
 
       .side-star {
         width: 100px;
       }
 
-
       .artmag {
         width: 90%;
       }
 
-
-      /* SEPARATE MISSION BOX */
-
       .mission-box {
-
         width: 94%;
-
         margin: 0 auto;
-
         padding: 30px 20px;
-
         font-size: 20px;
-
         border-radius: 20px;
       }
-
-
-      /* SEPARATE SECOND BOX */
 
       .issue-section {
-
         width: 94%;
-
         margin: 35px auto 20px;
-
         padding: 25px 15px;
-
         border-radius: 20px;
       }
 
-
       .issue-inner {
-
         flex-direction: column;
-
         gap: 30px;
       }
-
 
       .issue-left {
         width: 90%;
       }
 
-
       .issue-right {
         width: 80%;
       }
 
-
       .issue-banner {
         font-size: 20px;
-
         padding: 20px;
       }
 
-    }
+      .market-section {
+        width: 94%;
+        margin: 35px auto 40px;
+        padding: 25px 18px;
+        border-width: 3px;
+        border-radius: 20px;
+      }
 
+      .market-section h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+
+      .market-section p {
+        font-size: 19px;
+        line-height: 1.5;
+        margin-bottom: 25px;
+      }
+
+      .market-section img {
+        border-width: 3px;
+        border-radius: 15px;
+      }
+    }
   </style>
 </head>
 
-
 <body>
-
 
   <!-- HEADER -->
 
   <div class="header">
-
     <a href="index.html">Home</a>
-
     <a href="purchase.html">Purchase</a>
-
     <a href="submitart.html">Submit Art</a>
-
     <a href="contact.html">Contact</a>
-
   </div>
-
-
 
   <!-- BIG STATIK TITLE -->
 
-  <img src="hometitle1.jpg" class="title">
+  <img src="hometitle1.jpg" class="title" alt="STATIK">
 
-
-
-  <!-- ART + STARS
-       THE ONLY ELEMENTS THAT OVERLAP THE TITLE -->
+  <!-- ART + STARS -->
 
   <div class="artmag-row">
-
-    <img src="star2.jpg" class="side-star">
-
-    <img src="artmag.jpg" class="artmag">
-
-    <img src="starstar.jpg" class="side-star">
-
+    <img src="star2.jpg" class="side-star" alt="Decorative star">
+    <img src="artmag.jpg" class="artmag" alt="STATIK art magazine">
+    <img src="starstar.jpg" class="side-star" alt="Decorative stars">
   </div>
 
-
-
-  <!-- SEPARATE MISSION BOX -->
+  <!-- MISSION BOX -->
 
   <div class="mission-box">
-
     STATIK is a youth-run magazine featuring artwork from young artists, including organizations supporting children in underserved areas. We curate and design each issue to showcase their artwork. All profits from magazine sales are split and donated back to participating organizations.
-
   </div>
 
-
-
-  <!-- SEPARATE SECOND BOX -->
+  <!-- ISSUE SECTION -->
 
   <div class="issue-section">
-
     <div class="issue-inner">
 
       <div class="issue-left">
-
-        <img src="soonstar.jpg">
-
+        <img src="soonstar.jpg" alt="STATIK magazine issue">
       </div>
 
-
       <div class="issue-right">
-
-        <img src="statiktitle.png">
-
+        <img src="statiktitle.png" alt="STATIK magazine title">
       </div>
 
     </div>
   </div>
 
+  <!-- OKTOBERFEST THANK-YOU SECTION -->
+
+  <section class="market-section">
+
+    <h2>Thank You for Supporting STATIK!</h2>
+
+    <p>
+      Thank you to everyone who joined us at
+      <span class="market-highlight">Demarest Nature Center Oktoberfest!</span>
+      Together, we raised <span class="market-highlight">$140</span>,
+      which will soon be donated to nonprofits supporting children
+      in underserved communities. Thank you for helping us support
+      young artists and make a difference!
+    </p>
+
+    <img src="MARKET.jpeg" alt="STATIK at Demarest Nature Center Oktoberfest">
+
+  </section>
 
 </body>
 </html>
